@@ -4,7 +4,7 @@ import { getPromos } from "../services/api";
 import { Tag, X, ChevronRight } from "lucide-react";
 import { brand } from "../lib/brand";
 
-const STORAGE_KEY = "discoverysamal-resort_promo_dismissed";
+const STORAGE_KEY = "resort-template_promo_dismissed";
 
 export default function PromoModal() {
   const [visible, setVisible] = useState(false);

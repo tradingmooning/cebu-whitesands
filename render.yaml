@@ -1,7 +1,7 @@
 services:
   # ── Backend API ──
   - type: web
-    name: discoverysamal-resort
+    name: resort-template-api
     runtime: node
     region: oregon
     rootDir: backend
@@ -31,10 +31,10 @@ services:
       - key: CLOUDINARY_API_SECRET
         sync: false
       - key: CLIENT_URL
-        value: "https://www.discoverysamal-resort.org"
+        value: "https://www.example.com"
       - key: PROJECT_ID
-        value: "DSCV-S4ML0R7X"
+        value: "YOUR-PROJECT-ID"
       - key: PROJECT_NAME
-        value: "Discovery Samal Resort"
+        value: "Your Resort Name"
       - key: DOMAIN
-        value: "discoverysamal-resort.org"
+        value: "yourdomain.com"

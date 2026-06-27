@@ -84,7 +84,7 @@ function getTransporter() {
 
 const fromAddress = () =>
   process.env.EMAIL_FROM ||
-  `"Discovery Samal Resort" <${process.env.SMTP_USER}>`;
+  `"${process.env.PROJECT_NAME || "Your Resort"}" <${process.env.SMTP_USER}>`;
 
 // ── Helpers ───────────────────────────────────────────────────────────────────
 const formatDate = (date) =>
@@ -153,8 +153,8 @@ const emailShell = (content, socialCfg = {}) => `
 <body>
   <div class="container">
     <div class="header">
-      <h1 class="logo">Discovery Samal Resort</h1>
-      <p class="tagline">Your Island Discovery in Samal</p>
+      <h1 class="logo">${process.env.PROJECT_NAME || "Your Resort"}</h1>
+      <p class="tagline">${process.env.PROJECT_TAGLINE || "Your premier resort destination"}</p>
     </div>
     <div class="content">${content}</div>
     <div class="footer">
@@ -163,7 +163,7 @@ const emailShell = (content, socialCfg = {}) => `
       <p>${socialCfg.email || process.env.SMTP_USER}</p>
       <p><a href="${socialCfg.facebookUrl || "https://www.facebook.com"}" style="color:#008c8c;">Visit us on Facebook</a></p>
       <p style="margin-top: 20px; color: #008c8c;">
-        &copy; ${new Date().getFullYear()} Discovery Samal Resort. All rights reserved.
+        &copy; ${new Date().getFullYear()} ${process.env.PROJECT_NAME || "Your Resort"}. All rights reserved.
       </p>
     </div>
   </div>
@@ -176,11 +176,11 @@ function buildBookingReceived(b, clientUrl, socialCfg) {
   const paymentUrl = `${clientUrl}/booking/${b._id}/payment`;
   return {
     to: b.guestEmail,
-    subject: `Booking Received � ${b.bookingRef} | Discovery Samal Resort`,
+    subject: `Booking Received – ${b.bookingRef} | ${process.env.PROJECT_NAME || "Your Resort"}`,
     html: emailShell(
       `
       <h2 class="title">Booking Received</h2>
-      <p class="subtitle">Thank you for choosing Discovery Samal Resort, ${b.guestName}</p>
+      <p class="subtitle">Thank you for choosing ${process.env.PROJECT_NAME || "Your Resort"}, ${b.guestName}</p>
       <div class="ref-box">
         <p class="ref-label">Booking Reference</p>
         <p class="ref-number">${b.bookingRef}</p>
@@ -243,7 +243,7 @@ function buildPaymentReminder(b, reminderType, clientUrl, socialCfg) {
   return {
     to: b.guestEmail,
     subject: isFinal
-      ? `Final Reminder: Payment Due Today — ${b.bookingRef} | Discovery Samal Resort`
+      ? `Final Reminder: Payment Due Today — ${b.bookingRef} | ${process.env.PROJECT_NAME || "Your Resort"}`
       : `Friendly Reminder: Your Payment is Due Today — ${b.bookingRef}`,
     html: emailShell(
       `
@@ -289,7 +289,7 @@ function buildPaymentReceived(b, screenshotUrl, socialCfg) {
   const facebookPageUrl = socialCfg?.facebookUrl || "https://www.facebook.com";
   return {
     to: b.guestEmail,
-    subject: `Payment Received � ${b.bookingRef} | Discovery Samal Resort`,
+    subject: `Payment Received – ${b.bookingRef} | ${process.env.PROJECT_NAME || "Your Resort"}`,
     html: emailShell(
       `
       <h2 class="title">Payment Proof Submitted</h2>
@@ -379,7 +379,7 @@ function buildPartialPayment(b, continuationUrl, socialCfg) {
     : "on check-in day";
   return {
     to: b.guestEmail,
-    subject: `First Payment Received � ${b.bookingRef} | Discovery Samal Resort`,
+    subject: `First Payment Received – ${b.bookingRef} | ${process.env.PROJECT_NAME || "Your Resort"}`,
     html: emailShell(
       `
       <h2 class="title">First Payment Received</h2>
@@ -425,7 +425,7 @@ function buildRemainingBalanceReminder(b, continuationUrl, socialCfg) {
   const amountRemaining = installment.secondPaymentAmount || 0;
   return {
     to: b.guestEmail,
-    subject: `Balance Due � ${b.bookingRef} | Discovery Samal Resort`,
+    subject: `Balance Due – ${b.bookingRef} | ${process.env.PROJECT_NAME || "Your Resort"}`,
     html: emailShell(
       `
       <h2 class="title">Balance Payment Due</h2>
@@ -435,7 +435,7 @@ function buildRemainingBalanceReminder(b, continuationUrl, socialCfg) {
         <p class="ref-number">${b.bookingRef}</p>
       </div>
       <p>Dear ${b.guestName},</p>
-      <p>This is a friendly reminder that your remaining balance for your upcoming stay at Discovery Samal Resort is now due. Please settle it at your earliest convenience to secure your reservation.</p>
+      <p>This is a friendly reminder that your remaining balance for your upcoming stay at ${process.env.PROJECT_NAME || "Your Resort"} is now due. Please settle it at your earliest convenience to secure your reservation.</p>
       <div class="details">
         <div class="detail-row"><span class="detail-label">Room</span><span class="detail-value">${b.room?.name || "N/A"}</span></div>
         <div class="detail-row"><span class="detail-label">Check-in</span><span class="detail-value">${formatDate(b.checkIn)}</span></div>
@@ -460,7 +460,7 @@ function buildBookingCancelled(b, reason, clientUrl, socialCfg) {
   const newBookingUrl = `${clientUrl}/booking`;
   return {
     to: b.guestEmail,
-    subject: `Booking Cancelled � ${b.bookingRef} | Discovery Samal Resort`,
+    subject: `Booking Cancelled – ${b.bookingRef} | ${process.env.PROJECT_NAME || "Your Resort"}`,
     html: emailShell(
       `
       <h2 class="title">Booking Cancelled</h2>
@@ -470,7 +470,7 @@ function buildBookingCancelled(b, reason, clientUrl, socialCfg) {
         <p class="ref-number">${b.bookingRef}</p>
       </div>
       <p>Dear ${b.guestName},</p>
-      <p>We regret to inform you that your reservation at Discovery Samal Resort has been cancelled.</p>
+      <p>We regret to inform you that your reservation at ${process.env.PROJECT_NAME || "Your Resort"} has been cancelled.</p>
       ${
         reason
           ? `
@@ -500,11 +500,11 @@ function buildBookingCancelled(b, reason, clientUrl, socialCfg) {
 function buildBookingConfirmed(b, socialCfg) {
   return {
     to: b.guestEmail,
-    subject: `Reservation Confirmed � ${b.bookingRef} | Discovery Samal Resort`,
+    subject: `Reservation Confirmed – ${b.bookingRef} | ${process.env.PROJECT_NAME || "Your Resort"}`,
     html: emailShell(
       `
       <h2 class="title">Reservation Confirmed &#10003;</h2>
-      <p class="subtitle">Your stay at Discovery Samal Resort has been confirmed</p>
+      <p class="subtitle">Your stay at ${process.env.PROJECT_NAME || "Your Resort"} has been confirmed</p>
       <div class="ref-box">
         <p class="ref-label">Confirmation Number</p>
         <p class="ref-number">${b.bookingRef}</p>
@@ -555,9 +555,7 @@ module.exports = async (req, res) => {
       .json({ error: "Missing required fields: type, booking" });
   }
 
-  const clientUrl = (
-    process.env.CLIENT_URL || "https://www.discoverysamal-resort.org"
-  )
+  const clientUrl = (process.env.CLIENT_URL || "https://www.example.com")
     .split(",")[0]
     .trim();
 
@@ -644,7 +642,7 @@ module.exports = async (req, res) => {
       from: fromAddress(),
       replyTo: socialCfg?.email || process.env.SMTP_USER,
       headers: {
-        "X-Mailer": "Discovery Samal Resort Booking System",
+        "X-Mailer": `${process.env.PROJECT_NAME || "Your Resort"} Booking System`,
         "X-Entity-Ref-ID": `dscv-${Date.now()}`,
         Precedence: "transactional",
         "X-Auto-Response-Suppress": "OOF, AutoReply",

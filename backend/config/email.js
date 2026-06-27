@@ -1,6 +1,9 @@
 const nodemailer = require("nodemailer");
 const generateReceipt = require("../utils/generateReceipt");
 
+// Resort name read from env so it works for any project
+const resortName = () => process.env.PROJECT_NAME || "Your Resort";
+
 const transporter = nodemailer.createTransport({
   host: process.env.SMTP_HOST || "smtp.zoho.com",
   port: Number(process.env.SMTP_PORT) || 587,
@@ -14,10 +17,10 @@ const transporter = nodemailer.createTransport({
 
 const fromAddress =
   process.env.EMAIL_FROM ||
-  `"Discovery Samal Resort" <${
+  `"${resortName()}" <${
     process.env.SMTP_USER ||
     process.env.RESORT_EMAIL ||
-    "reservations@discoverysamal-resort.org"
+    "reservations@example.com"
   }>";
 
 const formatDate = (date) =>
@@ -69,8 +72,8 @@ const emailShell = (content) => `
 <body>
   <div class="container">
     <div class="header">
-      <h1 class="logo">Discovery Samal Resort</h1>
-      <p class="tagline">Your ultimate beachside playground</p>
+      <h1 class="logo">${resortName()}</h1>
+      <p class="tagline">${process.env.PROJECT_TAGLINE || "Your premier resort destination"}</p>
     </div>
     <div class="content">
       ${content}
@@ -78,10 +81,10 @@ const emailShell = (content) => `
     <div class="footer">
       <p><strong>Need assistance?</strong></p>
       ${optionalEnv(process.env.RESORT_PHONE) ? `<p>📞 ${optionalEnv(process.env.RESORT_PHONE)}</p>` : ""}
-      <p>✉️ ${optionalEnv(process.env.RESORT_EMAIL) || process.env.SMTP_USER || "reservations@discoverysamal-resort.org"}</p>
+      <p>✉️ ${optionalEnv(process.env.RESORT_EMAIL) || process.env.SMTP_USER || "reservations@example.com"}</p>
       <p>💬 <a href="${optionalEnv(process.env.FACEBOOK_PAGE_URL) || "https://www.facebook.com"}" style="color:#6B7C3E;">Visit us on Facebook</a></p>
       <p style="margin-top: 20px; color: #C4A882;">
-        &copy; ${new Date().getFullYear()} Discovery Samal Resort. All rights reserved.
+        &copy; ${new Date().getFullYear()} ${resortName()}. All rights reserved.
       </p>
     </div>
   </div>
@@ -94,7 +97,7 @@ const sendBookingConfirmationToGuest = async (booking) => {
 
   const html = emailShell(`
     <h2 class="title">Booking Received</h2>
-    <p class="subtitle">Thank you for choosing Discovery Samal Resort, ${booking.guestName}</p>
+    <p class="subtitle">Thank you for choosing ${resortName()}, ${booking.guestName}</p>
 
     <div class="ref-box">
       <p class="ref-label">Booking Reference</p>
@@ -123,7 +126,7 @@ const sendBookingConfirmationToGuest = async (booking) => {
     const info = await transporter.sendMail({
       from: fromAddress,
       to: booking.guestEmail,
-      subject: `Booking Received – ${booking.bookingRef} | Discovery Samal Resort`,
+      subject: `Booking Received – ${booking.bookingRef} | ${resortName()}`,
       html,
     });
     return { success: true, messageId: info.messageId };
@@ -239,7 +242,7 @@ const sendGuestConfirmation = async (booking) => {
 
   const html = emailShell(`
     <h2 class="title">Reservation Confirmed</h2>
-    <p class="subtitle">Your stay at Discovery Samal Resort has been confirmed</p>
+    <p class="subtitle">Your stay at ${resortName()} has been confirmed</p>
 
     <div class="ref-box">
       <p class="ref-label">Confirmation Number</p>
@@ -258,7 +261,7 @@ const sendGuestConfirmation = async (booking) => {
     </div>
 
     <p style="text-align:center; color:#6B7C3E; font-size:14px; margin-top:20px;">
-      We look forward to welcoming you at Discovery Samal Resort!
+      We look forward to welcoming you at ${resortName()}!
     </p>
   `);
 
@@ -266,7 +269,7 @@ const sendGuestConfirmation = async (booking) => {
     const mailOptions = {
       from: fromAddress,
       to: booking.guestEmail,
-      subject: `Reservation Confirmed – ${booking.bookingRef} | Discovery Samal Resort`,
+      subject: `Reservation Confirmed – ${booking.bookingRef} | ${resortName()}`,
       html,
     };
 
@@ -350,7 +353,7 @@ const sendAutoReceipt = async (booking) => {
     </div>
 
     <p style="text-align:center; color:#6B7C3E; font-size:13px; margin-top:25px;">
-      We look forward to welcoming you at Discovery Samal Resort!
+      We look forward to welcoming you at ${resortName()}!
     </p>
   `);
 
@@ -358,7 +361,7 @@ const sendAutoReceipt = async (booking) => {
     const mailOptions = {
       from: fromAddress,
       to: booking.guestEmail,
-      subject: `Booking Receipt – ${booking.bookingRef} | Discovery Samal Resort`,
+      subject: `Booking Receipt – ${booking.bookingRef} | ${resortName()}`,
       html,
     };
 
@@ -417,7 +420,7 @@ const sendReceiptEmail = async (booking, pdfData) => {
     const info = await transporter.sendMail({
       from: fromAddress,
       to: booking.guestEmail,
-      subject: `Booking Receipt – ${booking.bookingRef} | Discovery Samal Resort`,
+      subject: `Booking Receipt – ${booking.bookingRef} | ${resortName()}`,
       html,
       attachments: [
         {
@@ -548,7 +551,7 @@ const sendPartialPaymentEmail = async (booking, continuationUrl) => {
     const info = await transporter.sendMail({
       from: fromAddress,
       to: booking.guestEmail,
-      subject: `First Payment Received – ${booking.bookingRef} | Discovery Samal Resort`,
+      subject: `First Payment Received – ${booking.bookingRef} | ${resortName()}`,
       html,
     });
     return { success: true, messageId: info.messageId };
@@ -573,7 +576,7 @@ const sendRemainingBalanceReminder = async (booking, continuationUrl) => {
     </div>
 
     <p>Dear ${booking.guestName},</p>
-    <p>This is a friendly reminder that your remaining balance for your upcoming stay at Discovery Samal Resort is now due. Please settle it at your earliest convenience to secure your reservation.</p>
+    <p>This is a friendly reminder that your remaining balance for your upcoming stay at ${resortName()} is now due. Please settle it at your earliest convenience to secure your reservation.</p>
 
     <div class="details">
       <div class="detail-row"><span class="detail-label">Room</span><span class="detail-value">${booking.room?.name || "N/A"}</span></div>
@@ -597,7 +600,7 @@ const sendRemainingBalanceReminder = async (booking, continuationUrl) => {
     const info = await transporter.sendMail({
       from: fromAddress,
       to: booking.guestEmail,
-      subject: `Balance Due – ${booking.bookingRef} | Discovery Samal Resort`,
+      subject: `Balance Due – ${booking.bookingRef} | ${resortName()}`,
       html,
     });
     return { success: true, messageId: info.messageId };
@@ -621,7 +624,7 @@ const sendPaymentCancelledEmail = async (booking, reason = null) => {
     </div>
 
     <p>Dear ${booking.guestName},</p>
-    <p>We regret to inform you that your reservation at Discovery Samal Resort has been cancelled.</p>
+    <p>We regret to inform you that your reservation at ${resortName()} has been cancelled.</p>
 
     ${
       reason
@@ -652,7 +655,7 @@ const sendPaymentCancelledEmail = async (booking, reason = null) => {
     const info = await transporter.sendMail({
       from: fromAddress,
       to: booking.guestEmail,
-      subject: `Booking Cancelled – ${booking.bookingRef} | Discovery Samal Resort`,
+      subject: `Booking Cancelled – ${booking.bookingRef} | ${resortName()}`,
       html,
     });
     return { success: true, messageId: info.messageId };

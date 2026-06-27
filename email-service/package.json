@@ -1,7 +1,7 @@
 {
-  "name": "discoverysamal-resort-email-service",
+  "name": "resort-template-email-service",
   "version": "1.0.0",
-  "description": "Vercel-hosted email relay service for Discovery Samal Resort",
+  "description": "Vercel-hosted email relay service for your resort",
   "main": "api/send.js",
   "scripts": {
     "dev": "node dev-server.js"

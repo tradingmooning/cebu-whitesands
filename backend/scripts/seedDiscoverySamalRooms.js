@@ -1,5 +1,5 @@
 /**
- * Seed script — Discovery Samal Resort rooms & villas
+ * Seed script — Resort Template rooms & villas
  * Usage: node backend/scripts/seedDiscoverySamalRooms.js
  *
  * Uses CDN images directly (no Cloudinary upload needed).

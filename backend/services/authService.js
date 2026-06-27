@@ -116,7 +116,7 @@ const authService = {
   },
 
   async seed({
-    email = "reservations@discoverysamal-resort.org",
+    email = "reservations@example.com",
     password = "Passw0rd!",
     name = "Resort Owner",
   } = {}) {
@@ -138,7 +138,7 @@ const authService = {
     if (!existingPayment) {
       await PaymentDetails.create({
         bankName: "BDO",
-        accountName: "Discovery Samal Resort",
+        accountName: process.env.PROJECT_NAME || "Your Resort",
         accountNumber: "1234567890",
         instructions:
           "Please upload a clear screenshot of the payment receipt.",

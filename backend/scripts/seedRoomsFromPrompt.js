@@ -200,7 +200,7 @@ function buildDescription(room) {
   return [
     `Sleeps up to ${room.maxGuests} guest${room.maxGuests > 1 ? "s" : ""}.`,
     `Bedding: ${room.beds}.`,
-    "Designed for refined comfort with thoughtful in-room amenities and the signature service of Discovery Samal Resort.",
+    "Designed for refined comfort with thoughtful in-room amenities and the signature service of this resort.",
   ].join(" ");
 }
 

@@ -1,5 +1,5 @@
 /**
- * Seeds rooms from the project root `rooms.json` (Discovery Samal Resort data).
+ * Seeds rooms from the project root `rooms.json` (resort template data).
  * Maps the scraped schema (bestRate/publishedRate, goodFor/maxOccupancy,
  * highlights, "Beach Villas"/"Pool Villas"/etc.) into the backend Room model.
  *

@@ -1,7 +1,6 @@
 /**
- * Discovery Samal Resort — Rooms & Villas Data
- * Source: https://www.discoverysamal.com/villa
- * 153 lush villas and suites total across 12 room types
+ * Resort Template — Rooms & Villas Seed Data
+ * Replace this data with your resort's actual room inventory.
  */
 
 const LIRP = "https://lirp.cdn-website.com/b434b26a/dms3rep/multi/opt";
@@ -15,10 +14,10 @@ const rooms = [
     name: "Junior Suite",
     slug: "junior-suite",
     category: "Standard",
-    tagline: "Your gateway to Discovery Samal",
+    tagline: "Your gateway to the resort",
     location: "Hotel Towers — Heart of the Resort",
     description:
-      "Begin your Discovery Samal journey with a peek of the panoramic vistas of the whole estate in your own suite. Our Junior Suite offers traveler essentials and more.",
+      "Begin your stay with stunning views of the entire estate in your own suite. Our Junior Suite offers traveler essentials and more.",
     intro:
       "Located in the middle level and right in the heart of the resort, this is where modern interiors meet comfort and convenience. These suites showcase contemporary designs with progressive furnishings and state-of-the-art amenities to provide guests with the ultimate comfort and relaxation. Being in the two hotel towers, they provide an elevated view of the entire resort — a unique perspective of the beautiful structures and the tropical paradise all while relaxing in the comfort of your room.",
     bedType: "Double beds",
@@ -95,7 +94,7 @@ const rooms = [
     tagline: "Where nature meets luxury",
     location: "Hotel Towers",
     description:
-      "Reconnect with your inner wanderer through all the best of what Discovery Samal has to offer. Stays at our One-Bedroom Suites bring unforgettable experiences where nature meets luxury.",
+      "Reconnect with your inner wanderer and experience the best the resort has to offer. Stays at our One-Bedroom Suites bring unforgettable experiences where nature meets luxury.",
     intro:
       "Located in the two hotel towers, the One-Bedroom Suite features a comfortable king-sized bed, calling you to relax and unwind in its cozy embrace, and will make you linger more. This well-appointed suite highlights modern amenities to ensure maximum comfort and convenience for our guests, with a separate living and dining room so you can move and travel with ease. Right outside the hotel towers is a massive infinity pool that seamlessly flows with the view of the Davao Gulf.",
     bedType: "King-sized bed",
@@ -168,10 +167,10 @@ const rooms = [
     name: "Executive Suite Beach",
     slug: "executive-suite-beach",
     category: "Premium",
-    tagline: "Island getaway at the Garden City of Samal",
+    tagline: "Island getaway at our premier resort",
     location: "Beneath the Villas — Beach Wing",
     description:
-      "Reconnect with the traveler in you and wander in an island getaway at the Island Garden City of Samal. Discovery Samal's Executive Suites bring marvelous experiences for all the things you yearn for.",
+      "Reconnect with the traveler in you and wander in a premium island getaway. Our Executive Suites bring marvelous experiences for all the things you yearn for.",
     intro:
       "Spread beneath the villas, the Executive Suites create an undisturbed space, offering guests a quiet and serene expanse away from the common areas, allowing for a truly private and exclusive experience. The spacious rooms are designed to provide guests with maximum comfort and relaxation, with modern amenities, plush bedding, smart TV in all spaces, and the luxury of space for the living, bed, and bathroom. The private terraces in our Executive Suites offer the perfect spot for spending quality time with family and friends in a cozy and intimate setting.",
     bedType: "King-sized bed",
@@ -331,7 +330,7 @@ const rooms = [
     description:
       "With its private yard and private pool, this elegant villa is perfect for those looking for a tranquil escape.",
     intro:
-      "Step into the villa of your dreams at Discovery Samal's luxurious One-Bedroom Villa. With its private yard, private pool, and stunning view of the villa amenity and Davao Gulf, this elegant and spacious villa is perfect for honeymooners looking for a romantic escape in a serene and tranquil environment, or solo travelers who are on a hunt to that splendid lifestyle. The bedroom features a plush king-sized bed with superior linens and the softest pillows. This villa is equipped with a smart TV, a mini-bar, and a full-set living room to enjoy a cup of coffee or tea as you savor the sweet villa life. The private pool is just a few steps away from your bedroom.",
+      "Step into the villa of your dreams at our luxurious One-Bedroom Villa. With its private yard, private pool, and stunning views, this elegant and spacious villa is perfect for honeymooners looking for a romantic escape in a serene and tranquil environment, or solo travelers who are on a hunt for that splendid lifestyle. The bedroom features a plush king-sized bed with superior linens and the softest pillows. This villa is equipped with a smart TV, a mini-bar, and a full-set living room to enjoy a cup of coffee or tea as you savor the sweet villa life. The private pool is just a few steps away from your bedroom.",
     bedType: "King-sized bed",
     minGuests: 1,
     maxGuests: 3,
@@ -420,7 +419,7 @@ const rooms = [
     capacity: 6,
     occupancy: 6,
     pricePerNight: 120000,
-    note: "Price on request. Contact reservations@discoverysamal.com for exclusive rates.",
+    note: "Price on request. Contact reservations@example.com for exclusive rates.",
     features: [
       "Air Conditioning",
       "Free WiFi",
@@ -467,7 +466,7 @@ const rooms = [
     capacity: 8,
     occupancy: 8,
     pricePerNight: 180000,
-    note: "Price on request. Contact reservations@discoverysamal.com for exclusive rates.",
+    note: "Price on request. Contact reservations@example.com for exclusive rates.",
     features: [
       "Air Conditioning",
       "Free WiFi",

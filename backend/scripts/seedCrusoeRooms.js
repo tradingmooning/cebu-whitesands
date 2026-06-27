@@ -1,5 +1,5 @@
 /**
- * Seed script: Discovery Samal Resort Rooms
+ * Seed script: Resort Template Rooms
  *
  * Reads local images from frontend/src/assets/rooms/<Room Name>/
  * Uploads each image to Cloudinary, then upserts the room in MongoDB.
@@ -133,7 +133,7 @@ const ROOMS = [
     slug: "luxury-pool-villas",
     category: "Luxury",
     description:
-      "An expansive luxury pool villa with a private infinity pool, open-plan living, vaulted ceilings, and lush tropical surroundings for up to 20 guests. The ultimate group getaway at Discovery Samal Resort.",
+      "An expansive luxury pool villa with a private infinity pool, open-plan living, vaulted ceilings, and lush tropical surroundings for up to 20 guests. The ultimate group getaway at this resort.",
     maxGuests: 20,
     occupancy: 20,
     pricePerNight: 20000,
@@ -146,7 +146,7 @@ const ROOMS = [
     slug: "luxury-couples",
     category: "Luxury",
     description:
-      "Designed for intimate grand celebrations, the Luxury Couples villa features multiple bedrooms, a private pool, outdoor dining, and butler service for up to 15 guests — the crown jewel of Discovery Samal Resort.",
+      "Designed for intimate grand celebrations, the Luxury Couples villa features multiple bedrooms, a private pool, outdoor dining, and butler service for up to 15 guests — the crown jewel of this resort.",
     maxGuests: 15,
     occupancy: 15,
     pricePerNight: 25000,
@@ -180,11 +180,11 @@ async function uploadRoomImages(folderName, slug) {
   const urls = [];
   for (let i = 0; i < files.length; i++) {
     const filePath = path.join(folderPath, files[i]);
-    const publicId = `discoverysamal-resort/rooms/${slug}/${slug}-${i + 1}`;
+    const publicId = `resort-template/rooms/${slug}/${slug}-${i + 1}`;
     try {
       console.log(`  📤 Uploading ${files[i]} → ${publicId}`);
       const result = await cloudinary.uploader.upload(filePath, {
-        folder: "discoverysamal-resort/rooms",
+        folder: "resort-template/rooms",
         public_id: `${slug}/${slug}-${i + 1}`,
         resource_type: "image",
         overwrite: true,

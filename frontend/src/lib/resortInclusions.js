@@ -10,13 +10,11 @@
  * so the backend seeder and frontend share the same vocabulary).
  */
 
-export const RESORT_ADDRESS =
-  "Samal Island, Island Garden City of Samal, Davao del Norte, Philippines";
+export const RESORT_ADDRESS = "Your Resort Address, City, Country";
 
-export const RESORT_ADDRESS_SHORT = "Samal Island, Davao del Norte";
+export const RESORT_ADDRESS_SHORT = "Your Resort Location";
 
-export const RESORT_MAP_QUERY =
-  "Samal+Island+Island+Garden+City+of+Samal+Davao+del+Norte";
+export const RESORT_MAP_QUERY = "Your+Resort+Address+City+Country";
 
 export const RESORT_MAP_EMBED_URL = `https://www.google.com/maps?q=${RESORT_MAP_QUERY}&output=embed`;
 
@@ -28,7 +26,7 @@ export const RESORT_MAP_DIRECTIONS_URL = `https://www.google.com/maps?q=${RESORT
  */
 export const GLOBAL_RESORT_INCLUSIONS = [
   "Breakfast (Included)",
-  "Roundtrip Davao Airport transfer",
+  "Roundtrip Airport transfer",
   "Unlimited bottomless drinks during meals",
   "Exclusive access to swimming pool",
   "Beachfront access",
@@ -58,7 +56,7 @@ export const GLOBAL_RESORT_INCLUSIONS_DETAILED = [
     key: "transfer",
     icon: "Plane",
     title: "Airport Transfers",
-    description: "Roundtrip transfers from Francisco Bangoy International Airport, Davao City.",
+    description: "Roundtrip transfers from the nearest international airport.",
   },
   {
     key: "pool",
@@ -70,7 +68,7 @@ export const GLOBAL_RESORT_INCLUSIONS_DETAILED = [
     key: "beach",
     icon: "Sun",
     title: "Beachfront Access",
-    description: "Direct beachfront access on Samal Island.",
+    description: "Direct beachfront access.",
   },
   {
     key: "pavilion",

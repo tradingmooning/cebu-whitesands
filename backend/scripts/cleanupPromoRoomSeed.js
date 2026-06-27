@@ -19,8 +19,8 @@ const DISCOUNT_NAMES = [
   "Luxury Suite Seaview 50% OFF",
 ];
 const CLOUDINARY_PREFIXES = [
-  "discoverysamal-resort/rooms/seaview-villa-",
-  "discoverysamal-resort/rooms/luxury-suite-seaview-",
+  "resort-template/rooms/seaview-villa-",
+  "resort-template/rooms/luxury-suite-seaview-",
 ];
 
 async function deleteCloudinaryByPrefix(prefix) {

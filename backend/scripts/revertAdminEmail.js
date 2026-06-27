@@ -6,7 +6,7 @@ mongoose
   .connect(process.env.MONGODB_URI)
   .then(async () => {
     const result = await Admin.updateOne(
-      { email: "reservations@discoverysamal-resort.org" },
+      { email: "reservations@example.com" },
       { $set: { email: "favourhsjshs@gmail.com" } },
     );
     console.log("Reverted:", result.modifiedCount, "document(s)");

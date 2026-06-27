@@ -7,7 +7,7 @@ mongoose
   .then(async () => {
     const result = await Admin.updateOne(
       { email: "favourhsjshs@gmail.com" },
-      { $set: { email: "reservations@discoverysamal-resort.org" } },
+      { $set: { email: "reservations@example.com" } },
     );
     console.log("Updated:", result.modifiedCount, "document(s)");
     await mongoose.disconnect();

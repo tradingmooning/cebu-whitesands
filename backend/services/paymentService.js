@@ -89,7 +89,7 @@ const paymentService = {
     if (!details) {
       details = await PaymentDetails.create({
         bankName: "Update in admin dashboard",
-        accountName: "Discovery Samal Resort",
+        accountName: process.env.PROJECT_NAME || "Your Resort",
         accountNumber: "0000000000",
         instructions: "",
         gcashName: "",

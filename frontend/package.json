@@ -1,7 +1,7 @@
 {
-  "name": "discoverysamal-resort-frontend",
+  "name": "resort-template-frontend",
   "version": "1.0.0",
-  "description": "Frontend app for Discovery Samal Resort",
+  "description": "Frontend app for your resort booking system",
   "main": "index.js",
   "scripts": {
     "dev": "vite",

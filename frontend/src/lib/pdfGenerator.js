@@ -21,7 +21,7 @@ export async function generateReceiptPDF(element) {
 
 export async function downloadReceiptPDF(element, bookingRef) {
   const pdf = await generateReceiptPDF(element);
-  pdf.save(`DiscoverySamalResort_Booking_${bookingRef}.pdf`);
+  pdf.save(`Resort_Booking_${bookingRef}.pdf`);
 }
 
 export async function pdfToBase64(element) {

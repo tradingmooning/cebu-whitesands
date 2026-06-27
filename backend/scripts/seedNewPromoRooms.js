@@ -79,7 +79,7 @@ function getImageFiles(dirPath) {
 async function uploadLocalImage(filePath, slug, index) {
   const publicId = `${slug}-${index + 1}`;
   const result = await cloudinary.uploader.upload(filePath, {
-    folder: "discoverysamal-resort/rooms",
+    folder: "resort-template/rooms",
     public_id: publicId,
     overwrite: true,
     resource_type: "image",

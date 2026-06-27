@@ -36,7 +36,7 @@ const roomService = {
       for (const file of files) {
         const result = await uploadToCloudinary(
           file.buffer,
-          "discoverysamal-resort/rooms",
+          "resort-template/rooms",
         );
         images.push(result.secure_url);
       }
@@ -101,7 +101,7 @@ const roomService = {
       for (const file of files) {
         const result = await uploadToCloudinary(
           file.buffer,
-          "discoverysamal-resort/rooms",
+          "resort-template/rooms",
         );
         newImages.push(result.secure_url);
       }

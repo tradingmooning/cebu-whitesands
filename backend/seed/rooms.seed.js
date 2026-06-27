@@ -38,7 +38,7 @@ async function uploadFromUrl(url, publicId) {
           const buffer = Buffer.concat(chunks);
           const stream = cloudinary.uploader.upload_stream(
             {
-              folder: "discoverysamal-resort/rooms",
+              folder: "resort-template/rooms",
               public_id: publicId,
               resource_type: "image",
             },
@@ -279,7 +279,7 @@ const roomsData = [
     slug: "private-villa",
     category: "Villa",
     description:
-      "The crown jewel of Discovery Samal Resort. A massive 130 sqm private villa that accommodates up to 10 guests. Featuring a full private living space, multiple rooms, and exclusive beach access. Perfect for special occasions and luxury group getaways.",
+      "The crown jewel of the resort. A massive 130 sqm private villa that accommodates up to 10 guests. Featuring a full private living space, multiple rooms, and exclusive beach access. Perfect for special occasions and luxury group getaways.",
     occupancy: 10,
     size: "130 sqm",
     bedType: "Multiple beds — villa layout",

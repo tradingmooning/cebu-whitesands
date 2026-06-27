@@ -29,15 +29,18 @@ function generateReceipt(booking) {
     const pageWidth = doc.page.width - 100; // 50 margin each side
 
     // ── Header ──
-    doc.fontSize(24).fillColor(forest).text("Discovery Samal Resort", 50, 50, {
-      align: "center",
-      characterSpacing: 4,
-    });
+    doc
+      .fontSize(24)
+      .fillColor(forest)
+      .text(process.env.PROJECT_NAME || "Your Resort", 50, 50, {
+        align: "center",
+        characterSpacing: 4,
+      });
 
     doc
       .fontSize(9)
       .fillColor(olive)
-      .text("Your ultimate beachside playground", {
+      .text(process.env.PROJECT_TAGLINE || "Your premier resort destination", {
         align: "center",
         characterSpacing: 2,
       });
@@ -206,7 +209,7 @@ function generateReceipt(booking) {
     const resortEmail =
       optionalEnv(process.env.RESORT_EMAIL) ||
       process.env.SMTP_USER ||
-      "reservations@discoverysamal-resort.org";
+      "reservations@example.com";
     const facebookPageUrl =
       optionalEnv(process.env.FACEBOOK_PAGE_URL) || "facebook.com";
 
@@ -246,7 +249,7 @@ function generateReceipt(booking) {
       .fontSize(8)
       .fillColor(sand)
       .text(
-        `© ${new Date().getFullYear()} Discovery Samal Resort. All rights reserved.`,
+        `© ${new Date().getFullYear()} ${process.env.PROJECT_NAME || "Your Resort"}. All rights reserved.`,
         { align: "center" },
       );
 

@@ -1,7 +1,7 @@
 {
-  "name": "discoverysamal-resort-backend",
+  "name": "resort-template-backend",
   "version": "1.0.0",
-  "description": "Backend API for Discovery Samal Resort",
+  "description": "Backend API for your resort booking system",
   "main": "index.js",
   "scripts": {
     "dev": "nodemon server.js",
