@@ -82,7 +82,7 @@ function Hero() {
   const opacity = useTransform(scrollY, [0, 500], [1, 0.35]);
 
   return (
-    <section className="relative h-svh min-h-170 w-full overflow-hidden bg-ocean">
+    <section className="relative h-svh min-h-170 w-full overflow-hidden bg-[#212121]">
       <motion.div style={{ y }} className="absolute inset-0">
         <img
           src={CONTACT_HERO_IMAGE}
@@ -101,9 +101,9 @@ function Hero() {
         className="absolute left-1/2 top-28 z-10 -translate-x-1/2"
       >
         <div className="flex items-center gap-3 border border-teal/50 bg-ocean/35 px-5 py-2 text-[10px] uppercase tracking-[0.4em] text-ivory backdrop-blur-md">
-          <Star className="h-3 w-3 fill-teal text-teal" />
+          <Star className="h-3 w-3 fill-teal text-[#651D4C]" />
           <span>24/7 Concierge · Discovery Samal</span>
-          <Star className="h-3 w-3 fill-teal text-teal" />
+          <Star className="h-3 w-3 fill-teal text-[#651D4C]" />
         </div>
       </motion.div>
 
@@ -113,9 +113,9 @@ function Hero() {
       >
         <motion.p
           {...fadeIn(0.5)}
-          className="mb-6 flex items-center gap-4 text-[11px] font-semibold uppercase tracking-[0.5em] text-teal"
+          className="mb-6 flex items-center gap-4 text-[11px] font-semibold uppercase tracking-[0.5em] text-[#651D4C]"
         >
-          <span className="h-px w-12 bg-teal/60" />
+          <span className="h-px w-12 bg-[#651D4C]/60" />
           {CONTACT_HERO.preTitle}
         </motion.p>
 
@@ -127,10 +127,10 @@ function Hero() {
             duration: 1.1,
             ease: [0.22, 0.61, 0.36, 1],
           }}
-          className="max-w-5xl font-serif text-5xl leading-[1.02] text-ivory sm:text-6xl lg:text-7xl xl:text-[88px]"
+          className="max-w-5xl font-sans text-5xl leading-[1.02] text-ivory sm:text-6xl lg:text-7xl xl:text-[88px]"
         >
           {CONTACT_HERO.title}{" "}
-          <span className="italic text-teal">
+          <span className="italic text-[#651D4C]">
             {CONTACT_HERO.titleAccent}
           </span>
           .
@@ -149,7 +149,7 @@ function Hero() {
         >
           <a
             href="#contact-form"
-            className="group inline-flex items-center gap-3 bg-teal px-9 py-4 text-[11px] font-semibold uppercase tracking-[0.32em] text-ocean transition-all hover:bg-[#006d6d] hover:text-ivory hover:shadow-[0_20px_60px_-15px_rgba(212,133,0,0.6)]"
+            className="group inline-flex items-center gap-3 bg-[#651D4C] px-9 py-4 text-[11px] font-semibold uppercase tracking-[0.32em] text-[#333333] transition-all hover:bg-[#006d6d] hover:text-ivory hover:shadow-[0_20px_60px_-15px_rgba(212,133,0,0.6)]"
           >
             Contact Concierge
             <ArrowDown className="h-3.5 w-3.5 transition-transform group-hover:translate-y-0.5" />
@@ -170,20 +170,20 @@ function Hero() {
         >
           <a
             href={`tel:${(brand.phone || "").replace(/\s/g, "")}`}
-            className="inline-flex items-center gap-2.5 border border-ivory/15 bg-ocean/40 px-4 py-2.5 text-[12px] text-ivory/85 backdrop-blur-md transition hover:border-teal/60 hover:text-teal"
+            className="inline-flex items-center gap-2.5 border border-ivory/15 bg-ocean/40 px-4 py-2.5 text-[12px] text-ivory/85 backdrop-blur-md transition hover:border-teal/60 hover:text-[#651D4C]"
           >
-            <Phone className="h-3.5 w-3.5 text-teal" />
+            <Phone className="h-3.5 w-3.5 text-[#651D4C]" />
             {brand.phone}
           </a>
           <a
             href={`mailto:${brand.email}`}
-            className="inline-flex items-center gap-2.5 border border-ivory/15 bg-ocean/40 px-4 py-2.5 text-[12px] text-ivory/85 backdrop-blur-md transition hover:border-teal/60 hover:text-teal"
+            className="inline-flex items-center gap-2.5 border border-ivory/15 bg-ocean/40 px-4 py-2.5 text-[12px] text-ivory/85 backdrop-blur-md transition hover:border-teal/60 hover:text-[#651D4C]"
           >
-            <Mail className="h-3.5 w-3.5 text-teal" />
+            <Mail className="h-3.5 w-3.5 text-[#651D4C]" />
             {brand.email}
           </a>
           <span className="inline-flex items-center gap-2.5 border border-ivory/15 bg-ocean/40 px-4 py-2.5 text-[12px] text-ivory/85 backdrop-blur-md">
-            <MapPin className="h-3.5 w-3.5 text-teal" />
+            <MapPin className="h-3.5 w-3.5 text-[#651D4C]" />
             Samal Island, Davao del Norte
           </span>
         </motion.div>
@@ -213,22 +213,22 @@ function Hero() {
 /* ================================================================== */
 function Welcome() {
   return (
-    <section className="relative bg-ivory py-24 lg:py-36">
+    <section className="relative bg-white py-24 lg:py-36">
       <div className="mx-auto max-w-4xl px-6 text-center lg:px-12">
         <motion.p
           {...fadeUp()}
           className="mb-6 flex items-center justify-center gap-3 text-[11px] font-semibold uppercase tracking-[0.4em] text-[#006d6d]"
         >
-          <span className="h-px w-10 bg-teal" />
+          <span className="h-px w-10 bg-[#651D4C]" />
           {WELCOME.preTitle}
-          <span className="h-px w-10 bg-teal" />
+          <span className="h-px w-10 bg-[#651D4C]" />
         </motion.p>
         <motion.h2
           {...fadeUp(0.1)}
-          className="font-serif text-4xl leading-tight text-charcoal lg:text-5xl"
+          className="font-sans text-4xl leading-tight text-charcoal lg:text-5xl"
         >
           {WELCOME.title}{" "}
-          <span className="italic text-teal">{WELCOME.titleAccent}</span>.
+          <span className="italic text-[#651D4C]">{WELCOME.titleAccent}</span>.
         </motion.h2>
         <motion.p
           {...fadeUp(0.2)}
@@ -246,7 +246,7 @@ function Welcome() {
 /* ================================================================== */
 function ChannelCards() {
   return (
-    <section className="relative bg-ivory pb-24 lg:pb-32">
+    <section className="relative bg-white pb-24 lg:pb-32">
       <div className="mx-auto max-w-7xl px-6 lg:px-12">
         <motion.div
           {...fadeUp()}
@@ -254,12 +254,12 @@ function ChannelCards() {
         >
           <div className="max-w-2xl">
             <p className="mb-5 flex items-center gap-3 text-[11px] font-semibold uppercase tracking-[0.4em] text-[#006d6d]">
-              <span className="h-px w-10 bg-teal" />
+              <span className="h-px w-10 bg-[#651D4C]" />
               Direct Channels
             </p>
-            <h2 className="font-serif text-4xl leading-tight text-charcoal sm:text-5xl">
+            <h2 className="font-sans text-4xl leading-tight text-charcoal sm:text-5xl">
               Reach the right team,{" "}
-              <span className="italic text-teal">straight away</span>.
+              <span className="italic text-[#651D4C]">straight away</span>.
             </h2>
           </div>
         </motion.div>
@@ -281,10 +281,10 @@ function ChannelCards() {
                   }}
                 />
                 <div className="relative">
-                  <div className="flex h-12 w-12 items-center justify-center border border-teal/40 bg-teal/10 transition-colors group-hover:bg-teal group-hover:text-ocean">
-                    <Icon className="h-5 w-5 text-[#006d6d] transition-colors group-hover:text-ocean" />
+                  <div className="flex h-12 w-12 items-center justify-center border border-teal/40 bg-[#651D4C]/10 transition-colors group-hover:bg-[#651D4C] group-hover:text-[#333333]">
+                    <Icon className="h-5 w-5 text-[#006d6d] transition-colors group-hover:text-[#333333]" />
                   </div>
-                  <h3 className="mt-7 font-serif text-2xl text-charcoal lg:text-[28px]">
+                  <h3 className="mt-7 font-sans text-2xl text-charcoal lg:text-[28px]">
                     {c.title}
                   </h3>
                   <p className="mt-3 text-sm leading-relaxed text-charcoal/65">
@@ -302,7 +302,7 @@ function ChannelCards() {
                         </span>
                         <a
                           href={it.href}
-                          className="break-all text-charcoal transition-colors hover:text-teal"
+                          className="break-all text-charcoal transition-colors hover:text-[#651D4C]"
                         >
                           {it.value}
                         </a>
@@ -353,7 +353,7 @@ function FloatingInput({
         placeholder={label}
       />
       {Icon && (
-        <Icon className="pointer-events-none absolute left-4 top-5 h-4 w-4 text-teal/70" />
+        <Icon className="pointer-events-none absolute left-4 top-5 h-4 w-4 text-[#651D4C]/70" />
       )}
       <label
         htmlFor={name}
@@ -361,12 +361,12 @@ function FloatingInput({
           Icon ? "left-12" : "left-5"
         } ${
           hasValue
-            ? "top-2 scale-[0.85] text-teal"
-            : "top-5 text-ivory/55 peer-focus:top-2 peer-focus:scale-[0.85] peer-focus:text-teal"
+            ? "top-2 scale-[0.85] text-[#651D4C]"
+            : "top-5 text-ivory/55 peer-focus:top-2 peer-focus:scale-[0.85] peer-focus:text-[#651D4C]"
         }`}
       >
         {label}
-        {required && <span className="ml-1 text-teal">*</span>}
+        {required && <span className="ml-1 text-[#651D4C]">*</span>}
       </label>
     </div>
   );
@@ -393,26 +393,26 @@ function FloatingSelect({
           Icon ? "pl-12" : "pl-5"
         } pr-12 pt-7 pb-2 text-sm text-ivory backdrop-blur-md outline-none transition-all focus:border-teal focus:bg-ivory/8`}
       >
-        <option value="" className="bg-ocean">
+        <option value="" className="bg-[#212121]">
           Selectâ€¦
         </option>
         {options.map((o) => (
-          <option key={o} value={o} className="bg-ocean">
+          <option key={o} value={o} className="bg-[#212121]">
             {o}
           </option>
         ))}
       </select>
       {Icon && (
-        <Icon className="pointer-events-none absolute left-4 top-1/2 h-4 w-4 -translate-y-1/2 text-teal/70" />
+        <Icon className="pointer-events-none absolute left-4 top-1/2 h-4 w-4 -translate-y-1/2 text-[#651D4C]/70" />
       )}
       <label
         htmlFor={name}
         className={`pointer-events-none absolute top-2 origin-top-left scale-[0.85] text-[11px] font-semibold uppercase tracking-[0.25em] ${
           Icon ? "left-12" : "left-5"
-        } ${value ? "text-teal" : "text-ivory/55"}`}
+        } ${value ? "text-[#651D4C]" : "text-ivory/55"}`}
       >
         {label}
-        {required && <span className="ml-1 text-teal">*</span>}
+        {required && <span className="ml-1 text-[#651D4C]">*</span>}
       </label>
       <ChevronDown className="pointer-events-none absolute right-5 top-1/2 h-4 w-4 -translate-y-1/2 text-ivory/50" />
     </div>
@@ -463,7 +463,7 @@ function ContactForm() {
   return (
     <section
       id="contact-form"
-      className="relative overflow-hidden bg-ocean py-24 lg:py-32"
+      className="relative overflow-hidden bg-[#212121] py-24 lg:py-32"
     >
       <div
         className="pointer-events-none absolute -left-40 top-0 h-130 w-130 rounded-full opacity-30"
@@ -482,14 +482,14 @@ function ContactForm() {
 
       <div className="relative mx-auto max-w-5xl px-6 lg:px-12">
         <motion.div {...fadeUp()} className="mb-14 text-center">
-          <p className="mb-5 inline-flex items-center justify-center gap-3 text-[11px] font-semibold uppercase tracking-[0.4em] text-teal">
-            <span className="h-px w-10 bg-teal" />
+          <p className="mb-5 inline-flex items-center justify-center gap-3 text-[11px] font-semibold uppercase tracking-[0.4em] text-[#651D4C]">
+            <span className="h-px w-10 bg-[#651D4C]" />
             Concierge Inquiry
-            <span className="h-px w-10 bg-teal" />
+            <span className="h-px w-10 bg-[#651D4C]" />
           </p>
-          <h2 className="font-serif text-4xl leading-tight text-ivory sm:text-5xl lg:text-[56px]">
+          <h2 className="font-sans text-4xl leading-tight text-ivory sm:text-5xl lg:text-[56px]">
             Tell us how we can{" "}
-            <span className="italic text-teal">be of service</span>.
+            <span className="italic text-[#651D4C]">be of service</span>.
           </h2>
           <p className="mx-auto mt-6 max-w-xl text-sm leading-relaxed text-ivory/65">
             Share your travel details and our reservations team will craft a
@@ -613,7 +613,7 @@ function ContactForm() {
             <button
               type="submit"
               disabled={status === "sending"}
-              className="group inline-flex items-center gap-3 bg-teal px-9 py-4 text-[11px] font-semibold uppercase tracking-[0.32em] text-ocean transition-all hover:bg-[#006d6d] hover:text-ivory hover:shadow-[0_20px_60px_-15px_rgba(212,133,0,0.7)] disabled:opacity-60"
+              className="group inline-flex items-center gap-3 bg-[#651D4C] px-9 py-4 text-[11px] font-semibold uppercase tracking-[0.32em] text-[#333333] transition-all hover:bg-[#006d6d] hover:text-ivory hover:shadow-[0_20px_60px_-15px_rgba(212,133,0,0.7)] disabled:opacity-60"
             >
               {status === "sending" ? (
                 <>
@@ -634,7 +634,7 @@ function ContactForm() {
             </button>
             <a
               href={`tel:${(brand.phone || "").replace(/\s/g, "")}`}
-              className="group inline-flex items-center gap-3 border border-ivory/30 px-9 py-4 text-[11px] font-semibold uppercase tracking-[0.32em] text-ivory transition-all hover:border-teal hover:text-teal"
+              className="group inline-flex items-center gap-3 border border-ivory/30 px-9 py-4 text-[11px] font-semibold uppercase tracking-[0.32em] text-ivory transition-all hover:border-teal hover:text-[#651D4C]"
             >
               <Phone className="h-4 w-4" />
               Speak With Concierge
@@ -647,7 +647,7 @@ function ContactForm() {
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0 }}
-                className="mt-6 flex items-center gap-3 border border-teal/40 bg-teal/10 px-5 py-4 text-[13px] text-teal"
+                className="mt-6 flex items-center gap-3 border border-teal/40 bg-[#651D4C]/10 px-5 py-4 text-[13px] text-[#651D4C]"
               >
                 <Sparkles className="h-4 w-4" />
                 Thank you — a concierge will be in touch within one business
@@ -667,16 +667,16 @@ function ContactForm() {
 function LocationBand() {
   const loc = LOCATIONS[0];
   return (
-    <section className="relative bg-ivory py-24 lg:py-32">
+    <section className="relative bg-white py-24 lg:py-32">
       <div className="mx-auto max-w-7xl px-6 lg:px-12">
         <motion.div {...fadeUp()} className="mb-14 max-w-2xl">
           <p className="mb-5 flex items-center gap-3 text-[11px] font-semibold uppercase tracking-[0.4em] text-[#006d6d]">
-            <span className="h-px w-10 bg-teal" />
+            <span className="h-px w-10 bg-[#651D4C]" />
             Our Location
           </p>
-          <h2 className="font-serif text-4xl leading-tight text-charcoal sm:text-5xl">
+          <h2 className="font-sans text-4xl leading-tight text-charcoal sm:text-5xl">
             Steps from{" "}
-            <span className="italic text-teal">Samal Island</span>.
+            <span className="italic text-[#651D4C]">Samal Island</span>.
           </h2>
         </motion.div>
 
@@ -684,7 +684,7 @@ function LocationBand() {
           {/* Map */}
           <motion.div
             {...fadeUp()}
-            className="relative overflow-hidden border border-charcoal/10 bg-ocean shadow-[0_30px_80px_-30px_rgba(90,35,14,0.35)] lg:col-span-8"
+            className="relative overflow-hidden border border-charcoal/10 bg-[#212121] shadow-[0_30px_80px_-30px_rgba(90,35,14,0.35)] lg:col-span-8"
           >
             <div className="relative aspect-4/3 sm:aspect-16/10 lg:aspect-4/3">
               <iframe
@@ -700,9 +700,9 @@ function LocationBand() {
             {/* Floating address card */}
             <div className="absolute bottom-6 left-6 right-6 max-w-md border border-ivory/20 bg-ocean/85 p-6 backdrop-blur-xl lg:bottom-8 lg:left-8">
               <div className="flex items-start gap-3">
-                <MapPin className="mt-1 h-4 w-4 flex-none text-teal" />
+                <MapPin className="mt-1 h-4 w-4 flex-none text-[#651D4C]" />
                 <div>
-                  <p className="text-[10px] font-semibold uppercase tracking-[0.35em] text-teal">
+                  <p className="text-[10px] font-semibold uppercase tracking-[0.35em] text-[#651D4C]">
                     {loc.name}
                   </p>
                   <p className="mt-2 text-sm leading-relaxed text-ivory/85">
@@ -712,7 +712,7 @@ function LocationBand() {
                     href={loc.mapLink}
                     target="_blank"
                     rel="noreferrer"
-                    className="mt-4 inline-flex items-center gap-2 text-[10px] font-semibold uppercase tracking-[0.32em] text-teal transition hover:text-ivory"
+                    className="mt-4 inline-flex items-center gap-2 text-[10px] font-semibold uppercase tracking-[0.32em] text-[#651D4C] transition hover:text-ivory"
                   >
                     Open in Maps
                     <ArrowUpRight className="h-3 w-3" />
@@ -730,7 +730,7 @@ function LocationBand() {
             <p className="text-[10px] font-semibold uppercase tracking-[0.4em] text-[#006d6d]">
               Nearby Highlights
             </p>
-            <h3 className="mt-3 font-serif text-2xl text-charcoal lg:text-3xl">
+            <h3 className="mt-3 font-sans text-2xl text-charcoal lg:text-3xl">
               {loc.name}
             </h3>
 
@@ -741,7 +741,7 @@ function LocationBand() {
                   {...fadeUp(0.05 * i)}
                   className="flex items-start gap-3 text-sm leading-relaxed text-charcoal/80"
                 >
-                  <span className="mt-1.5 inline-flex h-6 w-6 flex-none items-center justify-center border border-teal/40 bg-teal/10 text-[10px] font-semibold text-[#006d6d]">
+                  <span className="mt-1.5 inline-flex h-6 w-6 flex-none items-center justify-center border border-teal/40 bg-[#651D4C]/10 text-[10px] font-semibold text-[#006d6d]">
                     {String(i + 1).padStart(2, "0")}
                   </span>
                   <span className="pt-0.5">{lm}</span>
@@ -752,16 +752,16 @@ function LocationBand() {
             <div className="mt-8 grid grid-cols-1 gap-2 border-t border-charcoal/15 pt-7">
               <a
                 href={`tel:${(brand.phone || "").replace(/\s/g, "")}`}
-                className="flex items-center gap-3 text-sm text-charcoal transition hover:text-teal"
+                className="flex items-center gap-3 text-sm text-charcoal transition hover:text-[#651D4C]"
               >
-                <Phone className="h-4 w-4 text-teal" />
+                <Phone className="h-4 w-4 text-[#651D4C]" />
                 {brand.phone}
               </a>
               <a
                 href={`mailto:${brand.email}`}
-                className="flex items-center gap-3 text-sm text-charcoal transition hover:text-teal"
+                className="flex items-center gap-3 text-sm text-charcoal transition hover:text-[#651D4C]"
               >
-                <Mail className="h-4 w-4 text-teal" />
+                <Mail className="h-4 w-4 text-[#651D4C]" />
                 {brand.email}
               </a>
             </div>
@@ -777,7 +777,7 @@ function LocationBand() {
 /* ================================================================== */
 function ConciergeBand() {
   return (
-    <section className="relative overflow-hidden bg-ocean py-24 lg:py-32">
+    <section className="relative overflow-hidden bg-[#212121] py-24 lg:py-32">
       <div className="mx-auto grid max-w-7xl gap-16 px-6 lg:grid-cols-12 lg:gap-20 lg:px-12">
         <motion.div
           {...fadeIn()}
@@ -791,7 +791,7 @@ function ConciergeBand() {
           />
           <div className="absolute inset-0 bg-linear-to-tr from-ocean/55 via-transparent to-transparent" />
           <div className="absolute bottom-6 left-6 inline-flex items-center gap-2 border border-teal/60 bg-ocean/60 px-3 py-1.5 text-[10px] font-semibold uppercase tracking-[0.3em] text-ivory backdrop-blur-md">
-            <Clock className="h-3 w-3 text-teal" />
+            <Clock className="h-3 w-3 text-[#651D4C]" />
             24/7 Service
           </div>
         </motion.div>
@@ -800,14 +800,14 @@ function ConciergeBand() {
           {...fadeUp(0.1)}
           className="flex flex-col justify-center lg:col-span-6"
         >
-          <p className="mb-5 flex items-center gap-3 text-[11px] font-semibold uppercase tracking-[0.4em] text-teal">
-            <span className="h-px w-10 bg-teal" />
+          <p className="mb-5 flex items-center gap-3 text-[11px] font-semibold uppercase tracking-[0.4em] text-[#651D4C]">
+            <span className="h-px w-10 bg-[#651D4C]" />
             {CONCIERGE.preTitle}
           </p>
-          <h2 className="font-serif text-4xl leading-tight text-ivory sm:text-5xl lg:text-[52px]">
+          <h2 className="font-sans text-4xl leading-tight text-ivory sm:text-5xl lg:text-[52px]">
             {CONCIERGE.title}
             <br />
-            <span className="italic text-teal">
+            <span className="italic text-[#651D4C]">
               {CONCIERGE.titleAccent}
             </span>
             .
@@ -823,7 +823,7 @@ function ConciergeBand() {
                 {...fadeUp(0.05 * i)}
                 className="flex items-start gap-3 text-ivory/85"
               >
-                <span className="mt-2 h-1.5 w-1.5 flex-none bg-teal" />
+                <span className="mt-2 h-1.5 w-1.5 flex-none bg-[#651D4C]" />
                 <span className="text-sm leading-relaxed">{b}</span>
               </motion.li>
             ))}
@@ -832,7 +832,7 @@ function ConciergeBand() {
           <div className="mt-10">
             <a
               href="#contact-form"
-              className="group inline-flex items-center gap-3 border border-teal/50 bg-teal/10 px-9 py-4 text-[11px] font-semibold uppercase tracking-[0.32em] text-teal transition hover:bg-teal hover:text-ocean"
+              className="group inline-flex items-center gap-3 border border-teal/50 bg-[#651D4C]/10 px-9 py-4 text-[11px] font-semibold uppercase tracking-[0.32em] text-[#651D4C] transition hover:bg-[#651D4C] hover:text-[#333333]"
             >
               <MessageCircle className="h-4 w-4" />
               Request the Concierge
@@ -855,13 +855,13 @@ function FAQItem({ q, a, isOpen, onToggle }) {
         onClick={onToggle}
         className="group flex w-full items-center justify-between gap-6 py-6 text-left lg:py-7"
       >
-        <span className="font-serif text-lg text-charcoal transition-colors group-hover:text-teal lg:text-xl">
+        <span className="font-sans text-lg text-charcoal transition-colors group-hover:text-[#651D4C] lg:text-xl">
           {q}
         </span>
         <span
           className={`flex h-9 w-9 flex-none items-center justify-center border transition-all ${
             isOpen
-              ? "rotate-180 border-teal bg-teal/10 text-teal"
+              ? "rotate-180 border-teal bg-[#651D4C]/10 text-[#651D4C]"
               : "border-charcoal/30 text-charcoal"
           }`}
         >
@@ -890,17 +890,17 @@ function FAQItem({ q, a, isOpen, onToggle }) {
 function Faq() {
   const [open, setOpen] = useState(0);
   return (
-    <section className="relative bg-ivory py-24 lg:py-32">
+    <section className="relative bg-white py-24 lg:py-32">
       <div className="mx-auto max-w-4xl px-6 lg:px-12">
         <motion.div {...fadeUp()} className="text-center">
           <p className="mb-5 inline-flex items-center justify-center gap-3 text-[11px] font-semibold uppercase tracking-[0.4em] text-[#006d6d]">
-            <span className="h-px w-10 bg-teal" />
+            <span className="h-px w-10 bg-[#651D4C]" />
             Quick Concierge Help
-            <span className="h-px w-10 bg-teal" />
+            <span className="h-px w-10 bg-[#651D4C]" />
           </p>
-          <h2 className="font-serif text-4xl leading-tight text-charcoal sm:text-5xl lg:text-[52px]">
+          <h2 className="font-sans text-4xl leading-tight text-charcoal sm:text-5xl lg:text-[52px]">
             Answers,{" "}
-            <span className="italic text-teal">before you ask</span>.
+            <span className="italic text-[#651D4C]">before you ask</span>.
           </h2>
         </motion.div>
 
@@ -928,17 +928,17 @@ function Faq() {
 /* ================================================================== */
 function Social() {
   return (
-    <section className="relative overflow-hidden bg-ocean py-24 lg:py-32">
+    <section className="relative overflow-hidden bg-[#212121] py-24 lg:py-32">
       <div className="mx-auto max-w-7xl px-6 lg:px-12">
         <motion.div {...fadeUp()} className="mb-14 text-center">
-          <p className="mb-5 inline-flex items-center justify-center gap-3 text-[11px] font-semibold uppercase tracking-[0.4em] text-teal">
-            <span className="h-px w-10 bg-teal" />
+          <p className="mb-5 inline-flex items-center justify-center gap-3 text-[11px] font-semibold uppercase tracking-[0.4em] text-[#651D4C]">
+            <span className="h-px w-10 bg-[#651D4C]" />
             Stay Connected
-            <span className="h-px w-10 bg-teal" />
+            <span className="h-px w-10 bg-[#651D4C]" />
           </p>
-          <h2 className="font-serif text-4xl leading-tight text-ivory sm:text-5xl lg:text-[52px]">
+          <h2 className="font-sans text-4xl leading-tight text-ivory sm:text-5xl lg:text-[52px]">
             Experience Samal Island{" "}
-            <span className="italic text-teal">through our guests</span>.
+            <span className="italic text-[#651D4C]">through our guests</span>.
           </h2>
         </motion.div>
 
@@ -981,14 +981,14 @@ function Social() {
                 className="group flex items-center justify-between gap-4 border border-ivory/10 bg-ocean/40 px-6 py-5 backdrop-blur-md transition hover:border-teal/60 hover:bg-ocean/70"
               >
                 <div className="flex items-center gap-4">
-                  <span className="flex h-12 w-12 items-center justify-center border border-teal/40 bg-teal/10 transition-colors group-hover:bg-teal group-hover:text-ocean">
-                    <Icon className="h-5 w-5 text-teal transition-colors group-hover:text-ocean" />
+                  <span className="flex h-12 w-12 items-center justify-center border border-teal/40 bg-[#651D4C]/10 transition-colors group-hover:bg-[#651D4C] group-hover:text-[#333333]">
+                    <Icon className="h-5 w-5 text-[#651D4C] transition-colors group-hover:text-[#333333]" />
                   </span>
                   <div>
-                    <p className="text-[10px] font-semibold uppercase tracking-[0.32em] text-teal">
+                    <p className="text-[10px] font-semibold uppercase tracking-[0.32em] text-[#651D4C]">
                       Follow us on
                     </p>
-                    <p className="mt-1 font-serif text-xl text-ivory">
+                    <p className="mt-1 font-sans text-xl text-ivory">
                       {s.name}{" "}
                       <span className="text-sm text-ivory/55">
                         {s.handle}
@@ -996,7 +996,7 @@ function Social() {
                     </p>
                   </div>
                 </div>
-                <ArrowUpRight className="h-4 w-4 text-ivory/55 transition group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-teal" />
+                <ArrowUpRight className="h-4 w-4 text-ivory/55 transition group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-[#651D4C]" />
               </motion.a>
             );
           })}
@@ -1024,18 +1024,18 @@ function FinalCTA() {
       <div className="relative z-10 mx-auto max-w-4xl px-6 py-32 text-center lg:px-12 lg:py-44">
         <motion.p
           {...fadeUp()}
-          className="mb-6 flex items-center justify-center gap-3 text-[11px] font-semibold uppercase tracking-[0.4em] text-teal"
+          className="mb-6 flex items-center justify-center gap-3 text-[11px] font-semibold uppercase tracking-[0.4em] text-[#651D4C]"
         >
-          <span className="h-px w-10 bg-teal" />
+          <span className="h-px w-10 bg-[#651D4C]" />
           Your Escape Awaits
-          <span className="h-px w-10 bg-teal" />
+          <span className="h-px w-10 bg-[#651D4C]" />
         </motion.p>
         <motion.h2
           {...fadeUp(0.1)}
-          className="font-serif text-4xl leading-tight text-ivory lg:text-6xl"
+          className="font-sans text-4xl leading-tight text-ivory lg:text-6xl"
         >
           Your luxury escape{" "}
-          <span className="italic text-teal">starts here</span>.
+          <span className="italic text-[#651D4C]">starts here</span>.
         </motion.h2>
         <motion.p
           {...fadeUp(0.2)}
@@ -1051,14 +1051,14 @@ function FinalCTA() {
         >
           <Link
             to="/booking"
-            className="group inline-flex items-center gap-3 bg-teal px-10 py-4 text-[11px] font-semibold uppercase tracking-[0.32em] text-ocean transition hover:bg-[#006d6d] hover:text-ivory hover:shadow-[0_20px_60px_-15px_rgba(212,133,0,0.7)]"
+            className="group inline-flex items-center gap-3 bg-[#651D4C] px-10 py-4 text-[11px] font-semibold uppercase tracking-[0.32em] text-[#333333] transition hover:bg-[#006d6d] hover:text-ivory hover:shadow-[0_20px_60px_-15px_rgba(212,133,0,0.7)]"
           >
             Reserve Your Escape
             <ArrowUpRight className="h-3.5 w-3.5 transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
           </Link>
           <a
             href="#contact-form"
-            className="inline-flex items-center gap-2 border border-ivory/30 px-10 py-4 text-[11px] font-semibold uppercase tracking-[0.32em] text-ivory transition hover:border-teal hover:text-teal"
+            className="inline-flex items-center gap-2 border border-ivory/30 px-10 py-4 text-[11px] font-semibold uppercase tracking-[0.32em] text-ivory transition hover:border-teal hover:text-[#651D4C]"
           >
             Contact Our Team
           </a>
@@ -1084,14 +1084,14 @@ function StickyMobileCTA({ visible }) {
         >
           <a
             href={`tel:${(brand.phone || "").replace(/\s/g, "")}`}
-            className="flex items-center justify-center gap-2 border border-ivory/25 px-4 py-3 text-[11px] font-semibold uppercase tracking-[0.28em] text-ivory transition hover:border-teal hover:text-teal"
+            className="flex items-center justify-center gap-2 border border-ivory/25 px-4 py-3 text-[11px] font-semibold uppercase tracking-[0.28em] text-ivory transition hover:border-teal hover:text-[#651D4C]"
           >
             <Phone className="h-3.5 w-3.5" />
             Call
           </a>
           <Link
             to="/booking"
-            className="flex items-center justify-center gap-2 bg-teal px-4 py-3 text-[11px] font-semibold uppercase tracking-[0.28em] text-ocean transition hover:bg-[#006d6d] hover:text-ivory"
+            className="flex items-center justify-center gap-2 bg-[#651D4C] px-4 py-3 text-[11px] font-semibold uppercase tracking-[0.28em] text-[#333333] transition hover:bg-[#006d6d] hover:text-ivory"
           >
             Reserve
             <ArrowRight className="h-3.5 w-3.5" />
@@ -1124,7 +1124,7 @@ export default function Contact() {
   }, []);
 
   return (
-    <main className="bg-ivory text-charcoal">
+    <main className="bg-white text-charcoal">
       <Hero />
       <Welcome />
       <ChannelCards />
@@ -1139,3 +1139,4 @@ export default function Contact() {
     </main>
   );
 }
+

@@ -106,7 +106,7 @@ function Counter({ value, suffix = "", duration = 2 }) {
 /* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
 export default function AboutPage() {
   return (
-    <main className="bg-ivory text-ocean selection:bg-teal/30">
+    <main className="bg-white text-[#333333] selection:bg-[#651D4C]/30">
       <HeroSection />
       <IntroductionSection />
       <StorySection />
@@ -172,18 +172,18 @@ function HeroSection() {
         >
           <motion.p
             variants={fadeUp}
-            className="mb-6 inline-flex items-center gap-3 text-[11px] uppercase tracking-[0.5em] text-teal"
+            className="mb-6 inline-flex items-center gap-3 text-[11px] uppercase tracking-[0.5em] text-[#651D4C]"
           >
-            <span className="h-px w-10 bg-teal" />
+            <span className="h-px w-10 bg-[#651D4C]" />
             About the Resort
           </motion.p>
 
           <motion.h1
             variants={fadeUp}
-            className="font-serif text-5xl leading-[1.05] text-white sm:text-6xl md:text-7xl lg:text-[88px]"
+            className="font-sans text-5xl leading-[1.05] text-white sm:text-6xl md:text-7xl lg:text-[88px]"
           >
             About{" "}
-            <em className="font-light italic text-teal">{brand.shortName}</em>{" "}
+            <em className="font-light italic text-[#651D4C]">{brand.shortName}</em>{" "}
             Resort
           </motion.h1>
 
@@ -281,16 +281,16 @@ function IntroductionSection() {
             variants={fadeUp}
             className="mb-5 inline-flex items-center gap-3 text-[10px] uppercase tracking-[0.5em] text-charcoal/70"
           >
-            <span className="h-px w-10 bg-teal" />
+            <span className="h-px w-10 bg-[#651D4C]" />
             Introduction
           </motion.p>
 
           <motion.h2
             variants={fadeUp}
-            className="font-serif text-4xl leading-[1.1] text-charcoal sm:text-5xl lg:text-[56px]"
+            className="font-sans text-4xl leading-[1.1] text-charcoal sm:text-5xl lg:text-[56px]"
           >
             A refined escape where paradise{" "}
-            <em className="italic text-teal">meets</em> modern luxury.
+            <em className="italic text-[#651D4C]">meets</em> modern luxury.
           </motion.h2>
 
           <motion.div
@@ -311,7 +311,7 @@ function IntroductionSection() {
           <motion.div variants={fadeUp} className="mt-12">
             <Link
               to="/rooms"
-              className="group inline-flex items-center gap-4 border-b border-charcoal/30 pb-2 text-[12px] font-medium uppercase tracking-[0.35em] text-charcoal transition-colors hover:border-teal hover:text-teal"
+              className="group inline-flex items-center gap-4 border-b border-charcoal/30 pb-2 text-[12px] font-medium uppercase tracking-[0.35em] text-charcoal transition-colors hover:border-teal hover:text-[#651D4C]"
             >
               Discover Our Rooms
               <ArrowRight
@@ -362,17 +362,17 @@ function StorySection() {
         >
           <motion.p
             variants={fadeUp}
-            className="mb-5 inline-flex items-center gap-3 text-[10px] uppercase tracking-[0.5em] text-teal"
+            className="mb-5 inline-flex items-center gap-3 text-[10px] uppercase tracking-[0.5em] text-[#651D4C]"
           >
-            <span className="h-px w-10 bg-teal" />
+            <span className="h-px w-10 bg-[#651D4C]" />
             Our Story
           </motion.p>
           <motion.h2
             variants={fadeUp}
-            className="font-serif text-4xl leading-[1.1] sm:text-5xl lg:text-6xl"
+            className="font-sans text-4xl leading-[1.1] sm:text-5xl lg:text-6xl"
           >
             A vision born <br />
-            of <em className="italic text-teal">island calm</em>.
+            of <em className="italic text-[#651D4C]">island calm</em>.
           </motion.h2>
         </motion.div>
 
@@ -415,8 +415,8 @@ function StorySection() {
                 variants={fadeUp}
                 className="relative border-l border-teal/40 pl-5"
               >
-                <span className="absolute -left-[5px] top-1.5 h-2.5 w-2.5 rounded-full bg-teal" />
-                <div className="font-serif text-2xl text-teal">
+                <span className="absolute -left-[5px] top-1.5 h-2.5 w-2.5 rounded-full bg-[#651D4C]" />
+                <div className="font-sans text-2xl text-[#651D4C]">
                   {t.year}
                 </div>
                 <div className="mt-1 text-[12px] uppercase tracking-[0.3em] text-white/55">
@@ -447,7 +447,7 @@ const FEATURES = [
 
 function WhyChooseSection() {
   return (
-    <section className="relative bg-ivory py-28 lg:py-36">
+    <section className="relative bg-white py-28 lg:py-36">
       <div className="mx-auto max-w-7xl px-6 lg:px-10">
         <motion.div
           initial="hidden"
@@ -460,15 +460,15 @@ function WhyChooseSection() {
             variants={fadeUp}
             className="mb-5 inline-flex items-center gap-3 text-[10px] uppercase tracking-[0.5em] text-charcoal/70"
           >
-            <span className="h-px w-10 bg-teal" />
+            <span className="h-px w-10 bg-[#651D4C]" />
             Why Choose Us
           </motion.p>
           <motion.h2
             variants={fadeUp}
-            className="font-serif text-4xl leading-[1.1] text-charcoal sm:text-5xl lg:text-[56px]"
+            className="font-sans text-4xl leading-[1.1] text-charcoal sm:text-5xl lg:text-[56px]"
           >
             The hallmarks of a{" "}
-            <em className="italic text-teal">world-class</em> stay.
+            <em className="italic text-[#651D4C]">world-class</em> stay.
           </motion.h2>
         </motion.div>
 
@@ -493,12 +493,12 @@ function WhyChooseSection() {
               <motion.div
                 whileHover={{ rotate: -6, scale: 1.1 }}
                 transition={{ type: "spring", stiffness: 200 }}
-                className="relative mb-5 inline-flex h-12 w-12 items-center justify-center rounded-lg bg-charcoal/5 text-charcoal transition-colors group-hover:bg-teal/15 group-hover:text-teal"
+                className="relative mb-5 inline-flex h-12 w-12 items-center justify-center rounded-lg bg-charcoal/5 text-charcoal transition-colors group-hover:bg-[#651D4C]/15 group-hover:text-[#651D4C]"
               >
                 <f.icon size={22} strokeWidth={1.5} />
               </motion.div>
 
-              <h3 className="relative font-serif text-xl text-charcoal">
+              <h3 className="relative font-sans text-xl text-charcoal">
                 {f.title}
               </h3>
               <p className="relative mt-2 text-[13.5px] leading-relaxed text-[#111]/60">
@@ -550,19 +550,19 @@ function ExperienceSection() {
         >
           <motion.p
             variants={fadeUp}
-            className="mb-6 inline-flex items-center gap-3 text-[11px] uppercase tracking-[0.5em] text-teal"
+            className="mb-6 inline-flex items-center gap-3 text-[11px] uppercase tracking-[0.5em] text-[#651D4C]"
           >
-            <span className="h-px w-10 bg-teal" />
+            <span className="h-px w-10 bg-[#651D4C]" />
             The Experience
           </motion.p>
 
           <motion.h2
             variants={fadeUp}
-            className="font-serif text-4xl leading-[1.1] sm:text-6xl lg:text-7xl"
+            className="font-sans text-4xl leading-[1.1] sm:text-6xl lg:text-7xl"
           >
             Breathtaking sunsets, <br />
             ocean breeze mornings, <br />
-            <em className="italic text-teal">unforgettable</em> island
+            <em className="italic text-[#651D4C]">unforgettable</em> island
             moments.
           </motion.h2>
         </motion.div>
@@ -577,7 +577,7 @@ function ExperienceSection() {
         >
           {STATS.map((s) => (
             <motion.div key={s.label} variants={fadeUp} className="text-center">
-              <div className="font-serif text-4xl text-teal sm:text-5xl lg:text-6xl">
+              <div className="font-sans text-4xl text-[#651D4C] sm:text-5xl lg:text-6xl">
                 <Counter value={s.value} suffix={s.suffix} />
               </div>
               <div className="mt-3 text-[10px] uppercase tracking-[0.35em] text-white/65">
@@ -618,7 +618,7 @@ function GallerySection() {
   }, [active]);
 
   return (
-    <section className="relative bg-ivory py-28 lg:py-36">
+    <section className="relative bg-white py-28 lg:py-36">
       <div className="mx-auto max-w-7xl px-6 lg:px-10">
         <motion.div
           initial="hidden"
@@ -632,14 +632,14 @@ function GallerySection() {
               variants={fadeUp}
               className="mb-5 inline-flex items-center gap-3 text-[10px] uppercase tracking-[0.5em] text-charcoal/70"
             >
-              <span className="h-px w-10 bg-teal" />
+              <span className="h-px w-10 bg-[#651D4C]" />
               Image Showcase
             </motion.p>
             <motion.h2
               variants={fadeUp}
-              className="font-serif text-4xl leading-[1.1] text-charcoal sm:text-5xl lg:text-[56px]"
+              className="font-sans text-4xl leading-[1.1] text-charcoal sm:text-5xl lg:text-[56px]"
             >
-              A glimpse of <em className="italic text-teal">paradise</em>.
+              A glimpse of <em className="italic text-[#651D4C]">paradise</em>.
             </motion.h2>
           </div>
           <motion.p
@@ -776,7 +776,7 @@ function TestimonialSection() {
   return (
     <section className="relative isolate overflow-hidden bg-linear-to-b from-ocean to-charcoal py-28 text-white lg:py-36">
       {/* Decorative glow */}
-      <div className="pointer-events-none absolute -left-40 top-1/3 h-[460px] w-[460px] rounded-full bg-teal/10 blur-3xl" />
+      <div className="pointer-events-none absolute -left-40 top-1/3 h-[460px] w-[460px] rounded-full bg-[#651D4C]/10 blur-3xl" />
       <div className="pointer-events-none absolute -right-40 bottom-0 h-[420px] w-[420px] rounded-full bg-[#3fa7d6]/8 blur-3xl" />
 
       <div className="mx-auto max-w-5xl px-6 text-center lg:px-10">
@@ -784,9 +784,9 @@ function TestimonialSection() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="mb-5 inline-flex items-center gap-3 text-[10px] uppercase tracking-[0.5em] text-teal"
+          className="mb-5 inline-flex items-center gap-3 text-[10px] uppercase tracking-[0.5em] text-[#651D4C]"
         >
-          <span className="h-px w-10 bg-teal" />
+          <span className="h-px w-10 bg-[#651D4C]" />
           Guest Stories
         </motion.p>
 
@@ -794,9 +794,9 @@ function TestimonialSection() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="font-serif text-4xl leading-[1.1] sm:text-5xl lg:text-6xl"
+          className="font-sans text-4xl leading-[1.1] sm:text-5xl lg:text-6xl"
         >
-          Words from <em className="italic text-teal">our guests</em>.
+          Words from <em className="italic text-[#651D4C]">our guests</em>.
         </motion.h2>
 
         <div className="relative mt-16 min-h-[320px]">
@@ -811,14 +811,14 @@ function TestimonialSection() {
             >
               <Quote
                 size={40}
-                className="mx-auto mb-6 text-teal/60"
+                className="mx-auto mb-6 text-[#651D4C]/60"
                 strokeWidth={1.2}
               />
-              <blockquote className="font-serif text-2xl font-light italic leading-[1.5] text-white/90 sm:text-3xl">
+              <blockquote className="font-sans text-2xl font-light italic leading-[1.5] text-white/90 sm:text-3xl">
                 â€œ{TESTIMONIALS[idx].quote}â€
               </blockquote>
               <figcaption className="mt-8">
-                <div className="font-serif text-lg text-teal">
+                <div className="font-sans text-lg text-[#651D4C]">
                   {TESTIMONIALS[idx].name}
                 </div>
                 <div className="mt-1 text-[11px] uppercase tracking-[0.35em] text-white/55">
@@ -832,7 +832,7 @@ function TestimonialSection() {
           <div className="mt-10 flex items-center justify-center gap-6">
             <button
               onClick={prev}
-              className="rounded-full border border-white/20 p-2.5 text-white/70 transition hover:border-teal hover:text-teal"
+              className="rounded-full border border-white/20 p-2.5 text-white/70 transition hover:border-teal hover:text-[#651D4C]"
               aria-label="Previous testimonial"
             >
               <ChevronLeft size={18} />
@@ -843,7 +843,7 @@ function TestimonialSection() {
                   key={i}
                   onClick={() => setIdx(i)}
                   className={`h-1.5 rounded-full transition-all duration-500 ${
-                    i === idx ? "w-8 bg-teal" : "w-2 bg-white/25"
+                    i === idx ? "w-8 bg-[#651D4C]" : "w-2 bg-white/25"
                   }`}
                   aria-label={`Go to testimonial ${i + 1}`}
                 />
@@ -851,7 +851,7 @@ function TestimonialSection() {
             </div>
             <button
               onClick={next}
-              className="rounded-full border border-white/20 p-2.5 text-white/70 transition hover:border-teal hover:text-teal"
+              className="rounded-full border border-white/20 p-2.5 text-white/70 transition hover:border-teal hover:text-[#651D4C]"
               aria-label="Next testimonial"
             >
               <ChevronRight size={18} />
@@ -875,7 +875,7 @@ const NEARBY = [
 
 function LocationSection() {
   return (
-    <section className="relative bg-ivory py-28 lg:py-36">
+    <section className="relative bg-white py-28 lg:py-36">
       <div className="mx-auto max-w-7xl px-6 lg:px-10">
         <motion.div
           initial="hidden"
@@ -888,14 +888,14 @@ function LocationSection() {
             variants={fadeUp}
             className="mb-5 inline-flex items-center gap-3 text-[10px] uppercase tracking-[0.5em] text-charcoal/70"
           >
-            <span className="h-px w-10 bg-teal" />
+            <span className="h-px w-10 bg-[#651D4C]" />
             Location
           </motion.p>
           <motion.h2
             variants={fadeUp}
-            className="font-serif text-4xl leading-[1.1] text-charcoal sm:text-5xl lg:text-[56px]"
+            className="font-sans text-4xl leading-[1.1] text-charcoal sm:text-5xl lg:text-[56px]"
           >
-            Find us on <em className="italic text-teal">Samal Island</em>.
+            Find us on <em className="italic text-[#651D4C]">Samal Island</em>.
           </motion.h2>
           <motion.p
             variants={fadeUp}
@@ -922,7 +922,7 @@ function LocationSection() {
             transition={{ duration: 0.8 }}
             className="absolute bottom-6 left-6 right-6 hidden rounded-xl border border-white/40 bg-white/70 p-6 backdrop-blur-xl sm:block sm:left-8 sm:right-auto sm:max-w-md"
           >
-            <h3 className="font-serif text-xl text-charcoal">
+            <h3 className="font-sans text-xl text-charcoal">
               {brand.displayName}
             </h3>
             <p className="mt-2 text-[13px] leading-relaxed text-[#111]/70">
@@ -932,7 +932,7 @@ function LocationSection() {
               href="https://www.google.com/maps?q=Samal+Island+Island+Garden+City+of+Samal+Davao+del+Norte"
               target="_blank"
               rel="noopener noreferrer"
-              className="mt-4 inline-flex items-center gap-2 text-[11px] uppercase tracking-[0.3em] text-teal hover:text-charcoal"
+              className="mt-4 inline-flex items-center gap-2 text-[11px] uppercase tracking-[0.3em] text-[#651D4C] hover:text-charcoal"
             >
               Open in Maps <ArrowRight size={14} />
             </a>
@@ -954,8 +954,8 @@ function LocationSection() {
               whileHover={{ y: -4 }}
               className="rounded-xl border border-charcoal/10 bg-white/70 p-5 backdrop-blur-xl"
             >
-              <n.icon size={20} strokeWidth={1.5} className="text-teal" />
-              <div className="mt-3 font-serif text-base text-charcoal">
+              <n.icon size={20} strokeWidth={1.5} className="text-[#651D4C]" />
+              <div className="mt-3 font-sans text-base text-charcoal">
                 {n.label}
               </div>
               <div className="mt-1 text-[11px] uppercase tracking-[0.3em] text-[#111]/55">
@@ -1000,15 +1000,15 @@ function FinalCTASection() {
         >
           <motion.p
             variants={fadeUp}
-            className="mb-6 text-[11px] uppercase tracking-[0.5em] text-teal"
+            className="mb-6 text-[11px] uppercase tracking-[0.5em] text-[#651D4C]"
           >
             Your stay awaits
           </motion.p>
           <motion.h2
             variants={fadeUp}
-            className="font-serif text-5xl leading-[1.05] sm:text-6xl lg:text-7xl"
+            className="font-sans text-5xl leading-[1.05] sm:text-6xl lg:text-7xl"
           >
-            Escape To <em className="italic text-teal">Paradise</em>
+            Escape To <em className="italic text-[#651D4C]">Paradise</em>
           </motion.h2>
           <motion.p
             variants={fadeUp}
@@ -1024,7 +1024,7 @@ function FinalCTASection() {
           >
             <Link
               to="/booking"
-              className="group inline-flex items-center gap-3 rounded-full border border-teal bg-teal px-9 py-4 text-[11px] font-semibold uppercase tracking-[0.35em] text-ocean transition-all duration-500 hover:bg-transparent hover:text-teal hover:shadow-[0_20px_60px_-20px_rgba(212,160,23,0.6)]"
+              className="group inline-flex items-center gap-3 rounded-full border border-teal bg-[#651D4C] px-9 py-4 text-[11px] font-semibold uppercase tracking-[0.35em] text-[#333333] transition-all duration-500 hover:bg-transparent hover:text-[#651D4C] hover:shadow-[0_20px_60px_-20px_rgba(212,160,23,0.6)]"
             >
               Book Now
               <ArrowRight
@@ -1048,6 +1048,7 @@ function FinalCTASection() {
     </section>
   );
 }
+
 
 
 

@@ -12,6 +12,8 @@ import Events from "./pages/Events";
 import Gallery from "./pages/Gallery";
 import Contact from "./pages/Contact";
 import Offer from "./pages/Offer";
+import Spa from "./pages/Spa";
+import Location from "./pages/Location";
 import Booking from "./pages/Booking";
 import BookingPayment from "./pages/BookingPayment";
 import BookingSuccess from "./pages/BookingSuccess";
@@ -44,6 +46,8 @@ export default function App() {
           <Route path="/contact" element={<Contact />} />
           <Route path="/offers" element={<Offer />} />
           <Route path="/offers/:slug" element={<Offer />} />
+          <Route path="/spa" element={<Spa />} />
+          <Route path="/location" element={<Location />} />
           <Route path="/booking" element={<Booking />} />
           <Route path="/booking/:id/payment" element={<BookingPayment />} />
           <Route path="/booking/:id/success" element={<BookingSuccess />} />

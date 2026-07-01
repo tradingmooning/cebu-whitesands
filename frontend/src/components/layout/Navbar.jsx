@@ -8,23 +8,14 @@ import MobileSidebar from "./MobileSidebar";
 
 const NAV_LINKS = [
   { to: "/", label: "Home" },
-  {
-    to: "/about",
-    label: "Discover",
-    dropdown: [
-      { to: "/about", label: "The Destination" },
-      { to: "/about#resort", label: "The Resort" },
-      { to: "/about#maps", label: "Resort Maps" },
-      { to: "/about#boat-schedule", label: "Boat Schedule" },
-      { to: "/activities", label: "Experiences" },
-      { to: "/about#blog", label: "Blog" },
-      { to: "/gallery", label: "Gallery" },
-      { to: "/about#location", label: "Location & Getting Here" },
-    ],
-  },
-  { to: "/rooms", label: "Villas & Suites" },
-  { to: "/offers", label: "Offers" },
-  { to: "/restaurants", label: "Dining" },
+  { to: "/rooms", label: "ROOMS" },
+  { to: "/spa", label: "ANAHATA SPA" },
+  { to: "/restaurants", label: "DINING" },
+  { to: "/events", label: "EVENTS" },
+  { to: "/activities", label: "ACTIVITIES" },
+  { to: "/about", label: "ABOUT US" },
+  { to: "/contact", label: "CONTACT" },
+  { to: "/location", label: "Location" },
 ];
 
 export default function Navbar() {
@@ -117,8 +108,8 @@ export default function Navbar() {
                           ? "text-white"
                           : "text-white/75 hover:text-white"
                         : isActive
-                          ? "text-teal"
-                          : "text-slate-500 hover:text-teal"
+                          ? "text-[#651D4C]"
+                          : "text-slate-500 hover:text-[#651D4C]"
                     }`}
                   >
                     {item.label}
@@ -134,7 +125,7 @@ export default function Navbar() {
                     )}
                     {/* Active underline */}
                     <span
-                      className={`absolute bottom-0 left-1/2 h-0.5 -translate-x-1/2 rounded-full bg-gold transition-all duration-300 ${
+                      className={`absolute bottom-0 left-1/2 h-0.5 -translate-x-1/2 rounded-full bg-[#651D4C] transition-all duration-300 ${
                         isActive ? "w-5" : "w-0 group-hover:w-5"
                       }`}
                     />
@@ -164,7 +155,7 @@ export default function Navbar() {
                 }}
                 whileTap={{ scale: 0.97 }}
                 transition={{ duration: 0.2 }}
-                className="inline-flex items-center rounded-full bg-gold px-6 py-2.5 text-[10.5px] font-semibold uppercase tracking-[0.22em] text-white shadow-[0_6px_20px_-4px_rgba(184,148,60,0.3)] transition-colors duration-300 hover:bg-gold-dark"
+                className="inline-flex items-center rounded-none border border-[#651D4C] px-6 py-2.5 text-[10.5px] font-semibold uppercase tracking-[0.22em] text-[#651D4C] transition-colors duration-300 hover:bg-[#651D4C] hover:text-white"
               >
                 Book Now
               </motion.div>

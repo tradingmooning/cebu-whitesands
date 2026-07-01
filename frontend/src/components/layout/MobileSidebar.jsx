@@ -35,37 +35,14 @@ import { brand } from "../../lib/brand";
 
 const MENU_ITEMS = [
   { to: "/", label: "Home" },
-  {
-    to: "/about",
-    label: "Discover",
-    sub: [
-      { to: "/about", label: "The Destination" },
-      { to: "/about#resort", label: "The Resort" },
-      { to: "/about#maps", label: "Resort Maps" },
-      { to: "/about#boat-schedule", label: "Boat Schedule" },
-      { to: "/activities", label: "Experiences" },
-      { to: "/about#blog", label: "Blog" },
-      { to: "/gallery", label: "Gallery" },
-      { to: "/about#location", label: "Location & Getting Here" },
-    ],
-  },
-  { to: "/rooms", label: "Villas & Suites" },
-  { to: "/offers", label: "Offers" },
-  { to: "/restaurants", label: "Dining" },
-  {
-    to: "/events",
-    label: "Meetings & Events",
-    sub: [
-      { to: "/events", label: "Samal Grand Ballroom" },
-      { to: "/events#meetings", label: "Meetings" },
-      { to: "/events#beach-wedding", label: "Beach Wedding" },
-      { to: "/events#destination-weddings", label: "Destination Weddings" },
-      { to: "/events#corporate", label: "Corporate Events" },
-      { to: "/events#social", label: "Social Events" },
-    ],
-  },
-  { to: "https://www.mydiscovery.ph/", label: "Loyalty", external: true },
-  { to: "/contact", label: "Contact Us" },
+  { to: "/rooms", label: "ROOMS" },
+  { to: "/spa", label: "ANAHATA SPA" },
+  { to: "/restaurants", label: "DINING" },
+  { to: "/events", label: "EVENTS" },
+  { to: "/activities", label: "ACTIVITIES" },
+  { to: "/about", label: "ABOUT US" },
+  { to: "/contact", label: "CONTACT" },
+  { to: "/location", label: "Location" },
 ];
 
 export default function MobileSidebar({ isOpen, onClose }) {

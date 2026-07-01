@@ -80,7 +80,7 @@ function CinematicHero({ onExplore }) {
   const opacity = useTransform(scrollY, [0, 500], [1, 0.3]);
 
   return (
-    <section className="relative h-svh min-h-170 w-full overflow-hidden bg-ocean">
+    <section className="relative h-svh min-h-170 w-full overflow-hidden bg-[#212121]">
       <motion.div style={{ y }} className="absolute inset-0">
         <img
           src="https://image-tc.galaxy.tf/wijpeg-aeexb9m4bu60ndq3vcdnb7l9o/discovery-samal-08124-2_standard.jpg"
@@ -99,9 +99,9 @@ function CinematicHero({ onExplore }) {
         className="absolute left-1/2 top-28 z-10 -translate-x-1/2"
       >
         <div className="flex items-center gap-3 border border-teal/50 bg-ocean/35 px-5 py-2 text-[10px] uppercase tracking-[0.4em] text-ivory backdrop-blur-md">
-          <Star className="h-3 w-3 fill-teal text-teal" />
+          <Star className="h-3 w-3 fill-teal text-[#651D4C]" />
           <span>Discovery Samal · Limited Time Offers</span>
-          <Star className="h-3 w-3 fill-teal text-teal" />
+          <Star className="h-3 w-3 fill-teal text-[#651D4C]" />
         </div>
       </motion.div>
 
@@ -111,11 +111,11 @@ function CinematicHero({ onExplore }) {
       >
         <motion.p
           {...fadeIn(0.6)}
-          className="mb-8 flex items-center gap-4 text-[11px] font-semibold uppercase tracking-[0.5em] text-teal"
+          className="mb-8 flex items-center gap-4 text-[11px] font-semibold uppercase tracking-[0.5em] text-[#651D4C]"
         >
-          <span className="h-px w-12 bg-teal/60" />
+          <span className="h-px w-12 bg-[#651D4C]/60" />
           Escape Into Paradise
-          <span className="h-px w-12 bg-teal/60" />
+          <span className="h-px w-12 bg-[#651D4C]/60" />
         </motion.p>
 
         <motion.h1
@@ -126,11 +126,11 @@ function CinematicHero({ onExplore }) {
             duration: 1.1,
             ease: [0.22, 0.61, 0.36, 1],
           }}
-          className="font-serif text-5xl leading-[1.02] text-ivory sm:text-6xl lg:text-[88px]"
+          className="font-sans text-5xl leading-[1.02] text-ivory sm:text-6xl lg:text-[88px]"
         >
           Curated Stays.
           <br />
-          <span className="italic text-teal">Unforgettable</span> Moments.
+          <span className="italic text-[#651D4C]">Unforgettable</span> Moments.
         </motion.h1>
 
         <motion.p
@@ -149,7 +149,7 @@ function CinematicHero({ onExplore }) {
           <button
             type="button"
             onClick={onExplore}
-            className="group inline-flex items-center gap-3 bg-teal px-8 py-4 text-[11px] font-semibold uppercase tracking-[0.32em] text-ocean transition-all hover:bg-[#006d6d] hover:text-ivory hover:shadow-[0_20px_60px_-15px_rgba(212,133,0,0.6)]"
+            className="group inline-flex items-center gap-3 bg-[#651D4C] px-8 py-4 text-[11px] font-semibold uppercase tracking-[0.32em] text-[#333333] transition-all hover:bg-[#006d6d] hover:text-ivory hover:shadow-[0_20px_60px_-15px_rgba(212,133,0,0.6)]"
           >
             Explore Offers
             <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-1" />
@@ -188,22 +188,22 @@ function CinematicHero({ onExplore }) {
 /* ================================================================== */
 function StoryIntro() {
   return (
-    <section className="bg-ivory py-24 lg:py-36">
+    <section className="bg-white py-24 lg:py-36">
       <div className="mx-auto max-w-4xl px-6 text-center lg:px-10">
         <motion.p
           {...fadeUp()}
           className="mb-6 flex items-center justify-center gap-3 text-[11px] font-semibold uppercase tracking-[0.4em] text-[#006d6d]"
         >
-          <span className="h-px w-10 bg-teal" />
+          <span className="h-px w-10 bg-[#651D4C]" />
           The Sands Collection
-          <span className="h-px w-10 bg-teal" />
+          <span className="h-px w-10 bg-[#651D4C]" />
         </motion.p>
         <motion.h2
           {...fadeUp(0.1)}
-          className="font-serif text-4xl leading-tight text-charcoal lg:text-5xl"
+          className="font-sans text-4xl leading-tight text-charcoal lg:text-5xl"
         >
           Beyond a stay.{" "}
-          <span className="italic text-teal">An experience.</span>
+          <span className="italic text-[#651D4C]">An experience.</span>
         </motion.h2>
         <motion.p
           {...fadeUp(0.2)}
@@ -232,7 +232,7 @@ function OfferShowcase({ offer, index }) {
 
 function ImageSideOffer({ offer, reverse }) {
   return (
-    <section id={offer.slug} className="relative bg-ivory py-20 lg:py-32">
+    <section id={offer.slug} className="relative bg-white py-20 lg:py-32">
       <div className="mx-auto max-w-7xl px-6 lg:px-10">
         <div
           className={`grid items-center gap-10 lg:gap-16 lg:grid-cols-12 ${
@@ -240,7 +240,7 @@ function ImageSideOffer({ offer, reverse }) {
           }`}
         >
           <motion.div {...fadeUp()} className="relative lg:col-span-7">
-            <div className="relative overflow-hidden bg-ocean">
+            <div className="relative overflow-hidden bg-[#212121]">
               <img
                 src={offer.heroImage}
                 alt={offer.title}
@@ -250,7 +250,7 @@ function ImageSideOffer({ offer, reverse }) {
               <div className="absolute inset-0 bg-linear-to-t from-ocean/45 via-transparent to-transparent" />
               {offer.badge && (
                 <div className="absolute left-6 top-6 inline-flex items-center gap-2 border border-teal/60 bg-ocean/40 px-4 py-2 text-[10px] uppercase tracking-[0.32em] text-ivory backdrop-blur-md">
-                  <Sparkles className="h-3 w-3 text-teal" />
+                  <Sparkles className="h-3 w-3 text-[#651D4C]" />
                   {offer.badge}
                 </div>
               )}
@@ -261,7 +261,7 @@ function ImageSideOffer({ offer, reverse }) {
                   <motion.div
                     key={src + i}
                     {...fadeUp(0.1 + i * 0.05)}
-                    className="aspect-square overflow-hidden bg-ocean"
+                    className="aspect-square overflow-hidden bg-[#212121]"
                   >
                     <img
                       src={src}
@@ -277,10 +277,10 @@ function ImageSideOffer({ offer, reverse }) {
 
           <motion.div {...fadeUp(0.15)} className="lg:col-span-5">
             <p className="mb-4 flex items-center gap-3 text-[11px] font-semibold uppercase tracking-[0.4em] text-[#006d6d]">
-              <span className="h-px w-10 bg-teal" />
+              <span className="h-px w-10 bg-[#651D4C]" />
               {offer.subtitle}
             </p>
-            <h2 className="font-serif text-4xl leading-tight text-charcoal lg:text-5xl">
+            <h2 className="font-sans text-4xl leading-tight text-charcoal lg:text-5xl">
               {offer.title}
             </h2>
             <p className="mt-6 text-base leading-relaxed text-charcoal/70">
@@ -300,7 +300,7 @@ function FullscreenFloatingOffer({ offer }) {
   return (
     <section
       id={offer.slug}
-      className="relative overflow-hidden bg-ocean py-20 lg:py-32"
+      className="relative overflow-hidden bg-[#212121] py-20 lg:py-32"
     >
       <img
         src={offer.heroImage}
@@ -315,15 +315,15 @@ function FullscreenFloatingOffer({ offer }) {
         <motion.div {...fadeUp()} className="lg:col-span-5 lg:pt-12">
           {offer.badge && (
             <div className="mb-6 inline-flex items-center gap-2 border border-teal/60 bg-ocean/40 px-4 py-2 text-[10px] uppercase tracking-[0.32em] text-ivory backdrop-blur-md">
-              <Sparkles className="h-3 w-3 text-teal" />
+              <Sparkles className="h-3 w-3 text-[#651D4C]" />
               {offer.badge}
             </div>
           )}
-          <p className="mb-4 flex items-center gap-3 text-[11px] font-semibold uppercase tracking-[0.4em] text-teal">
-            <span className="h-px w-10 bg-teal/70" />
+          <p className="mb-4 flex items-center gap-3 text-[11px] font-semibold uppercase tracking-[0.4em] text-[#651D4C]">
+            <span className="h-px w-10 bg-[#651D4C]/70" />
             {offer.subtitle}
           </p>
-          <h2 className="font-serif text-4xl leading-tight text-ivory lg:text-6xl">
+          <h2 className="font-sans text-4xl leading-tight text-ivory lg:text-6xl">
             {offer.title}
           </h2>
           <p className="mt-6 max-w-md text-base leading-relaxed text-ivory/75">
@@ -334,10 +334,10 @@ function FullscreenFloatingOffer({ offer }) {
         <motion.div {...fadeUp(0.2)} className="lg:col-span-7">
           <div className="border border-ivory/15 bg-ocean/40 p-8 backdrop-blur-xl shadow-[0_40px_120px_-40px_rgba(0,0,0,0.8)] lg:p-12">
             <div className="h-px w-full bg-linear-to-r from-transparent via-teal to-transparent" />
-            <p className="mt-7 mb-2 text-[10px] uppercase tracking-[0.4em] text-teal">
+            <p className="mt-7 mb-2 text-[10px] uppercase tracking-[0.4em] text-[#651D4C]">
               Included in this experience
             </p>
-            <h3 className="font-serif text-2xl text-ivory lg:text-3xl">
+            <h3 className="font-sans text-2xl text-ivory lg:text-3xl">
               {offer.title.split("·")[0].trim()} Inclusions
             </h3>
 
@@ -371,18 +371,18 @@ function InclusionGrid({ items, dark = false }) {
             className={`group flex items-start gap-3 px-4 py-4 transition-colors ${
               dark
                 ? "bg-ocean/60 hover:bg-ocean/80"
-                : "bg-white hover:bg-ivory"
+                : "bg-white hover:bg-white"
             }`}
           >
             <span
               className={`grid h-9 w-9 shrink-0 place-items-center border transition-colors ${
                 dark
-                  ? "border-teal/40 bg-teal/10 group-hover:bg-teal/20"
-                  : "border-teal/30 bg-ivory group-hover:border-teal"
+                  ? "border-teal/40 bg-[#651D4C]/10 group-hover:bg-[#651D4C]/20"
+                  : "border-teal/30 bg-white group-hover:border-teal"
               }`}
             >
               <Icon
-                className={`h-4 w-4 ${dark ? "text-teal" : "text-[#006d6d]"}`}
+                className={`h-4 w-4 ${dark ? "text-[#651D4C]" : "text-[#006d6d]"}`}
               />
             </span>
             <span
@@ -409,14 +409,14 @@ function PricingBlock({ offer, dark = false }) {
         <div>
           <p
             className={`text-[10px] font-semibold uppercase tracking-[0.4em] ${
-              dark ? "text-teal" : "text-[#006d6d]"
+              dark ? "text-[#651D4C]" : "text-[#006d6d]"
             }`}
           >
             {offer.priceLabel}
           </p>
           <div className="mt-2 flex items-baseline gap-3">
             <span
-              className={`font-serif text-5xl leading-none lg:text-6xl ${
+              className={`font-sans text-5xl leading-none lg:text-6xl ${
                 dark ? "text-ivory" : "text-charcoal"
               }`}
             >
@@ -455,7 +455,7 @@ function PricingBlock({ offer, dark = false }) {
       <div className="mt-7 flex flex-col gap-3 sm:flex-row">
         <Link
           to={offer.ctaPrimaryLink}
-          className="group inline-flex items-center justify-center gap-2 bg-teal px-7 py-4 text-[11px] font-semibold uppercase tracking-[0.32em] text-ocean transition hover:bg-[#006d6d] hover:text-ivory hover:shadow-[0_18px_50px_-15px_rgba(212,133,0,0.6)]"
+          className="group inline-flex items-center justify-center gap-2 bg-[#651D4C] px-7 py-4 text-[11px] font-semibold uppercase tracking-[0.32em] text-[#333333] transition hover:bg-[#006d6d] hover:text-ivory hover:shadow-[0_18px_50px_-15px_rgba(212,133,0,0.6)]"
         >
           {offer.ctaPrimaryLabel}
           <ArrowUpRight className="h-3.5 w-3.5 transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
@@ -482,25 +482,25 @@ function PricingBlock({ offer, dark = false }) {
 /* ================================================================== */
 function OfferDiscoveryRail({ offers, onJump }) {
   return (
-    <section className="bg-ocean py-24 lg:py-32">
+    <section className="bg-[#212121] py-24 lg:py-32">
       <div className="mx-auto max-w-7xl px-6 lg:px-10">
         <motion.div
           {...fadeUp()}
           className="mb-12 flex flex-wrap items-end justify-between gap-6"
         >
           <div>
-            <p className="mb-4 flex items-center gap-3 text-[11px] font-semibold uppercase tracking-[0.4em] text-teal">
-              <span className="h-px w-10 bg-teal" />
+            <p className="mb-4 flex items-center gap-3 text-[11px] font-semibold uppercase tracking-[0.4em] text-[#651D4C]">
+              <span className="h-px w-10 bg-[#651D4C]" />
               Discover Offers
             </p>
-            <h2 className="font-serif text-4xl text-ivory lg:text-5xl">
+            <h2 className="font-sans text-4xl text-ivory lg:text-5xl">
               Choose your{" "}
-              <span className="italic text-teal">island chapter</span>.
+              <span className="italic text-[#651D4C]">island chapter</span>.
             </h2>
           </div>
           <Link
             to="/booking"
-            className="group inline-flex items-center gap-2 text-[11px] font-semibold uppercase tracking-[0.3em] text-ivory/75 transition hover:text-teal"
+            className="group inline-flex items-center gap-2 text-[11px] font-semibold uppercase tracking-[0.3em] text-ivory/75 transition hover:text-[#651D4C]"
           >
             Reserve Now
             <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-1" />
@@ -514,7 +514,7 @@ function OfferDiscoveryRail({ offers, onJump }) {
               key={offer.id}
               onClick={() => onJump(offer.slug)}
               {...fadeUp(i * 0.08)}
-              className="group relative w-[78vw] shrink-0 snap-start overflow-hidden border border-ivory/10 bg-ocean text-left transition-colors hover:border-teal/50 sm:w-105"
+              className="group relative w-[78vw] shrink-0 snap-start overflow-hidden border border-ivory/10 bg-[#212121] text-left transition-colors hover:border-teal/50 sm:w-105"
             >
               <div className="relative h-72 overflow-hidden">
                 <img
@@ -531,10 +531,10 @@ function OfferDiscoveryRail({ offers, onJump }) {
                 )}
               </div>
               <div className="p-6">
-                <p className="mb-2 text-[10px] uppercase tracking-[0.3em] text-teal">
+                <p className="mb-2 text-[10px] uppercase tracking-[0.3em] text-[#651D4C]">
                   {offer.subtitle}
                 </p>
-                <h3 className="font-serif text-2xl text-ivory">
+                <h3 className="font-sans text-2xl text-ivory">
                   {offer.title}
                 </h3>
                 <div className="mt-5 flex items-end justify-between">
@@ -542,14 +542,14 @@ function OfferDiscoveryRail({ offers, onJump }) {
                     <p className="text-[10px] uppercase tracking-[0.3em] text-ivory/55">
                       {offer.priceLabel}
                     </p>
-                    <p className="mt-1 font-serif text-2xl text-ivory">
+                    <p className="mt-1 font-sans text-2xl text-ivory">
                       {formatPeso(offer.priceAmount)}
                       <span className="ml-1 text-xs text-ivory/55">
                         {offer.priceUnit}
                       </span>
                     </p>
                   </div>
-                  <span className="grid h-10 w-10 place-items-center border border-ivory/20 text-ivory transition group-hover:border-teal group-hover:bg-teal group-hover:text-ocean">
+                  <span className="grid h-10 w-10 place-items-center border border-ivory/20 text-ivory transition group-hover:border-teal group-hover:bg-[#651D4C] group-hover:text-[#333333]">
                     <ChevronRight className="h-4 w-4" />
                   </span>
                 </div>
@@ -579,20 +579,20 @@ function ClosingCTA() {
       <div className="relative z-10 mx-auto max-w-4xl px-6 py-32 text-center lg:px-10 lg:py-44">
         <motion.p
           {...fadeUp()}
-          className="mb-6 flex items-center justify-center gap-3 text-[11px] font-semibold uppercase tracking-[0.4em] text-teal"
+          className="mb-6 flex items-center justify-center gap-3 text-[11px] font-semibold uppercase tracking-[0.4em] text-[#651D4C]"
         >
-          <span className="h-px w-10 bg-teal" />
+          <span className="h-px w-10 bg-[#651D4C]" />
           Your Escape Awaits
-          <span className="h-px w-10 bg-teal" />
+          <span className="h-px w-10 bg-[#651D4C]" />
         </motion.p>
         <motion.h2
           {...fadeUp(0.1)}
-          className="font-serif text-4xl leading-tight text-ivory lg:text-6xl"
+          className="font-sans text-4xl leading-tight text-ivory lg:text-6xl"
         >
           Wake up steps away from
           <br />
           Samal Island's{" "}
-          <span className="italic text-teal">white sand paradise</span>.
+          <span className="italic text-[#651D4C]">white sand paradise</span>.
         </motion.h2>
         <motion.p
           {...fadeUp(0.2)}
@@ -608,7 +608,7 @@ function ClosingCTA() {
         >
           <Link
             to="/booking"
-            className="group inline-flex items-center gap-3 bg-teal px-9 py-4 text-[11px] font-semibold uppercase tracking-[0.32em] text-ocean transition hover:bg-[#006d6d] hover:text-ivory hover:shadow-[0_20px_60px_-15px_rgba(212,133,0,0.7)]"
+            className="group inline-flex items-center gap-3 bg-[#651D4C] px-9 py-4 text-[11px] font-semibold uppercase tracking-[0.32em] text-[#333333] transition hover:bg-[#006d6d] hover:text-ivory hover:shadow-[0_20px_60px_-15px_rgba(212,133,0,0.7)]"
           >
             Reserve Your Escape
             <ArrowUpRight className="h-3.5 w-3.5 transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
@@ -627,11 +627,11 @@ function ClosingCTA() {
           className="mt-10 flex flex-wrap items-center justify-center gap-x-8 gap-y-3 text-[11px] uppercase tracking-[0.3em] text-ivory/55"
         >
           <span className="flex items-center gap-2">
-            <MapPin className="h-3.5 w-3.5 text-teal" />
+            <MapPin className="h-3.5 w-3.5 text-[#651D4C]" />
             Samal Island, Davao del Norte
           </span>
           <span className="flex items-center gap-2">
-            <Mail className="h-3.5 w-3.5 text-teal" />
+            <Mail className="h-3.5 w-3.5 text-[#651D4C]" />
             {brand.email}
           </span>
         </motion.div>
@@ -656,7 +656,7 @@ function StickyMobileCTA({ visible }) {
         >
           <Link
             to="/booking"
-            className="flex w-full items-center justify-center gap-2 bg-teal px-6 py-3.5 text-[11px] font-semibold uppercase tracking-[0.3em] text-ocean transition hover:bg-[#006d6d] hover:text-ivory"
+            className="flex w-full items-center justify-center gap-2 bg-[#651D4C] px-6 py-3.5 text-[11px] font-semibold uppercase tracking-[0.3em] text-[#333333] transition hover:bg-[#006d6d] hover:text-ivory"
           >
             Reserve Now
             <ArrowUpRight className="h-3.5 w-3.5" />
@@ -714,7 +714,7 @@ export default function Offer() {
   };
 
   return (
-    <div className="bg-ivory">
+    <div className="bg-white">
       <CinematicHero onExplore={handleExplore} />
       <StoryIntro />
 
@@ -729,5 +729,6 @@ export default function Offer() {
     </div>
   );
 }
+
 
 

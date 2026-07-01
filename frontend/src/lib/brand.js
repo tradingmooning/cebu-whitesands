@@ -17,23 +17,24 @@ export const brand = {
   logoUrl: "https://image-tc.galaxy.tf/wipng-7fdiodx62skf1s8iq9jghjsz6/discovery-samal-colour.png?width=500",
   logoWhiteUrl: "https://image-tc.galaxy.tf/wipng-788jbt3890mjhd3ndne0t39dn/discovery-samal-colour-reversal.png?width=500",
   cdnBase: "",
-  // Brand palette — luxury Lind-inspired system
+  // Brand palette — whitesands-inspired wine/maroon system
   palette: {
-    bg:           "#fdfcfa", // warm white page background
+    bg:           "#ffffff", // clean white page background
     surface:      "#f8f4ef", // card / panel surface
-    primary:      "#0d3347", // deep ocean blue (dark text, headers)
-    brand:        "#0b7a8a", // luxury teal (CTAs, highlights)
-    brandDark:    "#0a5e6c", // teal hover state
-    brandDeeper:  "#073844", // footer / very dark teal
+    primary:      "#333333", // dark text, headers
+    brand:        "#651D4C", // wine/maroon (CTAs, highlights)
+    brandDark:    "#4a1538", // wine hover state
+    brandDeeper:  "#2d0e22", // footer / very dark wine
     gold:         "#b8943c", // warm antique gold (accent)
     goldLight:    "#d4ae6e", // lighter gold
     champagne:    "#e4c47a", // champagne / highlight
     sand:         "#e8d9c8", // warm sand
     ivory:        "#faf6f0", // ivory
-    charcoal:     "#1c1c1e", // near-black text
-    deep:         "#0d3347", // deep ocean (overlays, footer)
+    charcoal:     "#333333", // heading text
+    bodyText:     "#555555", // body text
+    deep:         "#2d0e22", // deep wine (overlays, footer)
     // legacy aliases
-    accent:       "#0b7a8a",
-    accentDark:   "#0a5e6c",
+    accent:       "#651D4C",
+    accentDark:   "#4a1538",
   },
 };

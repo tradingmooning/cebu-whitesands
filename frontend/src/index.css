@@ -2,18 +2,18 @@
 
 @theme {
   /* ─── Typography ─────────────────────────────────────────────────── */
-  --font-display: "Cormorant Garamond", "Georgia", serif;
-  --font-serif:   "Playfair Display", "Georgia", serif;
-  --font-sans:    "DM Sans", "Inter", system-ui, sans-serif;
+  --font-display: "Work Sans", system-ui, sans-serif;
+  --font-serif:   "Work Sans", system-ui, sans-serif;
+  --font-sans:    "Work Sans", system-ui, sans-serif;
 
-  /* ─── Primary — Deep Ocean Blue / Luxury Teal ────────────────────── */
-  --color-ocean:        #0d3347;
-  --color-ocean-mid:    #1a4f6e;
-  --color-ocean-light:  #265f80;
-  --color-teal:         #0b7a8a;
-  --color-teal-light:   #0e9fb3;
-  --color-teal-dark:    #0a5e6c;
-  --color-teal-deeper:  #073844;
+  /* ─── Primary — Wine / Maroon (whitesands-inspired) ───────────────── */
+  --color-ocean:        #2d0e22;
+  --color-ocean-mid:    #3d1530;
+  --color-ocean-light:  #4a1538;
+  --color-teal:         #651D4C;
+  --color-teal-light:   #7d2460;
+  --color-teal-dark:    #4a1538;
+  --color-teal-deeper:  #2d0e22;
 
   /* ─── Secondary — Warm Ivory / Sand / Beige ──────────────────────── */
   --color-ivory:        #faf6f0;
@@ -41,27 +41,27 @@
   --color-surface-dark: #1c2a30;
 
   /* ─── Backward-compat aliases (keep existing components working) ─── */
-  --color-forest:       #0b7a8a;
-  --color-forest-light: #0e9fb3;
-  --color-forest-dark:  #0a5e6c;
-  --color-forest-deeper:#073844;
+  --color-forest:       #651D4C;
+  --color-forest-light: #7d2460;
+  --color-forest-dark:  #4a1538;
+  --color-forest-deeper:#2d0e22;
   --color-cream:        #f5efe6;
   --color-cream-light:  #fdfcfa;
   --color-cream-dark:   #e8d9c8;
-  --color-seafoam:      #e8f4f6;
-  --color-olive:        #0b7a8a;
-  --color-olive-dark:   #0a5e6c;
+  --color-seafoam:      #f0e8ee;
+  --color-olive:        #651D4C;
+  --color-olive-dark:   #4a1538;
   --color-offwhite:     #faf6f0;
-  --color-sage:         #6fa090;
-  --color-sage-dark:    #4f7d6b;
-  --color-sage-deep:    #2e5248;
+  --color-sage:         #9b6080;
+  --color-sage-dark:    #7d4466;
+  --color-sage-deep:    #4a1538;
   --color-tan:          #b89e82;
   --color-bs-gold:      #b8943c;
   --color-bs-brown:     #5a230e;
   --color-bs-cream:     #faf6f0;
-  --color-bs-ocean:     #1a4f6e;
-  --color-bs-palm:      #2f6b3d;
-  --color-bs-deep:      #0d3347;
+  --color-bs-ocean:     #3d1530;
+  --color-bs-palm:      #651D4C;
+  --color-bs-deep:      #2d0e22;
 }
 
 /* ─────────────────────────────────────────────────────────────────────
