@@ -393,7 +393,10 @@ function RoomsGrid() {
         {isLoading ? (
           <div className="grid grid-cols-1 gap-1 sm:grid-cols-2 lg:grid-cols-3">
             {[1, 2, 3].map((n) => (
-              <div key={n} className="aspect-square animate-pulse bg-gray-100" />
+              <div
+                key={n}
+                className="aspect-square animate-pulse bg-gray-100"
+              />
             ))}
           </div>
         ) : (
