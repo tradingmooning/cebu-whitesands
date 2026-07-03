@@ -13,59 +13,43 @@ import hom8 from "../assets/slides/hom8.jpg";
 export const ABOUT_HERO_IMAGE = hom3;
 
 export const ABOUT_HERO = {
-  preTitle: "About Discovery Samal",
+  preTitle: "About Cebu Whitesand Resort",
   title: "Where luxury meets",
-  titleAccent: "experience",
-  body: "A world-class destination crafted for unforgettable escapes — relaxation, entertainment, and premium hospitality on the shores of Samal Island, Davao del Norte.",
+  titleAccent: "the white sands",
+  body: "A premier beachfront destination in Cebu — where crystal-clear waters, pristine shores, and genuine Filipino hospitality create unforgettable escapes.",
 };
 
 // â”€â”€â”€ OUR STORY â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 export const STORY = {
   preTitle: "Our Story",
-  title: "Two destinations.",
-  titleAccent: "One legacy of hospitality.",
+  title: "A sanctuary",
+  titleAccent: "on Cebu's shores.",
   paragraphs: [
-    "Discovery Samal Hospitality Group, Inc. is the steward of two of the country's most distinctive integrated resort destinations — a legacy built on hospitality, design, and a love of the Philippine coastline.",
-    "Discovery Samal Resort is a premier island resort destination nestled on the pristine shores of Samal Island, Island Garden City of Samal, Davao del Norte. Set against the breathtaking backdrop of the Davao Gulf, the resort offers 153 lush villas and suites thoughtfully designed for those who seek luxury, seclusion, and the unhurried rhythm of island life.",
-    "It is the premier island resort in Davao del Norte — complete with private pool villas, hotel suites, beachfront dining, the Samal Grand Ballroom, and a full range of watersports and wellness experiences for families, couples, and groups.",
+    "Cebu Whitesand Resort is a premier beachfront retreat nestled along the pristine coastline of Cebu, Philippines — where crystal-clear waters and powdery white sands set the stage for extraordinary stays.",
+    "Designed for travellers who seek beauty, comfort, and genuine warmth, every corner of the resort reflects a deep respect for nature and Filipino hospitality. From our thoughtfully appointed rooms to our beachfront dining and wellness offerings, we craft experiences that linger long after you leave.",
+    "Whether you are celebrating a milestone, planning a corporate retreat, or simply escaping the everyday, Cebu Whitesand Resort is your home away from home on the shores of the Philippines.",
   ],
   image: hom1,
-  imageCaption: "Samal Island, Davao del Norte · Premier island resort",
+  imageCaption: "Cebu, Philippines · Premier beachfront resort",
 };
 
 // â”€â”€â”€ PROPERTIES â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 export const PROPERTIES = [
   {
-    slug: "discovery-samal",
-    company: "Discovery Hospitality Corporation",
-    name: "Discovery Samal — Island Luxury Resort",
-    location: "Samal Island · Davao del Norte",
+    slug: "cebu-whitesand-resort",
+    company: "Cebu Whitesand Resort",
+    name: "Cebu Whitesand Resort — Beachfront Luxury",
+    location: "Cebu · Philippines",
     description:
-      "Set on the pristine shores of Samal Island, Discovery Samal Resort offers 153 lush villas and suites overlooking the Davao Gulf. Complete with beachfront dining, the Samal Grand Ballroom, watersports, The Spa, and unmatched Filipino hospitality — the premier island resort escape in Mindanao.",
+      "Set on the pristine shores of Cebu, Cebu Whitesand Resort offers thoughtfully designed rooms and suites overlooking crystal-clear waters. Complete with beachfront dining, a wellness spa, water activities, and genuine Filipino hospitality.",
     image: hom2,
     stats: [
-      { value: "153", label: "Villas & Suites" },
-      { value: "3", label: "Restaurants" },
       { value: "5★", label: "Experience" },
-    ],
-  },
-  {
-    slug: "discovery-primea",
-    company: "Discovery Hospitality Corporation",
-    name: "Discovery Primea — Urban Sanctuary",
-    location: "Ayala Avenue · Makati City",
-    description:
-      "Discovery Primea brings the same tradition of warm hospitality to the heart of Makati’s central business district. Luxury hotel suites, world-class dining at Kipling’s Restaurant, and an elevated city experience steps from Ayala Center.",
-    image: hom4,
-    stats: [
-      { value: "223", label: "Rooms & Suites" },
-      { value: "5★", label: "Deluxe Hotel" },
-      { value: "2015", label: "Est." },
+      { value: "1", label: "Beachfront Location" },
+      { value: "∞", label: "Memories Made" },
     ],
   },
 ];
-
-// â”€â”€â”€ EXPERIENCE PILLARS â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 export const EXPERIENCES = [
   {
     title: "Luxury Suites",
@@ -84,28 +68,28 @@ export const EXPERIENCES = [
   {
     title: "Recreation",
     blurb:
-      "Watersports, kayaking, beach volleyball, and an infinity pool overlooking the Davao Gulf.",
+      "Watersports, kayaking, beach volleyball, and a pool overlooking the blue Cebu waters.",
     image: hom5,
     href: "/activities",
   },
   {
     title: "Wellness",
     blurb:
-      "The Spa at Discovery Samal — body rituals, massage therapies, and quiet hours by the water.",
+      "Our spa — body rituals, massage therapies, and quiet hours by the sea.",
     image: hom8,
     href: "/activities",
   },
   {
     title: "Entertainment",
     blurb:
-      "Haribar Lounge evenings, live music nights, and sunset cocktails by the beach.",
+      "Live music evenings, sunset cocktails, and beachside gatherings under the stars.",
     image: hom7,
     href: "/activities",
   },
   {
     title: "Events & Celebrations",
     blurb:
-      "The Samal Grand Ballroom and scenic island venues for weddings, debuts, and milestone gatherings.",
+      "Beachfront and indoor venues for weddings, debuts, and milestone gatherings.",
     image:
       "/events/_hero/event-venues-page-website-header-announcement-1600-x-649-1.jpg",
     href: "/events",
@@ -126,32 +110,32 @@ export const WHY_US = [
   {
     title: "World-Class Hospitality",
     blurb:
-      "Two decades of integrated-resort experience, distilled into thoughtful, attentive service.",
+      "Warm, attentive service and genuine Filipino hospitality at every turn.",
   },
   {
     title: "Elegant Accommodations",
     blurb:
-      "153 lush villas and suites bringing the most distinctive luxury of space on Samal Island.",
+      "Thoughtfully designed rooms and suites with stunning views of the sea.",
   },
   {
-    title: "Scenic Destination",
+    title: "Scenic Beachfront Location",
     blurb:
-      "Breathtaking views of the Davao Gulf — sunrise, sunset, and the long blue of Samal waters.",
+      "Crystal-clear waters and powdery white sands right at your doorstep in Cebu.",
   },
   {
     title: "Curated Experiences",
     blurb:
-      "From The Spa wellness rituals to island watersports, every hour of the day is composed.",
+      "From spa wellness rituals to beachfront water activities, every hour is crafted for you.",
   },
   {
     title: "Premium Service",
     blurb:
-      "A concierge culture that anticipates — and a recreation team that elevates every itinerary.",
+      "A concierge culture that anticipates every need and elevates every itinerary.",
   },
   {
-    title: "A Legacy of Place",
+    title: "A Place to Remember",
     blurb:
-      "A Discovery Hospitality Corporation property — anchored in Philippine landscape, culture, and craft.",
+      "Anchored in the beauty of the Philippine coastline, crafted for memories that last.",
   },
 ];
 
@@ -175,15 +159,15 @@ export const GALLERY = [
 export const TESTIMONIALS = [
   {
     quote:
-      "A genuinely luxurious island escape. The villas are breathtaking and the service was warm at every turn — a true hidden gem of Mindanao.",
+      "A genuinely relaxing beachfront escape. The rooms are beautiful and the service was warm at every turn — a true gem of Cebu.",
     name: "Maria Reyes",
     role: "Guest · Manila",
   },
   {
     quote:
-      "We celebrated our wedding at the Samal Grand Ballroom. Sunset over the Davao Gulf, golden hour, attentive staff — exactly the moment we had imagined.",
+      "We celebrated our anniversary at Cebu Whitesand Resort. The beachfront setting, the warm staff, the food — every moment was exactly as we had imagined.",
     name: "Jonathan & Angela Lim",
-    role: "Wedding · Samal Island",
+    role: "Anniversary · Cebu",
   },
   {
     quote:

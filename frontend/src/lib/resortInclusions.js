@@ -1,5 +1,5 @@
-/**
- * Discovery Samal Resort — Global Resort Inclusions & Policies
+﻿/**
+ * Cebu Whitesand Resort — Global Resort Inclusions & Policies
  *
  * Single source of truth for resort-wide booking inclusions and guest policies.
  * All room cards, room detail pages, booking flows and SEO surfaces should
@@ -10,15 +10,21 @@
  * so the backend seeder and frontend share the same vocabulary).
  */
 
-export const RESORT_ADDRESS = "Your Resort Address, City, Country";
+export const RESORT_ADDRESS =
+  "Maribago Beach, Mactan Island, M.L. Quezon National Highway, Lapu-Lapu City, 6015 Cebu";
 
-export const RESORT_ADDRESS_SHORT = "Your Resort Location";
+export const RESORT_ADDRESS_SHORT =
+  "Maribago Beach, Mactan Island, Lapu-Lapu City, Cebu";
 
-export const RESORT_MAP_QUERY = "Your+Resort+Address+City+Country";
+export const RESORT_MAP_QUERY =
+  "Cebu+White+Sands+Resort+and+Spa+Maribago+Mactan+Island+Lapu-Lapu+City+Cebu";
 
-export const RESORT_MAP_EMBED_URL = `https://www.google.com/maps?q=${RESORT_MAP_QUERY}&output=embed`;
+export const RESORT_LAT = 10.28656;
+export const RESORT_LNG = 123.9989;
 
-export const RESORT_MAP_DIRECTIONS_URL = `https://www.google.com/maps?q=${RESORT_MAP_QUERY}`;
+export const RESORT_MAP_EMBED_URL = `https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d500!2d${RESORT_LNG}!3d${RESORT_LAT}!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x33a9994c68b3c3e9%3A0x0!2zQ2VidSBXaGl0ZSBTYW5kcyBSZXNvcnQ!5e0!3m2!1sen!2sph!4v1700000000000!5m2!1sen!2sph`;
+
+export const RESORT_MAP_DIRECTIONS_URL = `https://www.google.com/maps?ll=${RESORT_LAT},${RESORT_LNG}&z=19&t=m`;
 
 /**
  * Inclusions that apply to EVERY room booking.

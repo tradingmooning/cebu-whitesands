@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+﻿import { useEffect, useState } from "react";
 import { getPaymentDetails, updatePaymentDetails } from "../../services/api";
 import toast from "react-hot-toast";
 import { Save } from "lucide-react";
@@ -149,7 +149,7 @@ export default function PaymentSettingsPage() {
               type="text"
               value={form.gcashName}
               onChange={(e) => setForm({ ...form, gcashName: e.target.value })}
-              placeholder="e.g., Discovery Samal Resort"
+              placeholder="e.g., Cebu Whitesand Resort"
               className={inputClass}
             />
           </div>

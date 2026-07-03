@@ -8,7 +8,7 @@ const services = [
   {
     icon: `${CDN}/bus.svg`,
     title: "Airport Shuttle",
-    desc: "Seamless transfers from Clark International Airport to Discovery Samal Resort, arranged at your convenience.",
+    desc: "Seamless transfers from Clark International Airport to Cebu Whitesand Resort, arranged at your convenience.",
     bg: `${CDN}/DJI_0239_1.jpg`,
   },
   {
@@ -78,7 +78,7 @@ export default function Experience() {
       <section className="relative h-[70vh] min-h-[500px] overflow-hidden">
         <img
           src={`${CDN}/dining.jpg`}
-          alt="Discovery Samal Services"
+          alt="Cebu Whitesand Resort Services"
           className="absolute inset-0 w-full h-full object-cover scale-105"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-black/10 via-black/40 to-black/75" />
@@ -125,7 +125,7 @@ export default function Experience() {
               Designed Around You
             </h2>
             <p className="text-charcoal/60 leading-relaxed text-lg">
-              At Discovery Samal Resort, every service is an extension of our
+              At Cebu Whitesand Resort, every service is an extension of our
               commitment to you. From the moment you arrive until your last
               goodbye, we ensure comfort, convenience, and care at every step.
             </p>
@@ -204,7 +204,7 @@ export default function Experience() {
           <div className="text-center mb-14">
             <p className="section-pre-title mb-4">Explore More</p>
             <h2 className="font-serif text-4xl text-teal-dark">
-              Discover Discovery Samal
+              Discover Cebu Whitesand Resort
             </h2>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-5">

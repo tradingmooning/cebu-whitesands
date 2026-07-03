@@ -30,7 +30,7 @@ function Hero() {
     <section className="relative h-[80vh] min-h-[560px] w-full overflow-hidden">
       <img
         src={EVENTS_HERO_IMAGE}
-        alt="Discovery Samal Resort Meetings & Events"
+        alt="Cebu Whitesand Resort Meetings & Events"
         className="absolute inset-0 h-full w-full object-cover"
       />
       <div className="absolute inset-0 bg-linear-to-b from-black/60 via-black/30 to-black/70" />
@@ -79,7 +79,7 @@ function Intro() {
               {EVENTS_INTRO.body}
             </p>
             <a
-              href="mailto:reservations@discoverysamal.com"
+              href="mailto:reservations@cebu-whitesand-resort.com"
               className="inline-flex w-fit items-center gap-2 bg-[#651D4C] px-7 py-3 text-[11px] font-semibold uppercase tracking-[0.3em] text-white transition-colors hover:bg-[#006d6d]"
             >
               Request for Proposal
@@ -181,7 +181,7 @@ function VenueCard({ venue, index, onOpenLightbox }) {
 
             <div className="mt-7 flex flex-wrap gap-3">
               <a
-                href="mailto:reservations@discoverysamal.com"
+                href="mailto:reservations@cebu-whitesand-resort.com"
                 className="inline-flex items-center gap-2 bg-[#651D4C] px-7 py-3 text-[11px] font-semibold uppercase tracking-[0.3em] text-white transition-colors hover:bg-[#006d6d]"
               >
                 Enquire Now
@@ -299,14 +299,14 @@ function CTA() {
           className="mt-4 text-[15px] leading-relaxed text-white/75"
         >
           Our events team is ready to help you plan the perfect meeting,
-          wedding, or celebration at Discovery Samal Resort on Samal Island.
+          wedding, or celebration at Cebu Whitesand Resort on Cebu.
         </motion.p>
         <motion.div
           {...fadeUp(0.2)}
           className="mt-8 flex flex-wrap items-center justify-center gap-4"
         >
           <a
-            href="mailto:reservations@discoverysamal.com"
+            href="mailto:reservations@cebu-whitesand-resort.com"
             className="inline-flex items-center gap-2 bg-[#651D4C] px-8 py-3.5 text-[11px] font-semibold uppercase tracking-[0.3em] text-white transition-colors hover:bg-[#006d6d]"
           >
             Request for Proposal

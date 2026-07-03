@@ -3,65 +3,65 @@
 @theme {
   /* ─── Typography ─────────────────────────────────────────────────── */
   --font-display: "Work Sans", system-ui, sans-serif;
-  --font-serif:   "Work Sans", system-ui, sans-serif;
-  --font-sans:    "Work Sans", system-ui, sans-serif;
+  --font-serif: "Work Sans", system-ui, sans-serif;
+  --font-sans: "Work Sans", system-ui, sans-serif;
 
   /* ─── Primary — Wine / Maroon (whitesands-inspired) ───────────────── */
-  --color-ocean:        #2d0e22;
-  --color-ocean-mid:    #3d1530;
-  --color-ocean-light:  #4a1538;
-  --color-teal:         #651D4C;
-  --color-teal-light:   #7d2460;
-  --color-teal-dark:    #4a1538;
-  --color-teal-deeper:  #2d0e22;
+  --color-ocean: #2d0e22;
+  --color-ocean-mid: #3d1530;
+  --color-ocean-light: #4a1538;
+  --color-teal: #651d4c;
+  --color-teal-light: #7d2460;
+  --color-teal-dark: #4a1538;
+  --color-teal-deeper: #2d0e22;
 
   /* ─── Secondary — Warm Ivory / Sand / Beige ──────────────────────── */
-  --color-ivory:        #faf6f0;
-  --color-ivory-dark:   #f0e9df;
-  --color-sand:         #e8d9c8;
-  --color-sand-mid:     #d4c0a8;
-  --color-sand-dark:    #b89e82;
-  --color-beige:        #f5efe6;
-  --color-warm-white:   #fdfcfa;
+  --color-ivory: #faf6f0;
+  --color-ivory-dark: #f0e9df;
+  --color-sand: #e8d9c8;
+  --color-sand-mid: #d4c0a8;
+  --color-sand-dark: #b89e82;
+  --color-beige: #f5efe6;
+  --color-warm-white: #fdfcfa;
 
   /* ─── Accent — Gold / Champagne ──────────────────────────────────── */
-  --color-gold:         #b8943c;
-  --color-gold-light:   #d4ae6e;
-  --color-gold-bright:  #e4c47a;
-  --color-gold-dark:    #8a6c28;
-  --color-champagne:    #f2e2c0;
+  --color-gold: #b8943c;
+  --color-gold-light: #d4ae6e;
+  --color-gold-bright: #e4c47a;
+  --color-gold-dark: #8a6c28;
+  --color-champagne: #f2e2c0;
 
   /* ─── Neutral / Text ─────────────────────────────────────────────── */
-  --color-charcoal:     #1c1c1e;
-  --color-charcoal-soft:#2f2f31;
-  --color-gray-mid:     #6b6b6b;
-  --color-gray-light:   #a8a8a8;
-  --color-gray-soft:    #f0f0ee;
-  --color-surface:      #f8f4ef;
+  --color-charcoal: #1c1c1e;
+  --color-charcoal-soft: #2f2f31;
+  --color-gray-mid: #6b6b6b;
+  --color-gray-light: #a8a8a8;
+  --color-gray-soft: #f0f0ee;
+  --color-surface: #f8f4ef;
   --color-surface-dark: #1c2a30;
 
   /* ─── Backward-compat aliases (keep existing components working) ─── */
-  --color-forest:       #651D4C;
+  --color-forest: #651d4c;
   --color-forest-light: #7d2460;
-  --color-forest-dark:  #4a1538;
-  --color-forest-deeper:#2d0e22;
-  --color-cream:        #f5efe6;
-  --color-cream-light:  #fdfcfa;
-  --color-cream-dark:   #e8d9c8;
-  --color-seafoam:      #f0e8ee;
-  --color-olive:        #651D4C;
-  --color-olive-dark:   #4a1538;
-  --color-offwhite:     #faf6f0;
-  --color-sage:         #9b6080;
-  --color-sage-dark:    #7d4466;
-  --color-sage-deep:    #4a1538;
-  --color-tan:          #b89e82;
-  --color-bs-gold:      #b8943c;
-  --color-bs-brown:     #5a230e;
-  --color-bs-cream:     #faf6f0;
-  --color-bs-ocean:     #3d1530;
-  --color-bs-palm:      #651D4C;
-  --color-bs-deep:      #2d0e22;
+  --color-forest-dark: #4a1538;
+  --color-forest-deeper: #2d0e22;
+  --color-cream: #f5efe6;
+  --color-cream-light: #fdfcfa;
+  --color-cream-dark: #e8d9c8;
+  --color-seafoam: #f0e8ee;
+  --color-olive: #651d4c;
+  --color-olive-dark: #4a1538;
+  --color-offwhite: #faf6f0;
+  --color-sage: #9b6080;
+  --color-sage-dark: #7d4466;
+  --color-sage-deep: #4a1538;
+  --color-tan: #b89e82;
+  --color-bs-gold: #b8943c;
+  --color-bs-brown: #5a230e;
+  --color-bs-cream: #faf6f0;
+  --color-bs-ocean: #3d1530;
+  --color-bs-palm: #651d4c;
+  --color-bs-deep: #2d0e22;
 }
 
 /* ─────────────────────────────────────────────────────────────────────
@@ -80,12 +80,17 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-h1, h2, h3, h4 {
+h1,
+h2,
+h3,
+h4 {
   font-family: var(--font-serif);
 }
 
-a, button {
-  transition-property: color, background-color, border-color, transform, box-shadow, opacity;
+a,
+button {
+  transition-property:
+    color, background-color, border-color, transform, box-shadow, opacity;
   transition-duration: 250ms;
   transition-timing-function: ease;
 }
@@ -276,7 +281,10 @@ a, button {
   padding-bottom: 6rem;
 }
 @media (max-width: 768px) {
-  .luxury-section { padding-top: 4rem; padding-bottom: 4rem; }
+  .luxury-section {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
 }
 
 /* Thin gold divider */
@@ -297,16 +305,23 @@ a, button {
 .luxury-card {
   background-color: #fff;
   border: 1px solid var(--color-sand);
-  transition: box-shadow 300ms ease, transform 300ms ease;
+  transition:
+    box-shadow 300ms ease,
+    transform 300ms ease;
 }
 .luxury-card:hover {
-  box-shadow: 0 12px 40px rgba(13, 51, 71, 0.10);
+  box-shadow: 0 12px 40px rgba(13, 51, 71, 0.1);
   transform: translateY(-2px);
 }
 
 /* Gold text gradient */
 .text-gold-gradient {
-  background: linear-gradient(135deg, var(--color-gold-bright) 0%, var(--color-gold) 50%, var(--color-gold-dark) 100%);
+  background: linear-gradient(
+    135deg,
+    var(--color-gold-bright) 0%,
+    var(--color-gold) 50%,
+    var(--color-gold-dark) 100%
+  );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -316,7 +331,7 @@ a, button {
 .hero-overlay {
   background: linear-gradient(
     to bottom,
-    rgba(13, 51, 71, 0.30) 0%,
+    rgba(13, 51, 71, 0.3) 0%,
     rgba(13, 51, 71, 0.55) 60%,
     rgba(13, 51, 71, 0.75) 100%
   );
@@ -327,7 +342,7 @@ a, button {
   background: rgba(255, 255, 255, 0.06);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
-  border: 1px solid rgba(255, 255, 255, 0.10);
+  border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 /* ─────────────────────────────────────────────────────────────────────
@@ -346,7 +361,8 @@ a, button {
   background: #fff;
 }
 
-.food-prev, .food-next {
+.food-prev,
+.food-next {
   transition: background-color 0.2s;
 }
 
@@ -375,7 +391,6 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   filter: invert(1) opacity(0.6);
   cursor: pointer;
 }
-
 
 html {
   scroll-behavior: smooth;
@@ -435,7 +450,7 @@ button {
   transition: background-color 0.2s;
 }
 
-/* Discovery Samal specific utilities */
+/* Cebu Whitesand Resort specific utilities */
 .section-pre-title {
   font-family: var(--font-sans);
   font-size: 0.7rem;

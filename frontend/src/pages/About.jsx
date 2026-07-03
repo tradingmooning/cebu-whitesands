@@ -28,7 +28,7 @@ import {
 import { brand } from "../lib/brand";
 
 /* â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
-/*  Local image library (from discoverysamal.com — saved to /public)         */
+/*  Local image library (from cebu-whitesand-resort.com — saved to /public)         */
 /* â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 const CDN = "https://image-tc.galaxy.tf";
 
@@ -40,14 +40,46 @@ const EXPERIENCE_BG = `https://image-tc.galaxy.tf/wijpeg-7jtyjnoy3zk9ji5fg7szxft
 const CTA_BG = `https://image-tc.galaxy.tf/wijpeg-aeexb9m4bu60ndq3vcdnb7l9o/discovery-samal-08124-2_standard.jpg`;
 
 const GALLERY = [
-  { src: `https://lirp.cdn-website.com/b434b26a/dms3rep/multi/opt/2BR+POOL+VILLA+LEFT+WING+3-1920w.jpeg`, span: "row-span-2", alt: "Beachfront view" },
-  { src: `https://lirp.cdn-website.com/b434b26a/dms3rep/multi/opt/3BR+Pool+Villa+10-1920w.jpeg`, span: "", alt: "Resort interior" },
-  { src: `https://lirp.cdn-website.com/b434b26a/dms3rep/multi/opt/5+BEDROOM+8-1920w.jpeg`, span: "", alt: "Premium suite" },
-  { src: `https://image-tc.galaxy.tf/wijpeg-e9e3fi5ee3nudxmag9mtxp6bm/aerial-1.jpg`, span: "row-span-2", alt: "Pool lounge" },
-  { src: `https://lirp.cdn-website.com/b434b26a/dms3rep/multi/opt/6+BEDROOM+1-1920w.jpeg`, span: "", alt: "Beach view room" },
-  { src: `https://image-tc.galaxy.tf/wijpeg-75f73vymu5o1t89ryvtwcmpug/girl-enjoying-the-pool-in-the-best-luxury-resort-in-davao-discovery-samal-tablet-size.jpg`, span: "", alt: "Spa & wellness" },
-  { src: `https://lirp.cdn-website.com/b434b26a/dms3rep/multi/opt/The+Bistro+2-1920w.jpeg`, span: "row-span-2", alt: "Sunbeds" },
-  { src: `https://image-tc.galaxy.tf/wijpeg-aeexb9m4bu60ndq3vcdnb7l9o/discovery-samal-08124-2_standard.jpg`, span: "", alt: "Balcony at dusk" },
+  {
+    src: `https://lirp.cdn-website.com/b434b26a/dms3rep/multi/opt/2BR+POOL+VILLA+LEFT+WING+3-1920w.jpeg`,
+    span: "row-span-2",
+    alt: "Beachfront view",
+  },
+  {
+    src: `https://lirp.cdn-website.com/b434b26a/dms3rep/multi/opt/3BR+Pool+Villa+10-1920w.jpeg`,
+    span: "",
+    alt: "Resort interior",
+  },
+  {
+    src: `https://lirp.cdn-website.com/b434b26a/dms3rep/multi/opt/5+BEDROOM+8-1920w.jpeg`,
+    span: "",
+    alt: "Premium suite",
+  },
+  {
+    src: `https://image-tc.galaxy.tf/wijpeg-e9e3fi5ee3nudxmag9mtxp6bm/aerial-1.jpg`,
+    span: "row-span-2",
+    alt: "Pool lounge",
+  },
+  {
+    src: `https://lirp.cdn-website.com/b434b26a/dms3rep/multi/opt/6+BEDROOM+1-1920w.jpeg`,
+    span: "",
+    alt: "Beach view room",
+  },
+  {
+    src: `https://image-tc.galaxy.tf/wijpeg-75f73vymu5o1t89ryvtwcmpug/girl-enjoying-the-pool-in-the-best-luxury-resort-in-davao-discovery-samal-tablet-size.jpg`,
+    span: "",
+    alt: "Spa & wellness",
+  },
+  {
+    src: `https://lirp.cdn-website.com/b434b26a/dms3rep/multi/opt/The+Bistro+2-1920w.jpeg`,
+    span: "row-span-2",
+    alt: "Sunbeds",
+  },
+  {
+    src: `https://image-tc.galaxy.tf/wijpeg-aeexb9m4bu60ndq3vcdnb7l9o/discovery-samal-08124-2_standard.jpg`,
+    span: "",
+    alt: "Balcony at dusk",
+  },
 ];
 
 /* â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
@@ -144,7 +176,7 @@ function HeroSection() {
       >
         <img
           src={HERO_IMG}
-          alt="Discovery Samal Resort beachfront"
+          alt="Cebu Whitesand Resort beachfront"
           className="h-full w-full object-cover"
         />
       </motion.div>
@@ -183,7 +215,9 @@ function HeroSection() {
             className="font-sans text-5xl leading-[1.05] text-white sm:text-6xl md:text-7xl lg:text-[88px]"
           >
             About{" "}
-            <em className="font-light italic text-[#651D4C]">{brand.shortName}</em>{" "}
+            <em className="font-light italic text-[#651D4C]">
+              {brand.shortName}
+            </em>{" "}
             Resort
           </motion.h1>
 
@@ -298,7 +332,7 @@ function IntroductionSection() {
             className="mt-10 space-y-6 font-light text-[16.5px] leading-[1.95] text-[#111]/75"
           >
             <p>
-              Nestled in the heart of paradise, Discovery Samal Resort offers a
+              Nestled in the heart of paradise, Cebu Whitesand Resort offers a
               refined escape where tropical beauty meets modern luxury.
             </p>
             <p>
@@ -390,11 +424,11 @@ function StorySection() {
           >
             <p className="font-light text-[17px] leading-[2] text-white/85">
               What began as a vision to create a peaceful island sanctuary has
-              evolved into one of the most relaxing luxury resort experiences
-              on Samal Island, Davao del Norte.
+              evolved into one of the most relaxing luxury resort experiences on
+              Cebu, Philippines.
             </p>
             <p className="mt-6 font-light text-[17px] leading-[2] text-white/85">
-              Discovery Samal Resort blends contemporary elegance with tropical
+              Cebu Whitesand Resort blends contemporary elegance with tropical
               warmth, offering guests an escape from the ordinary and a
               connection to paradise.
             </p>
@@ -435,7 +469,11 @@ function StorySection() {
 /*  4. WHY CHOOSE US — Glassmorphism feature cards                         */
 /* â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 const FEATURES = [
-  { icon: Waves, title: "Beachfront Luxury", desc: "Island beachfront location." },
+  {
+    icon: Waves,
+    title: "Beachfront Luxury",
+    desc: "Island beachfront location.",
+  },
   { icon: Sparkles, title: "Infinity Pool", desc: "Sunset-facing waters." },
   { icon: Bed, title: "Private Villas", desc: "Suites with sea views." },
   { icon: Utensils, title: "Fine Dining", desc: "Coastal flavors, refined." },
@@ -646,8 +684,8 @@ function GallerySection() {
             variants={fadeUp}
             className="max-w-md font-light text-[15px] leading-relaxed text-[#111]/65"
           >
-            Wander through the moments that define a stay at {brand.displayName} — from
-            golden mornings on the sand to soft-lit evenings by the pool.
+            Wander through the moments that define a stay at {brand.displayName}{" "}
+            — from golden mornings on the sand to soft-lit evenings by the pool.
           </motion.p>
         </motion.div>
 
@@ -867,10 +905,10 @@ function TestimonialSection() {
 /*  8. LOCATION — Map + floating info cards                                */
 /* â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 const NEARBY = [
-  { icon: Waves, label: "Davao Gulf", value: "Beachfront" },
-  { icon: Plane, label: "Davao Airport", value: "~30 min + ferry" },
+  { icon: Waves, label: "Cebu waters", value: "Beachfront" },
+  { icon: Plane, label: "Cebu Airport", value: "~30 min" },
   { icon: Utensils, label: "D'Mall Dining", value: "5 min walk" },
-  { icon: MapPin, label: "Samal Island", value: "IGACOS, Davao del Norte" },
+  { icon: MapPin, label: "Cebu", value: "Cebu, Philippines" },
 ];
 
 function LocationSection() {
@@ -895,7 +933,7 @@ function LocationSection() {
             variants={fadeUp}
             className="font-sans text-4xl leading-[1.1] text-charcoal sm:text-5xl lg:text-[56px]"
           >
-            Find us on <em className="italic text-[#651D4C]">Samal Island</em>.
+            Find us on <em className="italic text-[#651D4C]">Cebu</em>.
           </motion.h2>
           <motion.p
             variants={fadeUp}
@@ -907,8 +945,8 @@ function LocationSection() {
 
         <div className="relative overflow-hidden rounded-2xl shadow-[0_30px_80px_-30px_rgba(17,17,17,0.35)]">
           <iframe
-            title="Discovery Samal Resort location"
-            src="https://www.google.com/maps?q=Samal+Island+Island+Garden+City+of+Samal+Davao+del+Norte&output=embed"
+            title="Cebu Whitesand Resort location"
+            src="https://www.google.com/maps?q=Cebu+Philippines&output=embed"
             className="h-[460px] w-full border-0 grayscale-[0.15]"
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
@@ -929,7 +967,7 @@ function LocationSection() {
               {brand.address}
             </p>
             <a
-              href="https://www.google.com/maps?q=Samal+Island+Island+Garden+City+of+Samal+Davao+del+Norte"
+              href="https://www.google.com/maps?q=Cebu+Philippines"
               target="_blank"
               rel="noopener noreferrer"
               className="mt-4 inline-flex items-center gap-2 text-[11px] uppercase tracking-[0.3em] text-[#651D4C] hover:text-charcoal"
@@ -984,7 +1022,7 @@ function FinalCTASection() {
       >
         <img
           src={CTA_BG}
-          alt="Sunset at discoverysamal"
+          alt="Sunset at cebu-whitesand-resort"
           className="h-full w-full object-cover"
         />
       </motion.div>
@@ -1014,7 +1052,7 @@ function FinalCTASection() {
             variants={fadeUp}
             className="mx-auto mt-8 max-w-xl font-light text-[17px] leading-[1.8] text-white/80"
           >
-            Book your unforgettable stay at Discovery Samal Resort today — where
+            Book your unforgettable stay at Cebu Whitesand Resort today — where
             the tide whispers and time slows.
           </motion.p>
 
@@ -1048,7 +1086,3 @@ function FinalCTASection() {
     </section>
   );
 }
-
-
-
-

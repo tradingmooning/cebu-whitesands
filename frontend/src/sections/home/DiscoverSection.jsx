@@ -1,8 +1,8 @@
-import { Link } from "react-router-dom";
+﻿import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { brand } from "../../lib/brand";
-import discoverBg from "../../assets/discoverysamal/discover-bg.jpg";
-import aboutBg from "../../assets/discoverysamal/about-bg.jpg";
+import discoverBg from "../../assets/cebu-whitesand-resort/discover-bg.jpg";
+import aboutBg from "../../assets/cebu-whitesand-resort/about-bg.jpg";
 
 export default function DiscoverSection() {
   return (
@@ -50,11 +50,11 @@ export default function DiscoverSection() {
           </p>
           <h2 className="mb-7 font-serif text-4xl font-light leading-[1.1] text-charcoal sm:text-5xl lg:text-[56px]">
             A Seaside Sanctuary <br />
-            On Samal Island, Davao del Norte
+            On Cebu, Philippines
           </h2>
           <p className="mb-5 text-[15px] leading-[1.85] text-charcoal/70">
-            Nestled on the shores of Samal Island in the Island Garden City of
-            Samal, Davao del Norte, {brand.displayName} is an intimate
+            Nestled on the shores of Cebu in the Island Garden City of
+            Samal, Cebu, {brand.displayName} is an intimate
             collection of 153 pool villas and seaview suites designed for slow
             mornings, long sunsets, and the kind of stillness only the sea can
             offer.

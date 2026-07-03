@@ -44,7 +44,7 @@ import {
 import { brand } from "../lib/brand";
 
 /* ------------------------------------------------------------------ */
-/*  Brand palette — Discovery Samal                                      */
+/*  Brand palette — Cebu Whitesand Resort                                      */
 /*    cream   #f7f7f5                                                  */
 /*    brown   #1a1a1a   (deep brown — primary text & dark panels)      */
 /*    orange  #008c8c   (accent CTA)                                   */
@@ -86,7 +86,7 @@ function Hero() {
       <motion.div style={{ y }} className="absolute inset-0">
         <img
           src={CONTACT_HERO_IMAGE}
-          alt="Discovery Samal — Samal Island Resort"
+          alt="Cebu Whitesand Resort — Cebu Resort"
           className="absolute inset-0 h-full w-full scale-110 object-cover"
         />
       </motion.div>
@@ -102,7 +102,7 @@ function Hero() {
       >
         <div className="flex items-center gap-3 border border-teal/50 bg-ocean/35 px-5 py-2 text-[10px] uppercase tracking-[0.4em] text-ivory backdrop-blur-md">
           <Star className="h-3 w-3 fill-teal text-[#651D4C]" />
-          <span>24/7 Concierge · Discovery Samal</span>
+          <span>24/7 Concierge · Cebu Whitesand Resort</span>
           <Star className="h-3 w-3 fill-teal text-[#651D4C]" />
         </div>
       </motion.div>
@@ -184,7 +184,7 @@ function Hero() {
           </a>
           <span className="inline-flex items-center gap-2.5 border border-ivory/15 bg-ocean/40 px-4 py-2.5 text-[12px] text-ivory/85 backdrop-blur-md">
             <MapPin className="h-3.5 w-3.5 text-[#651D4C]" />
-            Samal Island, Davao del Norte
+            Cebu, Philippines
           </span>
         </motion.div>
       </motion.div>
@@ -676,7 +676,7 @@ function LocationBand() {
           </p>
           <h2 className="font-sans text-4xl leading-tight text-charcoal sm:text-5xl">
             Steps from{" "}
-            <span className="italic text-[#651D4C]">Samal Island</span>.
+            <span className="italic text-[#651D4C]">Cebu</span>.
           </h2>
         </motion.div>
 
@@ -785,7 +785,7 @@ function ConciergeBand() {
         >
           <img
             src={CONCIERGE_IMAGE}
-            alt="Discovery Samal concierge"
+            alt="Cebu Whitesand Resort concierge"
             loading="lazy"
             className="absolute inset-0 h-full w-full object-cover transition-transform duration-2000 ease-out hover:scale-[1.04]"
           />
@@ -937,7 +937,7 @@ function Social() {
             <span className="h-px w-10 bg-[#651D4C]" />
           </p>
           <h2 className="font-sans text-4xl leading-tight text-ivory sm:text-5xl lg:text-[52px]">
-            Experience Samal Island{" "}
+            Experience Cebu{" "}
             <span className="italic text-[#651D4C]">through our guests</span>.
           </h2>
         </motion.div>
@@ -955,7 +955,7 @@ function Social() {
             >
               <img
                 src={src}
-                alt="Guest moment at Discovery Samal"
+                alt="Guest moment at Cebu Whitesand Resort"
                 loading="lazy"
                 className="absolute inset-0 h-full w-full object-cover transition-transform duration-1600 group-hover:scale-110"
               />
@@ -1110,7 +1110,7 @@ export default function Contact() {
 
   useEffect(() => {
     const prev = document.title;
-    document.title = "Contact Discovery Samal Resort · Luxury Island Resort";
+    document.title = "Contact Cebu Whitesand Resort · Luxury Island Resort";
     return () => {
       document.title = prev;
     };

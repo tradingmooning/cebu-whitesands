@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+﻿import { motion } from "framer-motion";
 import { galleryImages } from "../../data/galleryData";
 
 const HERO_IMG =
@@ -9,7 +9,7 @@ export default function GalleryHero() {
     <section className="relative h-[55vh] min-h-[380px] w-full overflow-hidden">
       <img
         src={HERO_IMG}
-        alt="Discovery Samal Resort aerial view"
+        alt="Cebu Whitesand Resort aerial view"
         className="absolute inset-0 h-full w-full object-cover"
       />
       <div
@@ -28,7 +28,7 @@ export default function GalleryHero() {
           className="text-[11px] font-medium uppercase"
           style={{ color: "#C9B48A", letterSpacing: "0.35em" }}
         >
-          Samal Island, Davao del Norte· Philippines
+          Cebu, Philippines· Philippines
         </motion.p>
 
         <motion.h1
@@ -38,7 +38,7 @@ export default function GalleryHero() {
           className="mt-4 font-serif font-bold text-white"
           style={{ fontSize: "clamp(40px, 6.5vw, 68px)", lineHeight: 1.05 }}
         >
-          Life at Discovery Samal.
+          Life at Cebu Whitesand Resort.
         </motion.h1>
 
         <motion.p

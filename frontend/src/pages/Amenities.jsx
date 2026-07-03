@@ -88,7 +88,7 @@ const SHOWCASES = [
   },
   {
     id: "beachfront",
-    eyebrow: "Beachfront on Samal Island",
+    eyebrow: "Beachfront on Cebu",
     title: "Beachfront Lounge Beds",
     description:
       "Linen canopies. Powder-soft sand. The Sulu Sea unfurling at your feet. Sun-warmed lounge beds reserved exclusively for our in-house guests.",
@@ -147,7 +147,7 @@ const GALLERY = [
 const TESTIMONIALS = [
   {
     quote:
-      "From the infinity pool at dusk to the candlelit spa rituals, every detail feels considered. A true sanctuary on Samal Island.",
+      "From the infinity pool at dusk to the candlelit spa rituals, every detail feels considered. A true sanctuary on Cebu.",
     name: "Isabella M.",
     origin: "London, UK",
     rating: 5,
@@ -241,7 +241,7 @@ function Hero() {
       <motion.div style={{ y, scale }} className="absolute inset-0">
         <img
           src={HERO_IMG}
-          alt="Discovery Samal luxury amenities"
+          alt="Cebu Whitesand Resort luxury amenities"
           className="h-full w-full object-cover"
           loading="eager"
         />
@@ -262,7 +262,7 @@ function Hero() {
           transition={{ duration: 1, delay: 0.2 }}
           className="mb-6 text-[11px] font-semibold uppercase tracking-[0.5em] text-teal"
         >
-          Discovery Samal · Samal Island
+          Cebu Whitesand Resort · Cebu
         </motion.p>
 
         <motion.h1
@@ -755,7 +755,7 @@ function Gallery() {
             className="max-w-sm text-[15px] leading-relaxed text-ocean/70"
           >
             Wander through frames of warm afternoons, quiet corners, and
-            unhurried indulgence at Discovery Samal.
+            unhurried indulgence at Cebu Whitesand Resort.
           </motion.p>
         </motion.div>
 
@@ -1011,7 +1011,7 @@ function FinalCTA() {
         viewport={{ once: true }}
         transition={{ duration: 2.5, ease: [0.22, 1, 0.36, 1] }}
         src={`https://image-tc.galaxy.tf/wijpeg-aeexb9m4bu60ndq3vcdnb7l9o/discovery-samal-08124-2_standard.jpg`}
-        alt="Sunset over Samal Island"
+        alt="Sunset over Cebu"
         className="absolute inset-0 h-full w-full object-cover"
         loading="lazy"
       />
@@ -1044,7 +1044,7 @@ function FinalCTA() {
           className="mt-8 max-w-xl text-base font-light leading-relaxed text-white/85 sm:text-lg"
         >
           Reserve your stay and let the rhythm of the sea, the warmth of our
-          hospitality, and the quiet luxury of Discovery Samal unfold.
+          hospitality, and the quiet luxury of Cebu Whitesand Resort unfold.
         </motion.p>
 
         <motion.div

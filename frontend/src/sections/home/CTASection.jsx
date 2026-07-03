@@ -1,13 +1,13 @@
-import { Link } from "react-router-dom";
+﻿import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import ctaBg from "../../assets/discoverysamal/hero-3.jpg";
+import ctaBg from "../../assets/cebu-whitesand-resort/hero-3.jpg";
 
 export default function CTASection() {
   return (
     <section className="relative overflow-hidden py-28 sm:py-36">
       <img
         src={ctaBg}
-        alt="Discovery Samal Resort coastline"
+        alt="Cebu Whitesand Resort coastline"
         className="absolute inset-0 h-full w-full object-cover"
       />
       <div className="absolute inset-0 bg-teal-dark/75" />
@@ -39,7 +39,7 @@ export default function CTASection() {
           className="mt-6 text-base text-white/70 leading-relaxed"
         >
           Whether you&rsquo;re planning a romantic escape, a family holiday, or
-          a destination event — Discovery Samal Resort on Samal Island, Davao del Norteis
+          a destination event — Cebu Whitesand Resort on Cebu, Philippinesis
           ready to welcome you.
         </motion.p>
         <motion.div

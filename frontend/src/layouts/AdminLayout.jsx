@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+﻿import { useState, useEffect } from "react";
 import {
   Outlet,
   Link,
@@ -30,7 +30,7 @@ import {
 import { useAuth } from "../hooks/useAuth";
 import { brand } from "../lib/brand";
 
-/* Samal Island admin palette
+/* Cebu admin palette
    cream    #f7f7f5
    ivory    #f7f7f5  (page bg)
    brown    #111111  (sidebar)

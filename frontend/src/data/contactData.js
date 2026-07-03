@@ -1,45 +1,44 @@
-﻿// Contact Us — content map for Discovery Samal Resort.
+﻿// Contact Us — content map for Cebu Whitesand Resort.
 // Brand identity comes from `frontend/src/lib/brand.js`.
 
 import { brand } from "../lib/brand";
 
-const CDN = "https://image-tc.galaxy.tf";
+const CDN = "https://homesweb.staah.net";
 
-export const CONTACT_HERO_IMAGE = "${CDN}/wijpeg-aeexb9m4bu60ndq3vcdnb7l9o/discovery-samal-08124-2_standard.jpg";
-export const CONCIERGE_IMAGE = "${CDN}/wijpeg-jd33yv34hbjgw3lw8cx21chv/discovery-samal-09301-compressed_standard.jpg";
-export const LOCATION_IMAGE = "${CDN}/wijpeg-e9e3fi5ee3nudxmag9mtxp6bm/aerial-1.jpg";
+export const CONTACT_HERO_IMAGE = `${CDN}/8689/1704432091_8689_WhiteSands_Resort_2019_(140)_(2).jpg`;
+export const CONCIERGE_IMAGE = `${CDN}/8689/1704673021_8689_WhiteSands_Resort_2019_(184)_(2).jpg`;
+export const LOCATION_IMAGE = `${CDN}/8689/1704604730_8689_WHAT_WE_DO.jpg`;
 export const SOCIAL_PREVIEW_IMAGES = [
-  "${CDN}/wijpeg-9g0c8e4jia8i8dw5hv5xd3r05/dss-website-banner-home-page-2.jpg",
-  "${CDN}/wijpeg-75f73vymu5o1t89ryvtwcmpug/girl-enjoying-the-pool-in-the-best-luxury-resort-in-davao-discovery-samal-tablet-size.jpg",
-  "${CDN}/wijpeg-7jtyjnoy3zk9ji5fg7szxfttb/dss-website-banner-home-page.jpg",
-  "${CDN}/wijpeg-e74jrxy6ezvibr2s8gcmfync5/109_standard.jpg",
-  "${CDN}/wijpeg-7bqiwwh88twoyx3ckq1s6rk7/98_standard.jpg",
-  "${CDN}/wipng-cn1xwe8oz6c74bztnpequs8sy/3_standard.png",
+  `${CDN}/imagelibrary/1705044784_8689_IMG_1655.jpg`,
+  `${CDN}/imagelibrary/big_1705900556_8689_WhiteSandsResort201944.jpg`,
+  `${CDN}/8689/1706233575_8689_patio.jpg`,
+  `${CDN}/8689/1703322544_8689_WEBSITEEVENTS.jpg`,
+  `${CDN}/8689/1704599753_8689_jetski_a.jpg`,
+  `${CDN}/8689/1714188411_8689_anahata-spa_4.jpg`,
 ];
 
 export const CONTACT_HERO = {
-  preTitle: "Let's Plan Together",
+  preTitle: "Get in Touch",
   title: "Let's plan your",
-  titleAccent: "island escape",
-  body: "Our concierge team is ready to help you craft the perfect Samal Island experience — from beachfront arrivals to sunset reservations.",
+  titleAccent: "Cebu escape",
+  body: "Our reservations team is ready to help you plan the perfect stay at Maribago Beach, Mactan Island. We respond within one business day.",
 };
 
 export const WELCOME = {
   preTitle: "A Warm Welcome",
   title: "Hospitality, attentive",
   titleAccent: "to the smallest detail",
-  body: "Whether you are planning a quiet retreat, hosting a celebration, or arranging a private island experience, our team is here to make every moment effortless. Reach us through the form below or any of the channels listed — we respond within one business day.",
+  body: "Whether you are planning a family vacation, a romantic getaway, a corporate retreat, or a beachfront wedding — our team is here to help. Reach us through the channels below.",
 };
 
-// â”€â”€â”€ FORM OPTIONS â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 export const INQUIRY_TYPES = [
   "Hotel Reservation",
   "Dining Reservation",
-  "Events & Celebrations",
-  "Group & Corporate",
-  "Spa & Wellness",
-  "VIP Guest Services",
-  "Special Offers Inquiry",
+  "Weddings & Celebrations",
+  "Meetings & Corporate Events",
+  "Anahata Spa",
+  "Island Activities",
+  "Day Tour Escapade",
   "General Inquiry",
 ];
 
@@ -113,7 +112,7 @@ export const CONTACT_CHANNELS = [
     iconKey: "sparkles",
     title: "Events & Celebrations",
     blurb:
-      "Weddings, debuts, conferences and milestone gatherings on the shores of Samal Island, Davao del Norte.",
+      "Weddings, debuts, conferences and milestone gatherings on the shores of Cebu, Philippines.",
     items: [
       { label: "Email", value: PRIMARY_EMAIL, href: `mailto:${PRIMARY_EMAIL}` },
     ],
@@ -133,82 +132,78 @@ export const CONTACT_CHANNELS = [
 // â”€â”€â”€ LOCATION â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 export const LOCATIONS = [
   {
-    id: "white-beach",
+    id: "cebu-white-sands",
     name: brand.displayName,
-    addressLines: brand.address.split(",").map((s) => s.trim()),
+    addressLines: [
+      "Maribago Beach, Mactan Island",
+      "M.L. Quezon National Highway",
+      "Lapu-Lapu City, 6015 Cebu",
+    ],
     email: brand.email,
     phone: brand.phone,
     landmarks: [
-      "Beachfront property on Samal Island, Davao del Norte",
-      "30 minutes from Francisco Bangoy International Airport, Davao",
-      "5-minute boat ride from Sta. Ana Wharf, Davao City",
-      "Accessible from Sasa Wharf and Island City Mall Pier",
+      "Maribago Beach, east coast of Mactan Island",
+      "20 minutes from Mactan–Cebu International Airport",
+      "40 minutes from historic Cebu City",
+      "Private family-owned resort since 1995",
     ],
     image: LOCATION_IMAGE,
     mapEmbed:
-      "https://www.google.com/maps?q=Samal+Island+Island+Garden+City+of+Samal+Davao+del+Norte&output=embed",
-    mapLink:
-      "https://maps.google.com/?q=Samal+Island+Island+Garden+City+of+Samal+Davao+del+Norte",
+      "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3925!2d123.9989!3d10.28656!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x33a9994c68b3c3e9%3A0x0!2sCebu+White+Sands+Resort!5e0!3m2!1sen!2sph!4v1700000000000",
+    mapLink: "https://www.google.com/maps?ll=10.28656,123.9989&z=19",
   },
 ];
 
 // â”€â”€â”€ CONCIERGE PROMISE â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 export const CONCIERGE = {
-  preTitle: "The Concierge",
+  preTitle: "Reservations",
   title: "From arrival to farewell,",
-  titleAccent: "every detail composed",
-  body: "From airport transfers to beachfront dining reservations, our concierge team ensures every moment of your island stay feels effortless and unforgettable.",
+  titleAccent: "every detail attended to",
+  body: "Our team is here to make your stay at Cebu White Sands Resort effortless — from airport transfers to dining reservations and island activity bookings.",
   bullets: [
-    "Roundtrip transfers from Davao City pier terminals",
-    "Private dining and sunset cocktail arrangements",
-    "Spa, island-hopping and excursion bookings",
-    "Curated itineraries for couples, families and groups",
+    "20 min from Mactan-Cebu International Airport",
+    "Assistance with island activity bookings",
+    "Dining and Anahata Spa reservations",
+    "Corporate and events coordination",
   ],
 };
 
-// â”€â”€â”€ FAQ â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 export const FAQ = [
   {
-    q: "Are airport and jetty port transfers included?",
-    a: "Yes — we can arrange roundtrip transfers between Francisco Bangoy International Airport in Davao City and the resort, plus a boat transfer across the Davao Gulf to Samal Island. Contact our concierge for arrangements.",
+    q: "How far is the resort from Mactan-Cebu International Airport?",
+    a: "Cebu White Sands Resort is only 20 minutes by car from Mactan-Cebu International Airport, and 40 minutes from historic Cebu City.",
   },
   {
     q: "What are your check-in and check-out times?",
     a: "Standard check-in is from 2:00 PM and check-out is until 12:00 noon. Early check-in and late check-out can be arranged on request, subject to availability.",
   },
   {
-    q: "How do I get to Discovery Samal from Davao City?",
-    a: "Discovery Samal is located on Samal Island — from Davao City, take a short ferry ride across the Davao Gulf (approximately 15–20 minutes from Sasa Wharf), then a short drive to the resort.",
+    q: "How many rooms does the resort have?",
+    a: "Cebu White Sands Resort has 86 guest rooms spread across 3 main wings, each designed to suit any traveller's taste.",
   },
   {
-    q: "What are your reservation and cancellation policies?",
-    a: "Reservations are confirmed once payment or a deposit is received. Specific cancellation terms depend on the rate or package booked — our reservations team will share the details with your confirmation.",
+    q: "What activities are available at the resort?",
+    a: "We offer jet skiing, island hopping, day tour escapades, and aqua sports. Our Anahata Spa also offers massage, facial, and wellness journey treatments.",
   },
   {
-    q: "Do you accommodate group bookings?",
-    a: "Yes. Our Group Beachfront Getaway accommodates up to four guests, and larger groups can be arranged through our events team. Select 'Group & Corporate' in the inquiry form.",
+    q: "Do you offer event and wedding packages?",
+    a: "Yes — we have beautiful beachfront and indoor venues for weddings, debuts, corporate meetings, and seminars. Contact our events team at sales@cebu-whitesand-resort.com.",
   },
   {
-    q: "What activities are available on the island?",
-    a: "Island hopping, snorkeling, kayaking, beach volleyball, and various watersports are available. Our concierge can arrange excursions around Davao del Norte and Samal Island. Our concierge will tailor the itinerary to your stay.",
-  },
-  {
-    q: "Do you offer spa and wellness services?",
-    a: "Yes — in-room and beachside massage treatments are available daily. Our beachfront packages include one-hour massages for each guest.",
+    q: "What dining options are available?",
+    a: "The resort has two dining venues: Patio Gavino Restaurant for casual beachside dining, and Room 801 for a more intimate dining experience.",
   },
 ];
 
-// â”€â”€â”€ SOCIAL â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 export const SOCIAL = [
   {
     name: "Facebook",
-    handle: brand.socialHandle,
-    href: brand.facebookPageUrl,
+    handle: "@cebuwhitesandsresortandspa",
+    href: "http://www.facebook.com/cebuwhitesandsresortandspa/",
   },
   {
     name: "Instagram",
-    handle: brand.socialHandle,
-    href: "https://www.instagram.com/",
+    handle: "@cebuwhitesands",
+    href: "https://www.instagram.com/cebuwhitesands/",
   },
 ];
-

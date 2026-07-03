@@ -1,5 +1,5 @@
-// Discovery Samal Resort — Gallery image data
-// All URLs are real CDN-hosted assets from discoverysamal-resort.com
+﻿// Cebu Whitesand Resort — Gallery image data
+// All URLs are real CDN-hosted assets from cebu-whitesand-resort-resort.com
 
 export const CATEGORIES = [
   { id: "all", label: "All" },
@@ -115,21 +115,21 @@ export const galleryImages = [
   {
     id: 15,
     src: "https://lirp.cdn-website.com/b434b26a/dms3rep/multi/opt/slider8-1920w.jpeg",
-    alt: "Samal Island, Davao del Nortebeachfront",
+    alt: "Cebu, Philippinesbeachfront",
     category: "beach",
     featured: true,
   },
   {
     id: 16,
     src: "https://lirp.cdn-website.com/b434b26a/dms3rep/multi/opt/DSC05833-1920w.jpeg",
-    alt: "Samal Island coastline morning",
+    alt: "Cebu coastline morning",
     category: "beach",
     featured: false,
   },
   {
     id: 17,
     src: "https://lirp.cdn-website.com/b434b26a/dms3rep/multi/opt/DSC05795-1920w.jpeg",
-    alt: "Shoreline view Samal Island",
+    alt: "Shoreline view Cebu",
     category: "beach",
     featured: false,
   },
@@ -143,7 +143,7 @@ export const galleryImages = [
   {
     id: 19,
     src: "https://lirp.cdn-website.com/b434b26a/dms3rep/multi/opt/DSC06267-1920w.jpeg",
-    alt: "Golden hour White Beach Samal Island",
+    alt: "Golden hour White Beach Cebu",
     category: "beach",
     featured: true,
   },
@@ -171,7 +171,7 @@ export const galleryImages = [
   {
     id: 23,
     src: "https://lirp.cdn-website.com/b434b26a/dms3rep/multi/opt/dji_fly_20230424_153756_212_1682322109283_photo_optimized-1920w.jpeg",
-    alt: "Aerial view White Beach Samal Island",
+    alt: "Aerial view White Beach Cebu",
     category: "beach",
     featured: true,
   },
@@ -280,7 +280,7 @@ export const galleryImages = [
   {
     id: 38,
     src: "https://lirp.cdn-website.com/b434b26a/dms3rep/multi/opt/5.2-1920w.jpg",
-    alt: "Outdoor celebration Samal Island",
+    alt: "Outdoor celebration Cebu",
     category: "events",
     featured: false,
   },
@@ -301,7 +301,7 @@ export const galleryImages = [
   {
     id: 41,
     src: "https://lirp.cdn-website.com/b434b26a/dms3rep/multi/opt/6.1-1920w.jpg",
-    alt: "Sunset event Samal Island",
+    alt: "Sunset event Cebu",
     category: "events",
     featured: false,
   },
@@ -310,7 +310,7 @@ export const galleryImages = [
   {
     id: 42,
     src: "https://lirp.cdn-website.com/b434b26a/dms3rep/multi/opt/IMG_0400-1920w.jpeg",
-    alt: "Water activities Samal Island",
+    alt: "Water activities Cebu",
     category: "activities",
     featured: true,
   },

@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+﻿import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { brand } from "../../lib/brand";
 
@@ -48,7 +48,7 @@ export default function DiningSection() {
             Enjoy fresh Filipino and international cuisine at our open-air
             Sunrise Pavilion restaurant. Dine with a stunning unobstructed view
             of the sea and start your morning with a golden sunrise over
-            Samal Island's shores.
+            Cebu's shores.
           </motion.p>
           <motion.p
             {...fadeUp(0.3)}

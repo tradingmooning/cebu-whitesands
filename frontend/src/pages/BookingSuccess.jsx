@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+﻿import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import { motion } from "framer-motion";
 import {
@@ -73,7 +73,7 @@ export default function BookingSuccess() {
       link.href = url;
       link.setAttribute(
         "download",
-        `DiscoverySamalResort-Receipt-${booking?.bookingRef || id}.pdf`,
+        `CebuWhitesandResort-Receipt-${booking?.bookingRef || id}.pdf`,
       );
       document.body.appendChild(link);
       link.click();
@@ -184,7 +184,7 @@ export default function BookingSuccess() {
               </h2>
               <p className="mt-3 text-charcoal/55 text-sm flex items-center gap-2">
                 <MapPin size={13} className="text-tan" />
-                Samal Island, Davao del Norte
+                Cebu, Philippines
               </p>
             </div>
 
@@ -331,7 +331,7 @@ export default function BookingSuccess() {
             slowly.”
           </p>
           <p className="mt-8 text-[11px] tracking-[0.3em] uppercase text-charcoal/55">
-            The Discovery Samal Concierge
+            The Cebu Whitesand Resort Concierge
           </p>
           <div className="mt-10 inline-flex items-center gap-2 text-sm text-charcoal/60">
             <Mail size={14} className="text-tan" />

@@ -116,7 +116,7 @@ const authService = {
   },
 
   async seed({
-    email = "reservations@example.com",
+    email = "reservations@cebu-whitesand-resort.com",
     password = "Passw0rd!",
     name = "Resort Owner",
   } = {}) {

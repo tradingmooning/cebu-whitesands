@@ -1,6 +1,6 @@
 const Booking = require("../models/Booking");
 const PaymentDetails = require("../models/PaymentSettings");
-const { uploadToCloudinary } = require("../middleware/upload");
+const storage = require("../src/storage/storage");
 const AppError = require("../utils/AppError");
 const emailService = require("./emailService");
 
@@ -30,12 +30,13 @@ const paymentService = {
       }
     }
 
-    const result = await uploadToCloudinary(file.buffer, "payments");
+    const result = await storage.uploadFile(file, storage.FOLDERS.PAYMENTS);
 
     if (booking.paymentOption === "installment" && installmentNumber) {
       const num = parseInt(installmentNumber);
       if (num === 1) {
-        booking.installment.firstPaymentScreenshot = result.secure_url;
+        booking.installment.firstPaymentScreenshot = result.url;
+        booking.installment.firstPaymentScreenshotKey = result.key;
         booking.installment.firstPaymentStatus = "pending";
         booking.installment.firstPaymentDate = new Date();
         // Track payment in history
@@ -43,31 +44,33 @@ const paymentService = {
           amount: booking.installment.firstPaymentAmount || 0,
           type: "first",
           status: "pending",
-          screenshotUrl: result.secure_url,
+          screenshotUrl: result.url,
           paidAt: new Date(),
         });
       } else if (num === 2) {
-        booking.installment.secondPaymentScreenshot = result.secure_url;
+        booking.installment.secondPaymentScreenshot = result.url;
+        booking.installment.secondPaymentScreenshotKey = result.key;
         booking.installment.secondPaymentStatus = "pending";
         booking.installment.secondPaymentDate = new Date();
         booking.payments.push({
           amount: booking.installment.secondPaymentAmount || 0,
           type: "second",
           status: "pending",
-          screenshotUrl: result.secure_url,
+          screenshotUrl: result.url,
           paidAt: new Date(),
         });
       }
       // First installment uploaded → "partial"; second → still "pending" until admin confirms
       booking.paymentStatus = num === 1 ? "partial" : "pending";
     } else {
-      booking.paymentScreenshot = result.secure_url;
+      booking.paymentScreenshot = result.url;
+      booking.paymentScreenshotKey = result.key;
       booking.paymentStatus = "pending";
       booking.payments.push({
         amount: booking.totalAmount,
         type: "full",
         status: "pending",
-        screenshotUrl: result.secure_url,
+        screenshotUrl: result.url,
         paidAt: new Date(),
       });
     }
@@ -77,7 +80,7 @@ const paymentService = {
     const populated = await booking.populate("room", "name pricePerNight");
     emailService.sendAdminPaymentAlert({
       booking: populated,
-      screenshotUrl: result.secure_url,
+      screenshotUrl: result.url,
     });
     emailService.sendAutoReceipt(populated);
 
@@ -89,7 +92,7 @@ const paymentService = {
     if (!details) {
       details = await PaymentDetails.create({
         bankName: "Update in admin dashboard",
-        accountName: process.env.PROJECT_NAME || "Your Resort",
+        accountName: process.env.PROJECT_NAME || "Cebu Whitesand Resort",
         accountNumber: "0000000000",
         instructions: "",
         gcashName: "",

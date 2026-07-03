@@ -1,4 +1,4 @@
-import { useState } from "react";
+﻿import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Link, useLocation } from "react-router-dom";
 import { X, ChevronDown, MapPin, Phone, Mail } from "lucide-react";
@@ -225,7 +225,7 @@ export default function MobileSidebar({ isOpen, onClose }) {
                   <FacebookIcon />
                 </a>
                 <a
-                  href="https://www.instagram.com/discoverysamal/"
+                  href="https://www.instagram.com/cebu-whitesand-resort/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="p-2 rounded-full bg-slate-100 text-slate-500 hover:bg-teal hover:text-white transition-all duration-200"
@@ -247,7 +247,7 @@ export default function MobileSidebar({ isOpen, onClose }) {
                     size={11}
                     className="mt-0.5 shrink-0 text-teal"
                   />
-                  <span>Samal Island, Davao del Norte, Philippines</span>
+                  <span>Cebu, Philippines, Philippines</span>
                 </div>
                 <a
                   href={`tel:${brand.phone.replace(/\s/g, "")}`}

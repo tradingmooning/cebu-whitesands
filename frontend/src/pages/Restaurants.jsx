@@ -30,7 +30,7 @@ function Hero() {
     <section className="relative h-[80vh] min-h-140 w-full overflow-hidden">
       <img
         src={RESTAURANTS_HERO_IMAGE}
-        alt="Discovery Samal Resort Dining"
+        alt="Cebu Whitesand Resort Dining"
         className="absolute inset-0 h-full w-full object-cover"
       />
       <div className="absolute inset-0 bg-linear-to-b from-black/60 via-black/30 to-black/70" />
@@ -51,7 +51,7 @@ function Hero() {
         >
           Best Restaurants
           <br />
-          in Samal Island
+          in Cebu
         </motion.h1>
         <motion.p
           initial={{ opacity: 0 }}
@@ -277,7 +277,7 @@ function CTA() {
           className="mt-4 text-[15px] leading-relaxed text-white/85"
         >
           Dine in paradise — our team is ready to arrange your perfect island
-          dining experience at Discovery Samal Resort.
+          dining experience at Cebu Whitesand Resort.
         </motion.p>
         <motion.div
           {...fadeUp(0.2)}

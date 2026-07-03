@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+﻿import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { brand } from "../../lib/brand";
 
@@ -16,14 +16,14 @@ const ACTIVITIES = [
     name: "Private Events & Weddings",
     image: `${CDN}/img_53.jpg`,
     description:
-      "From intimate beach ceremonies to grand celebrations, Discovery Samal provides a stunning backdrop for your most precious moments.",
+      "From intimate beach ceremonies to grand celebrations, Cebu Whitesand Resort provides a stunning backdrop for your most precious moments.",
     href: "/activities",
   },
   {
     name: "Beachfront Infinity Pool",
     image: `${CDN}/WhatsApp_Image_2025-08-09_at_10.18.48AM_1.jpeg`,
     description:
-      "Enjoy a refreshing swim in our infinity pool while taking in the breathtaking horizon views over the Davao Gulf.",
+      "Enjoy a refreshing swim in our infinity pool while taking in the breathtaking horizon views over the Cebu waters.",
     href: "/activities",
   },
   {
@@ -64,7 +64,7 @@ export default function ActivitiesSection() {
           </h2>
           <p className="mt-5 text-sm text-charcoal/55 max-w-xl mx-auto">
             From thrilling water sports to intimate wellness moments — there is
-            always something to discover at Discovery Samal Resort.
+            always something to discover at Cebu Whitesand Resort.
           </p>
         </motion.div>
 

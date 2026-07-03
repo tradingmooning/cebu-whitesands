@@ -12,7 +12,6 @@ const NAV_LINKS = [
   { to: "/spa", label: "ANAHATA SPA" },
   { to: "/restaurants", label: "DINING" },
   { to: "/events", label: "EVENTS" },
-  { to: "/activities", label: "ACTIVITIES" },
   { to: "/about", label: "ABOUT US" },
   { to: "/contact", label: "CONTACT" },
   { to: "/location", label: "Location" },

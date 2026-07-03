@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from "react";
+﻿import { useEffect, useMemo, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import {
@@ -112,15 +112,15 @@ function Hero({ room, onOpenGallery }) {
     room.images?.[0] ||
     "https://image-tc.galaxy.tf/wijpeg-9g0c8e4jia8i8dw5hv5xd3r05/dss-website-banner-home-page-2.jpg";
   return (
-    <section className="relative h-[88vh] min-h-[640px] w-full overflow-hidden bg-[#050d1f]">
+    <section className="relative h-[88vh] min-h-[640px] w-full overflow-hidden bg-[#1a1a1a]">
       <motion.img
         {...fadeIn()}
         src={cover}
         alt={room.name}
         className="absolute inset-0 h-full w-full object-cover"
       />
-      <div className="absolute inset-0 bg-gradient-to-b from-[#050d1f]/75 via-[#050d1f]/15 to-[#050d1f]/95" />
-      <div className="absolute inset-0 bg-gradient-to-r from-[#050d1f]/55 via-transparent to-transparent" />
+      <div className="absolute inset-0 bg-gradient-to-b from-[#1a1a1a]/75 via-[#1a1a1a]/15 to-[#1a1a1a]/95" />
+      <div className="absolute inset-0 bg-gradient-to-r from-[#1a1a1a]/55 via-transparent to-transparent" />
 
       <div className="relative z-10 mx-auto flex h-full max-w-7xl flex-col justify-end px-6 pb-24 lg:px-10">
         <motion.nav
@@ -147,14 +147,14 @@ function Hero({ room, onOpenGallery }) {
         </motion.p>
         <motion.h1
           {...fadeUp(0.28)}
-          className="font-serif text-5xl leading-[1.05] text-white sm:text-6xl lg:text-7xl"
+          className="font-serif text-5xl leading-[1.05] text-white sm:text-6xl lg:text-[5.5rem]"
         >
           {room.name}
         </motion.h1>
         {room.tagline && (
           <motion.p
             {...fadeUp(0.4)}
-            className="mt-5 max-w-2xl font-serif text-lg italic text-[#d8b988] lg:text-xl"
+            className="mt-5 max-w-2xl text-lg italic text-[#C9A96E] lg:text-xl"
           >
             {room.tagline}
           </motion.p>
@@ -193,7 +193,7 @@ function Hero({ room, onOpenGallery }) {
             {...fadeUp(0.6)}
             type="button"
             onClick={onOpenGallery}
-            className="mt-10 inline-flex w-fit items-center gap-2 border border-[#c9a36b]/50 bg-white/5 px-5 py-3 text-[11px] font-semibold uppercase tracking-[0.3em] text-white backdrop-blur transition hover:bg-[#c9a36b] hover:text-[#050d1f]"
+            className="inline-flex w-fit items-center gap-2 border border-[#C9A96E]/50 bg-white/5 px-5 py-3 text-[11px] font-semibold uppercase tracking-[0.3em] text-white backdrop-blur transition hover:bg-[#C9A96E] hover:text-[#1a1a1a]"
           >
             View Full Gallery ({room.images.length})
             <ArrowUpRight className="h-3.5 w-3.5" />
@@ -201,7 +201,7 @@ function Hero({ room, onOpenGallery }) {
         )}
       </div>
 
-      <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#c9a36b]/60 to-transparent z-10" />
+      <div className="h-px bg-gradient-to-r from-transparent via-[#C9A96E]/60 to-transparent z-10" />
     </section>
   );
 }
@@ -236,7 +236,7 @@ function ReservationCard({ room }) {
         <div className="h-px bg-gradient-to-r from-transparent via-[#c9a36b] to-transparent" />
 
         <div className="p-7 lg:p-8">
-          <p className="mb-3 flex items-center gap-2 text-[10px] font-semibold uppercase tracking-[0.32em] text-[#5a9bbf]">
+          <p className="mb-3 flex items-center gap-2 text-[10px] font-semibold uppercase tracking-[0.32em] text-[#651D4C]">
             ✦ Reserve this stay
           </p>
 
@@ -246,7 +246,7 @@ function ReservationCard({ room }) {
                 {formatPeso(original)}
               </span>
             )}
-            <span className="font-serif text-4xl text-[#0a1f3d]">
+            <span className="font-serif text-4xl text-[#651D4C]">
               {formatPeso(effective)}
             </span>
             <span className="text-xs text-[#0a1f3d]/55">/ night</span>
@@ -417,7 +417,7 @@ function Overview({ room }) {
           />
           <SpecItem
             label="Location"
-            value={room.location || "Samal Island, Davao del Norte"}
+            value={room.location || "Cebu, Philippines"}
             icon={MapPin}
           />
           <SpecItem
@@ -673,6 +673,288 @@ function RelatedRooms({ rooms, currentSlug }) {
 }
 
 /* ================================================================== */
+/*  STATIC ROOM CATALOG — fallback when API is unreachable            */
+/* ================================================================== */
+const WS = "https://homesweb.staah.net";
+const STATIC_ROOMS = [
+  {
+    slug: "deluxe",
+    name: "Deluxe",
+    category: "Deluxe",
+    tagline: "Comfortable island comfort for two",
+    description:
+      "Single/twin adult occupancy, max 2 kids aged 11 & below. Floor area: 30-35 sqm. Standard bed: 1 single + 1 double bed (limited King size bed rooms available).",
+    pricePerNight: 3500,
+    maxGuests: 4,
+    size: "30-35 sqm",
+    bedType: "1 Single + 1 Double bed",
+    available: true,
+    images: [
+      WS + "/imagelibrary/big_1702967760_8689_heritagedeluxe1.jpg",
+      WS + "/imagelibrary/big_1702967765_8689_heritagedeluxe2.jpg",
+    ],
+    features: [
+      "Balcony",
+      "Air-conditioning",
+      "Free WiFi",
+      "Flat Screen TV",
+      "Private Bathroom",
+      "Shower",
+      "Hair Dryer",
+      "Electric Kettle",
+      "Refrigerator",
+      "Electronic Door Lock",
+      "In-room Safe",
+      "Non-smoking",
+      "Free Parking",
+      "Desk",
+      "Towels & Toiletries",
+    ],
+  },
+  {
+    slug: "grandluxe-room",
+    name: "Grand Luxe Room",
+    category: "Luxury",
+    tagline: "Elevated comfort with garden or pool views",
+    description:
+      "Elevated guest experience with premium furnishings and plush bedding. Features a balcony and a full suite of modern amenities ideal for couples.",
+    pricePerNight: 4500,
+    maxGuests: 3,
+    size: "35-40 sqm",
+    bedType: "1 King size bed",
+    available: true,
+    images: [
+      WS + "/imagelibrary/big_1702966945_8689_WhiteSandsResort2019119.jpg",
+    ],
+    features: [
+      "Balcony",
+      "Air-conditioning",
+      "Free WiFi",
+      "Flat Screen TV",
+      "Private Bathroom",
+      "Bathtub & Shower",
+      "Hair Dryer",
+      "Electric Kettle",
+      "Refrigerator",
+      "Bathrobes",
+      "Room Slippers",
+      "Electronic Door Lock",
+      "In-room Safe",
+      "Non-smoking",
+      "Free Parking",
+      "Towels & Toiletries",
+    ],
+  },
+  {
+    slug: "premier-room",
+    name: "Premier Room",
+    category: "Premier",
+    tagline: "Spacious premier rooms with premium touches",
+    description:
+      "Generous well-appointed space for guests who demand a premium stay. High-quality furnishings, minibar, and direct access to resort facilities.",
+    pricePerNight: 5500,
+    maxGuests: 3,
+    size: "40-45 sqm",
+    bedType: "1 King size bed",
+    available: true,
+    images: [WS + "/imagelibrary/big_1702975136_8689_1.png"],
+    features: [
+      "Balcony",
+      "Air-conditioning",
+      "Free WiFi",
+      "Flat Screen TV",
+      "Private Bathroom",
+      "Bathtub & Shower",
+      "Hair Dryer",
+      "Electric Kettle",
+      "Refrigerator",
+      "Bathrobes",
+      "Room Slippers",
+      "Electronic Door Lock",
+      "In-room Safe",
+      "Non-smoking",
+      "Free Parking",
+      "Desk",
+      "Towels & Toiletries",
+    ],
+  },
+  {
+    slug: "ocean-view-suite",
+    name: "Ocean View Suite",
+    category: "Luxury",
+    tagline: "Breathtaking beachfront views from your balcony",
+    description:
+      "Single/twin occupancy, max 2 kids aged 11 & below free in room. 80 sq. m. with a balcony overlooking the beach. 1 King size bed.",
+    pricePerNight: 10200,
+    maxGuests: 4,
+    size: "80 sqm",
+    bedType: "1 King size bed",
+    available: true,
+    images: [
+      WS + "/imagelibrary/big_1705900556_8689_WhiteSandsResort201944.jpg",
+      WS + "/imagelibrary/big_1715394652_8689_SUITE_CR.jpg",
+    ],
+    features: [
+      "Beachfront Balcony",
+      "Ocean View",
+      "Air-conditioning",
+      "Free WiFi",
+      "Flat Screen TV",
+      "Private Bathroom",
+      "Bathtub & Shower",
+      "Hair Dryer",
+      "Bathrobes",
+      "Room Slippers",
+      "Electric Kettle",
+      "Refrigerator",
+      "Electronic Door Lock",
+      "In-room Safe",
+      "Non-smoking",
+      "Free Parking",
+      "Towels & Toiletries",
+    ],
+  },
+  {
+    slug: "family-room",
+    name: "Family Room",
+    category: "Family",
+    tagline: "Spacious and welcoming for the whole family",
+    description:
+      "Thoughtfully designed for families — multiple beds, ample space, and all amenities needed for a relaxed stay together at Mactan Island.",
+    pricePerNight: 6000,
+    maxGuests: 5,
+    size: "45-55 sqm",
+    bedType: "2 Double beds",
+    available: true,
+    images: [
+      WS + "/imagelibrary/big_1702975987_8689_WhiteSandsResort2019307.jpg",
+    ],
+    features: [
+      "Air-conditioning",
+      "Free WiFi",
+      "Flat Screen TV",
+      "Private Bathroom",
+      "Shower",
+      "Hair Dryer",
+      "Electric Kettle",
+      "Refrigerator",
+      "Electronic Door Lock",
+      "In-room Safe",
+      "Non-smoking",
+      "Free Parking",
+      "Desk",
+      "Towels & Toiletries",
+      "Kid-friendly setup",
+    ],
+  },
+  {
+    slug: "family-suite",
+    name: "Family Suite",
+    category: "Family",
+    tagline: "A suite experience tailored for families",
+    description:
+      "Combines suite-level comfort with dedicated family-friendly amenities. Generous living area and multiple sleeping configurations.",
+    pricePerNight: 8500,
+    maxGuests: 6,
+    size: "60-70 sqm",
+    bedType: "1 King + 2 Single beds",
+    available: true,
+    images: [WS + "/imagelibrary/big_1702976465_8689_untitled-23.jpg"],
+    features: [
+      "Air-conditioning",
+      "Free WiFi",
+      "Flat Screen TV",
+      "Private Bathroom",
+      "Bathtub & Shower",
+      "Hair Dryer",
+      "Bathrobes",
+      "Room Slippers",
+      "Electric Kettle",
+      "Refrigerator",
+      "Electronic Door Lock",
+      "In-room Safe",
+      "Non-smoking",
+      "Free Parking",
+      "Desk",
+      "Towels & Toiletries",
+      "Kid-friendly setup",
+    ],
+  },
+  {
+    slug: "panoramic-view-suite",
+    name: "Panoramic View Suite",
+    category: "Luxury",
+    tagline: "360° panoramic views of Mactan Island and the sea",
+    description:
+      "Our most spectacular sea-view suite — expansive views of the Mactan Island coastline. Premium furnishings and a wrap-around balcony.",
+    pricePerNight: 12000,
+    maxGuests: 3,
+    size: "75-85 sqm",
+    bedType: "1 King size bed",
+    available: true,
+    images: [
+      WS + "/imagelibrary/big_1702977955_8689_WhiteSandsResort201933.jpg",
+    ],
+    features: [
+      "Panoramic Balcony",
+      "Panoramic Sea View",
+      "Air-conditioning",
+      "Free WiFi",
+      "Flat Screen TV",
+      "Private Bathroom",
+      "Bathtub & Shower",
+      "Hair Dryer",
+      "Bathrobes",
+      "Room Slippers",
+      "Electric Kettle",
+      "Refrigerator",
+      "Electronic Door Lock",
+      "In-room Safe",
+      "Non-smoking",
+      "Free Parking",
+      "Towels & Toiletries",
+    ],
+  },
+  {
+    slug: "grand-luxe-plus",
+    name: "Grand Luxe Plus",
+    category: "Luxury",
+    tagline: "The pinnacle of resort luxury at Cebu White Sands",
+    description:
+      "The finest room at Cebu White Sands Resort. Expansive floor plan, premium furnishings, living area, and top-tier amenities.",
+    pricePerNight: 15000,
+    maxGuests: 3,
+    size: "85-100 sqm",
+    bedType: "1 King size bed",
+    available: true,
+    images: [
+      WS + "/imagelibrary/big_1732177969_8689_Mabuhaygrandluxeroom1.jpg",
+    ],
+    features: [
+      "Private Balcony",
+      "Panoramic Sea View",
+      "Air-conditioning",
+      "Free WiFi",
+      "Flat Screen TV",
+      "Private Bathroom",
+      "Bathtub & Shower",
+      "Hair Dryer",
+      "Bathrobes",
+      "Room Slippers",
+      "Electric Kettle",
+      "Refrigerator",
+      "Electronic Door Lock",
+      "In-room Safe",
+      "Non-smoking",
+      "Free Parking",
+      "Desk",
+      "Living Area",
+      "Towels & Toiletries",
+    ],
+  },
+];
+
+/* ================================================================== */
 /*  PAGE                                                               */
 /* ================================================================== */
 export default function RoomDetails() {
@@ -691,7 +973,11 @@ export default function RoomDetails() {
         const data = res.data?.data || res.data;
         setRoom(data || null);
       })
-      .catch(() => mounted && setRoom(null))
+      .catch(() => {
+        // API unreachable — show not-found state
+        if (!mounted) return;
+        setRoom(null);
+      })
       .finally(() => mounted && setLoading(false));
     return () => {
       mounted = false;
@@ -706,7 +992,10 @@ export default function RoomDetails() {
         const list = res.data?.data || res.data || [];
         setRelated(Array.isArray(list) ? list : []);
       })
-      .catch(() => mounted && setRelated([]));
+      .catch(() => {
+        // API unreachable — show empty related rooms
+        if (mounted) setRelated([]);
+      });
     return () => {
       mounted = false;
     };

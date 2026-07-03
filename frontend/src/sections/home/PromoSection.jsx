@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+﻿import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { brand } from "../../lib/brand";
 
@@ -30,7 +30,7 @@ export default function PromoSection() {
             {...fadeUp(0.2)}
             className="mt-5 text-base leading-8 text-charcoal/65 max-w-md"
           >
-            Greetings from Discovery Samal Resort. Enjoy exclusive discounted rates
+            Greetings from Cebu Whitesand Resort. Enjoy exclusive discounted rates
             with premium inclusions designed for a seamless beachfront escape.
           </motion.p>
           <motion.ul

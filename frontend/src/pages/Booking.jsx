@@ -1,4 +1,4 @@
-import { useEffect, useState, useMemo } from "react";
+﻿import { useEffect, useState, useMemo } from "react";
 import { useNavigate, useSearchParams } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import {
@@ -131,7 +131,8 @@ export default function Booking() {
   /* ------- State (all preserved) -------------------------------- */
   const [step, setStep] = useState(0);
   const [rooms, setRooms] = useState([]);
-  const [, setLoading] = useState(true);
+  const [roomsLoading, setRoomsLoading] = useState(true);
+  const [roomsError, setRoomsError] = useState(false);
 
   const [checkIn, setCheckIn] = useState(null);
   const [checkOut, setCheckOut] = useState(null);
@@ -163,14 +164,18 @@ export default function Booking() {
     if (checkIn) params.checkIn = fmt(checkIn);
     if (checkOut) params.checkOut = fmt(checkOut);
 
-    setLoading(true);
+    setRoomsLoading(true);
+    setRoomsError(false);
     getRooms(params)
       .then((roomsRes) => {
         const rd = roomsRes.data.data || roomsRes.data;
         setRooms(Array.isArray(rd) ? rd : []);
       })
-      .catch(() => {})
-      .finally(() => setLoading(false));
+      .catch(() => {
+        setRoomsError(true);
+        setRooms([]);
+      })
+      .finally(() => setRoomsLoading(false));
   }, [checkIn, checkOut]);
 
   useEffect(() => {
@@ -191,14 +196,13 @@ export default function Booking() {
       : 0;
 
   const availableRooms = useMemo(() => {
-    if (!checkIn || !checkOut) return rooms;
+    // Only filter by capacity — never filter by date here (server already filters by availability)
     return rooms.filter((r) => {
-      // If room has no capacity metadata, don't hide it — show it.
       const cap = r.maxGuests || r.capacity || r.occupancy;
       if (!cap) return true;
       return cap >= numberOfGuests;
     });
-  }, [rooms, checkIn, checkOut, numberOfGuests]);
+  }, [rooms, numberOfGuests]);
 
   /* ------- Step navigation (preserved) -------------------------- */
   const handleSelectRange = (ci, co) => {
@@ -288,6 +292,8 @@ export default function Booking() {
               <motion.div key="step-1" {...fadeIn}>
                 <StepRooms
                   rooms={availableRooms}
+                  loading={roomsLoading}
+                  error={roomsError}
                   selectedRoom={selectedRoom}
                   setSelectedRoom={setSelectedRoom}
                   onChangeDates={() => setStep(0)}
@@ -358,7 +364,7 @@ function ConciergeHero() {
       <div className="absolute inset-0 flex items-end">
         <div className="max-w-7xl mx-auto px-6 lg:px-10 w-full pb-14 lg:pb-20 text-white">
           <p className="text-[11px] tracking-[0.35em] uppercase text-white/75 font-medium">
-            Reservations · Samal Island, Davao del Norte
+            Reservations · Cebu, Philippines
           </p>
           <h1 className="font-serif text-5xl lg:text-6xl mt-5 leading-[1.05]">
             Reserve your villa.
@@ -530,6 +536,8 @@ function DateBlock({ label, value }) {
 
 function StepRooms({
   rooms,
+  loading,
+  error,
   selectedRoom,
   setSelectedRoom,
   onChangeDates,
@@ -561,10 +569,22 @@ function StepRooms({
         </button>
       </div>
 
-      {rooms.length === 0 ? (
+      {loading ? (
+        <div className="text-center py-24">
+          <div className="mx-auto h-8 w-8 animate-spin rounded-full border border-teal/30 border-t-teal mb-4" />
+          <p className="text-charcoal/50 text-sm">Loading available rooms…</p>
+        </div>
+      ) : error ? (
+        <div className="text-center py-24 border border-dashed border-red-200">
+          <p className="text-red-500 font-medium mb-2">Unable to load rooms</p>
+          <p className="text-charcoal/55 text-sm">
+            Please make sure the server is running on port 5001 and try again.
+          </p>
+        </div>
+      ) : rooms.length === 0 ? (
         <div className="text-center py-24 border border-dashed border-charcoal/15">
           <p className="text-charcoal/60 mb-4">
-            No villas available for those dates and guest count.
+            No rooms available for those dates and guest count.
           </p>
           <button
             onClick={onChangeDates}

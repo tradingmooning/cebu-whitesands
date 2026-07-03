@@ -2,7 +2,7 @@ const nodemailer = require("nodemailer");
 const generateReceipt = require("../utils/generateReceipt");
 
 // Resort name read from env so it works for any project
-const resortName = () => process.env.PROJECT_NAME || "Your Resort";
+const resortName = () => process.env.PROJECT_NAME || "Cebu Whitesand Resort";
 
 const transporter = nodemailer.createTransport({
   host: process.env.SMTP_HOST || "smtp.zoho.com",
@@ -20,8 +20,8 @@ const fromAddress =
   `"${resortName()}" <${
     process.env.SMTP_USER ||
     process.env.RESORT_EMAIL ||
-    "reservations@example.com"
-  }>";
+    "reservations@cebu-whitesand-resort.com"
+  }>`;
 
 const formatDate = (date) =>
   new Date(date).toLocaleDateString("en-US", {
@@ -32,7 +32,7 @@ const formatDate = (date) =>
   });
 
 const formatCurrency = (amount) =>
-  `₱${Number(amount || 0).toLocaleString("en-PH")}`;
+  "PHP " + Number(amount || 0).toLocaleString("en-PH");
 
 const optionalEnv = (value) => {
   const normalized = String(value || "").trim();
@@ -81,7 +81,7 @@ const emailShell = (content) => `
     <div class="footer">
       <p><strong>Need assistance?</strong></p>
       ${optionalEnv(process.env.RESORT_PHONE) ? `<p>📞 ${optionalEnv(process.env.RESORT_PHONE)}</p>` : ""}
-      <p>✉️ ${optionalEnv(process.env.RESORT_EMAIL) || process.env.SMTP_USER || "reservations@example.com"}</p>
+      <p>✉️ ${optionalEnv(process.env.RESORT_EMAIL) || process.env.SMTP_USER || "reservations@cebu-whitesand-resort.com"}</p>
       <p>💬 <a href="${optionalEnv(process.env.FACEBOOK_PAGE_URL) || "https://www.facebook.com"}" style="color:#6B7C3E;">Visit us on Facebook</a></p>
       <p style="margin-top: 20px; color: #C4A882;">
         &copy; ${new Date().getFullYear()} ${resortName()}. All rights reserved.

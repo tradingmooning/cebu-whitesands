@@ -1,49 +1,48 @@
-import { motion } from "framer-motion";
-import { brand } from "../../lib/brand";
+﻿import { motion } from "framer-motion";
 
-const CDN = brand.cdnBase;
+const CDN = "https://homesweb.staah.net";
 
 const FEATURES = [
   {
     pre: "Located in",
     title: "Getting Here",
-    body: "Discovery Samal Resort is located on Samal Island, Island Garden City of Samal, Davao del Norte — accessible via Francisco Bangoy International Airport in Davao City.",
-    image: `${CDN}/img_26.jpg`,
+    body: "Cebu White Sands Resort is located on Maribago Beach, Mactan Island — just 20 minutes by car from Mactan–Cebu International Airport.",
+    image: `${CDN}/8689/1704604730_8689_WHAT_WE_DO.jpg`,
     reverse: false,
   },
   {
-    pre: "Stay Connected",
-    title: "Free Wi-Fi",
-    body: "Stay connected with our complimentary high-speed Wi-Fi available throughout the resort, including all rooms and outdoor areas.",
-    image: `${CDN}/img_06.jpg`,
+    pre: "Anahata Spa",
+    title: "Wellness & Relaxation",
+    body: "Experience traditional Filipino hilot massages, body rituals, and rejuvenating facial treatments at our Anahata Spa.",
+    image: `${CDN}/8689/1714188411_8689_anahata-spa_4.jpg`,
     reverse: true,
   },
   {
-    pre: "Comfort Awaits",
-    title: "King Size Beds",
-    body: "Sink into cloud-like king-size beds with premium linen in our spacious seaview rooms, each with a private terrace overlooking the sea.",
-    image: `${CDN}/img_15.jpg`,
+    pre: "Patio Gavino & Room 801",
+    title: "Dining Experiences",
+    body: "Savour fresh Filipino and international cuisine at Patio Gavino Restaurant or enjoy an intimate dinner at Room 801.",
+    image: `${CDN}/8689/1706233575_8689_patio.jpg`,
     reverse: false,
   },
   {
-    pre: "Relax & Rejuvenate",
-    title: "Wellness & Spa",
-    body: "From beachfront massages to holistic body treatments, our wellness offerings are designed to restore balance to your mind and body.",
-    image: `${CDN}/img_25.jpg`,
+    pre: "Activities & Recreation",
+    title: "Island Adventures",
+    body: "Jet skiing, island hopping, day tour escapades, and aqua sports — Mactan Island's waters await your discovery.",
+    image: `${CDN}/8689/1704599753_8689_jetski_a.jpg`,
     reverse: true,
   },
   {
-    pre: "Dine In",
-    title: "Room Service",
-    body: "Enjoy freshly prepared meals delivered directly to your room. Our in-room dining menu features an array of local and international cuisine.",
-    image: `${CDN}/img_12.jpg`,
+    pre: "Events & Celebrations",
+    title: "Weddings & Corporate",
+    body: "From intimate celebrations to grand corporate events, our beachfront venues on Mactan Island make every occasion unforgettable.",
+    image: `${CDN}/8689/1704421110_8689_9.jpg`,
     reverse: false,
   },
   {
-    pre: "Culinary Journey",
-    title: "Restaurant & Bar",
-    body: "Our Sunrise Pavilion restaurant serves breakfast, lunch, and dinner with stunning views of the ocean, complemented by a full-service bar.",
-    image: `${CDN}/img_27.jpg`,
+    pre: "Royal Koi Pond",
+    title: "Resort Grounds",
+    body: "Wander through our beautifully landscaped 2-hectare grounds and discover the serene Royal Koi Pond — a peaceful corner of our resort.",
+    image: `${CDN}/8689/1704531295_8689_ROYAL_KOI_POND.jpg`,
     reverse: true,
   },
 ];

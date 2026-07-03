@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+﻿import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { ExternalLink, Clock, MapPin } from "lucide-react";
 import { brand } from "../lib/brand";
@@ -29,7 +29,7 @@ export default function FoodMenu() {
       <section className="relative h-[70vh] min-h-[500px] overflow-hidden">
         <img
           src={`${CDN}/dining.jpg`}
-          alt="Dining at Discovery Samal"
+          alt="Dining at Cebu Whitesand Resort"
           className="absolute inset-0 w-full h-full object-cover scale-105"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-black/10 via-black/40 to-black/75" />
@@ -77,9 +77,9 @@ export default function FoodMenu() {
               Flavours Kissed by the Ocean
             </h2>
             <p className="text-charcoal/60 leading-relaxed text-lg">
-              From morning light to evening breeze, Discovery Samal offers
+              From morning light to evening breeze, Cebu Whitesand Resort offers
               intimate dining venues set against the stunning backdrop of
-              Samal Island's coastline. Fresh ingredients, artful presentation, and
+              Cebu's coastline. Fresh ingredients, artful presentation, and
               warm Filipino hospitality at every table.
             </p>
           </motion.div>

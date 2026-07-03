@@ -16,6 +16,7 @@ const roomSchema = new mongoose.Schema(
     weekendPrice: { type: Number },
     features: [String],
     images: [String],
+    imageKeys: [String],
     videoUrl: { type: String, trim: true },
     videoPoster: { type: String, trim: true },
     tagline: { type: String, trim: true },

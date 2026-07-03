@@ -1,7 +1,7 @@
 {
-  "name": "resort-template-email-service",
+  "name": "cebu-whitesand-resort-email-service",
   "version": "1.0.0",
-  "description": "Vercel-hosted email relay service for your resort",
+  "description": "Vercel-hosted email relay service for Cebu Whitesand Resort",
   "main": "api/send.js",
   "scripts": {
     "dev": "node dev-server.js"

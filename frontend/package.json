@@ -1,7 +1,7 @@
 {
-  "name": "resort-template-frontend",
+  "name": "cebu-whitesand-resort-frontend",
   "version": "1.0.0",
-  "description": "Frontend app for your resort booking system",
+  "description": "Frontend app for Cebu Whitesand Resort booking system",
   "main": "index.js",
   "scripts": {
     "dev": "vite",

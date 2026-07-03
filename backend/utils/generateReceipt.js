@@ -32,7 +32,7 @@ function generateReceipt(booking) {
     doc
       .fontSize(24)
       .fillColor(forest)
-      .text(process.env.PROJECT_NAME || "Your Resort", 50, 50, {
+      .text(process.env.PROJECT_NAME || "Cebu Whitesand Resort", 50, 50, {
         align: "center",
         characterSpacing: 4,
       });
@@ -209,7 +209,7 @@ function generateReceipt(booking) {
     const resortEmail =
       optionalEnv(process.env.RESORT_EMAIL) ||
       process.env.SMTP_USER ||
-      "reservations@example.com";
+      "reservations@cebu-whitesand-resort.com";
     const facebookPageUrl =
       optionalEnv(process.env.FACEBOOK_PAGE_URL) || "facebook.com";
 

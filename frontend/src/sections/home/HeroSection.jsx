@@ -13,70 +13,44 @@ import { brand } from "../../lib/brand";
 /* â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
    Slide data â€” images sourced from example.html
 â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
-const CDN = "https://image-tc.galaxy.tf";
+const CDN = "https://homesweb.staah.net";
+// Four hero images — exact user-specified images from whitesands.com.ph CDN
 const SLIDES = [
   {
     id: 1,
-    desktop: `${CDN}/wijpeg-9g0c8e4jia8i8dw5hv5xd3r05/dss-website-banner-home-page-2.jpg?width=1920`,
-    mobile: `${CDN}/wijpeg-3gvt51m6p7qhmq6msr8eugyv8/website-mobile-banner-size-1.jpg?height=700`,
-    eyebrow: "Independence Day Travel Sale",
-    heading: "Enjoy up to 50%\nSavings!",
-    cta: "Learn More",
-    ctaHref: "/offers",
-  },
-  {
-    id: 2,
-    desktop: `${CDN}/wijpeg-75f73vymu5o1t89ryvtwcmpug/girl-enjoying-the-pool-in-the-best-luxury-resort-in-davao-discovery-samal-tablet-size.jpg?width=1920`,
-    mobile: `${CDN}/wijpeg-3n0zecnifh2pnrs8f5hqiy63u/website-mobile-banner-size.jpg?height=700`,
-    eyebrow: "Happy Summer",
-    heading: "Experience exclusive discounts\ncoupled with delightful perks!",
-    cta: "Learn More",
-    ctaHref: "/offers",
-  },
-  {
-    id: 3,
-    desktop: `${CDN}/wijpeg-bcuufnq3q2s8cqqkqxm28wiqw/untitled-design-4.jpg?width=1920`,
-    mobile: `${CDN}/wijpeg-bcuufnq3q2s8cqqkqxm28wiqw/untitled-design-4.jpg?width=1920`,
-    eyebrow: "Samal Grand Ballroom",
-    heading: "Where grandiose moments\ntake centerstage.",
-    cta: "Discover More",
-    ctaHref: "/events",
-  },
-  {
-    id: 4,
-    desktop: `${CDN}/wijpeg-17ogtqpq3qj4s6r2rl3gu0mse/9.jpg?width=1920`,
-    mobile: `${CDN}/wijpeg-17ogtqpq3qj4s6r2rl3gu0mse/9.jpg?width=1920`,
-    eyebrow: "Samal Island",
-    heading: "Every getaway\nfulfilled.",
-    cta: "View Offers",
-    ctaHref: "/offers",
-  },
-  {
-    id: 5,
-    desktop: `${CDN}/wijpeg-7jtyjnoy3zk9ji5fg7szxfttb/dss-website-banner-home-page.jpg?width=1920`,
-    mobile: `${CDN}/wijpeg-7jtyjnoy3zk9ji5fg7szxfttb/dss-website-banner-home-page.jpg?width=1920`,
-    eyebrow: "Fine Dining & Flavours",
-    heading: "Every craving\nfulfilled.",
-    cta: "View Dining Options",
-    ctaHref: "/restaurants",
-  },
-  {
-    id: 6,
-    desktop: `${CDN}/wijpeg-e9e3fi5ee3nudxmag9mtxp6bm/aerial-1.jpg?width=1920`,
-    mobile: `${CDN}/wijpeg-e9e3fi5ee3nudxmag9mtxp6bm/aerial-1.jpg?width=1920`,
-    eyebrow: "Book Direct",
-    heading: "Get up to 50% Savings\non Best Available Rates",
+    desktop: `${CDN}/imagelibrary/1705046481_8689_fullresearial1.jpg`,
+    mobile: `${CDN}/imagelibrary/1705046481_8689_fullresearial1.jpg`,
+    eyebrow: "Maribago Beach, Mactan Island",
+    heading: "Natural Charms\nWelcome You",
     cta: "Book Now",
     ctaHref: "/booking",
   },
   {
-    id: 7,
-    desktop: `${CDN}/wipng-790j8v5mbshq758qtyy9hjlol/1.png?width=1920`,
-    mobile: `${CDN}/wipng-790j8v5mbshq758qtyy9hjlol/1.png?width=1920`,
-    eyebrow: "Event Venues",
-    heading: "Every moment\nfulfilled.",
-    cta: "View Event Venues",
-    ctaHref: "/events",
+    id: 2,
+    desktop: `${CDN}/imagelibrary/1704415237_8689_WhiteSandsResort201933.jpg`,
+    mobile: `${CDN}/imagelibrary/1704415237_8689_WhiteSandsResort201933.jpg`,
+    eyebrow: "86 Guest Rooms",
+    heading: "Tailored for\nEvery Traveller",
+    cta: "View Rooms",
+    ctaHref: "/rooms",
+  },
+  {
+    id: 3,
+    desktop: `${CDN}/imagelibrary/1705044784_8689_IMG_1655.jpg`,
+    mobile: `${CDN}/imagelibrary/1705044784_8689_IMG_1655.jpg`,
+    eyebrow: "Anahata Spa",
+    heading: "Restore Body\nand Soul",
+    cta: "Explore Spa",
+    ctaHref: "/spa",
+  },
+  {
+    id: 4,
+    desktop: `${CDN}/imagelibrary/1705046332_8689_anahata-25.jpg`,
+    mobile: `${CDN}/imagelibrary/1705046332_8689_anahata-25.jpg`,
+    eyebrow: "Cebu Whitesand Resort",
+    heading: "Your Perfect\nIsland Retreat",
+    cta: "Book Direct",
+    ctaHref: "/booking",
   },
 ];
 
@@ -362,7 +336,7 @@ export default function HeroSection() {
           {/* Header */}
           <div className="px-6 pt-6 pb-4 border-b border-white/10">
             <p className="text-[10px] uppercase tracking-[0.35em] text-white/60 mb-0.5">
-              Discovery Samal
+              Cebu Whitesand Resort
             </p>
             <p className="text-[13px] font-semibold text-white">
               Make a Reservation

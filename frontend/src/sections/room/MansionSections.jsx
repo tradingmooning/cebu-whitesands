@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+﻿import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import {
@@ -28,7 +28,7 @@ export function MansionTitle({ room }) {
     room.shortDescription ||
     room.description ||
     "";
-  const location = room.location || "Samal Island, Davao del Norte;
+  const location = room.location || "Cebu, Philippines;
   return (
     <section className="bg-warm-white pt-32 lg:pt-40 pb-12 lg:pb-16">
       <div className="max-w-5xl mx-auto px-6 lg:px-10 text-center">
@@ -38,7 +38,7 @@ export function MansionTitle({ room }) {
           transition={{ duration: 0.8 }}
           className="font-serif text-4xl sm:text-5xl lg:text-6xl text-teal-dark leading-[1.1]"
         >
-          Discovery Samal {room.name}
+          Cebu Whitesand Resort {room.name}
         </motion.h1>
         <motion.h2
           initial={{ opacity: 0, y: 14 }}

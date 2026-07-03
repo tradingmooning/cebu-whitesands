@@ -1,527 +1,315 @@
 {
   "_meta": {
-    "source": "Discovery Samal Resort — official client-supplied rate sheet (May 2026)",
+    "source": "Cebu White Sands Resort and Spa — Mactan Island, Lapu-Lapu City, Cebu",
     "currency": "PHP",
     "checkIn": "14:00",
     "checkOut": "12:00",
     "vatInclusive": true,
-    "address": "White Beach, Sitio Manggayad, Station 3, Boracay Island, Malay, Aklan 5608, Philippines",
-    "pricingNote": "Client-supplied selling prices are the source of truth. The published rate displayed on marketing surfaces is generated as 2× the selling price with a permanent 50% OFF badge for promotional presentation.",
-    "globalInclusions": [
-      "Breakfast, Lunch & Dinner (Full Buffet Meals)",
-      "Roundtrip Caticlan Airport transfer",
-      "Unlimited bottomless drinks during meals",
-      "Exclusive access to swimming pool",
-      "Beachfront access",
-      "Multipurpose Pavilion access",
-      "Free parking",
-      "Free WiFi",
-      "Pet friendly"
-    ],
-    "extraGuestPolicy": {
-      "extraAdultRate": 1500,
-      "extraAdultCurrency": "PHP",
-      "extraAdultNote": "₱1,500 per person per night beyond the room's base capacity (includes full board meals).",
-      "kidsFreeAge": 6,
-      "kidsFreeNote": "Kids aged 6 and below stay free — full board meals included."
-    },
-    "discountSystem": {
-      "type": "permanent-marketing",
-      "percentage": 50,
-      "label": "50% OFF",
-      "note": "Generated client-side: oldPrice = 2 × currentPrice."
-    }
+    "note": "Placeholder prices — update from admin panel once deployed."
   },
-
   "rooms": [
     {
-      "id": "standard-room-poolview",
-      "slug": "standard-room-poolview",
-      "name": "Standard Room Poolview",
-      "category": "Standard",
-      "location": "White Beach, Sitio Manggayad, Station 3, Boracay Island, Malay, Aklan 5608, Philippines",
-      "tagline": "Restful poolside comfort for two",
-      "shortDescription": "An air-conditioned poolview retreat with one comfortable bed — the perfect starter stay for couples on a Boracay escape.",
-      "longDescription": "Open your day to a tranquil pool view and the gentle hush of Station 3. This cozy room sleeps two in comfort and includes full board meals, roundtrip Caticlan transfers, and unlimited beverages during dining.",
-
-      "currentPrice": 4000,
-      "oldPrice": 8000,
-      "discountPercentage": 50,
-      "discountLabel": "50% OFF",
-
-      "capacity": { "base": 2, "max": 2 },
-      "goodFor": 2,
-      "maxOccupancy": 2,
-      "view": "Pool view",
-      "bedType": "1 Bed",
-      "bedConfiguration": [
-        "One (1) bed",
-        "Pool view",
-        "Private bathroom",
-        "Air-conditioned"
-      ],
-
-      "roomFeatures": [
-        "Pool view",
-        "Air-conditioned",
-        "Private bathroom",
-        "Fits 2 guests"
-      ],
-      "highlights": [
-        "Direct pool view",
-        "Quiet Station 3 location",
-        "Full board meals included",
-        "Roundtrip Caticlan transfers included"
-      ],
-      "amenities": [
-        "Air conditioner",
-        "Private bathroom",
-        "Free toiletries",
-        "Free WiFi",
-        "Flat-screen TV"
-      ],
-
-      "pricePerNight": 8000,
-      "publishedRate": 8000,
-      "bestRate": 4000,
-
-      "images": [],
-      "pendingImageUpload": true,
-
-      "featured": false,
-      "bookingUrl": "/booking?room=standard-room-poolview"
-    },
-
-    {
-      "id": "classic-room-beach-view",
-      "slug": "classic-room-beach-view",
-      "name": "Classic Room Beach View",
-      "category": "Classic",
-      "location": "White Beach, Sitio Manggayad, Station 3, Boracay Island, Malay, Aklan 5608, Philippines",
-      "tagline": "A king-bedded retreat with a beach view",
-      "shortDescription": "A king-bedded room with a serene beach view, full board meals, and roundtrip Caticlan transfers.",
-      "longDescription": "Wake up to the rhythm of White Beach in this classic king-bedded room. Fully air-conditioned with all the in-room comforts of a Boracay Sands stay, the package includes full board buffet meals, roundtrip transfers, and exclusive access to resort facilities.",
-
-      "currentPrice": 5500,
-      "oldPrice": 11000,
-      "discountPercentage": 50,
-      "discountLabel": "50% OFF",
-
-      "capacity": { "base": 2, "max": 3 },
-      "goodFor": 2,
-      "maxOccupancy": 3,
-      "view": "Beach view",
-      "bedType": "1 King bed",
-      "bedConfiguration": [
-        "One (1) king-sized bed",
-        "Beach view",
-        "Private bathroom",
-        "Air-conditioned"
-      ],
-
-      "roomFeatures": [
-        "Beach view",
-        "King-sized bed",
-        "Air-conditioned",
-        "Fits 2–3 guests"
-      ],
-      "highlights": [
-        "Serene beach view",
-        "King-sized bed for two",
-        "Mini-bar & coffee amenities",
-        "Cable TV and free toiletries"
-      ],
-      "amenities": [
-        "Free toiletries",
-        "Bathrobes",
-        "Hair dryer",
-        "Clothes rack",
-        "Wardrobe or closet",
-        "Electric kettle",
-        "Air conditioner",
-        "Flat-screen TV with cable",
-        "Wi-Fi",
-        "Telephone",
-        "Refrigerator",
-        "Minibar"
-      ],
-
-      "pricePerNight": 11000,
-      "publishedRate": 11000,
-      "bestRate": 5500,
-
-      "images": [
-        "https://discoverysamal.com/wp-content/uploads/2026/03/RCB04907-2.jpg",
-        "https://discoverysamal.com/wp-content/uploads/2026/03/RCB04904.jpg",
-        "https://discoverysamal.com/wp-content/uploads/2026/03/RCB04888.jpg",
-        "https://discoverysamal.com/wp-content/uploads/2026/03/RCB04859.jpg"
-      ],
-      "pendingImageUpload": false,
-
-      "featured": true,
-      "bookingUrl": "/booking?room=classic-room-beach-view"
-    },
-
-    {
-      "id": "premier-suite-beachfront",
-      "slug": "premier-suite-beachfront",
-      "name": "Premier Suite Beachfront",
-      "category": "Premier",
-      "location": "White Beach, Sitio Manggayad, Station 3, Boracay Island, Malay, Aklan 5608, Philippines",
-      "tagline": "Two-queen suite directly beachfront",
-      "shortDescription": "A premier beachfront suite with two queen beds — designed for friends or a small family stepping straight out to White Beach.",
-      "longDescription": "Set right on the beachfront, the Premier Suite places you steps from the sand with the lull of the surf as your soundtrack. Two queen beds accommodate up to four guests, with a balcony framing the Sulu Sea horizon.",
-
-      "currentPrice": 8000,
-      "oldPrice": 16000,
-      "discountPercentage": 50,
-      "discountLabel": "50% OFF",
-
-      "capacity": { "base": 3, "max": 4 },
-      "goodFor": 3,
-      "maxOccupancy": 4,
-      "view": "Beachfront",
-      "bedType": "2 Queen beds",
-      "bedConfiguration": [
-        "Two (2) queen-sized beds",
-        "Beachfront positioning",
-        "Private balcony",
-        "En suite bathroom"
-      ],
-
-      "roomFeatures": [
-        "Direct beachfront",
-        "Two queen beds",
-        "Private balcony",
-        "Fits 3–4 guests"
-      ],
-      "highlights": [
-        "Direct beachfront access",
-        "Two queen-sized beds",
-        "Private balcony with sea view",
-        "Lounge beds on the balcony"
-      ],
-      "amenities": [
-        "Free toiletries",
-        "Bathrobes",
-        "Hair dryer",
-        "Clothes rack",
-        "Wardrobe or closet",
-        "Sofa",
-        "Desk",
-        "Electric kettle",
-        "Balcony",
-        "Lounge beds",
-        "Air conditioner",
-        "Flat-screen TV with cable",
-        "Wi-Fi",
-        "Telephone",
-        "Refrigerator",
-        "Minibar"
-      ],
-
-      "pricePerNight": 16000,
-      "publishedRate": 16000,
-      "bestRate": 8000,
-
-      "images": [
-        "https://discoverysamal.com/wp-content/uploads/2026/03/RCB05275.jpg",
-        "https://discoverysamal.com/wp-content/uploads/2026/03/RCB05295.jpg",
-        "https://discoverysamal.com/wp-content/uploads/2026/03/RCB05311-3.jpg",
-        "https://discoverysamal.com/wp-content/uploads/2026/03/RCB05323-2.jpg",
-        "https://discoverysamal.com/wp-content/uploads/2026/03/RCB05332.jpg",
-        "https://discoverysamal.com/wp-content/uploads/2026/03/RCB05343-2.jpg",
-        "https://discoverysamal.com/wp-content/uploads/2026/03/RCB05351.jpg",
-        "https://discoverysamal.com/wp-content/uploads/2026/03/RCB05353-1.jpg",
-        "https://discoverysamal.com/wp-content/uploads/2026/03/RCB05360.jpg",
-        "https://discoverysamal.com/wp-content/uploads/2026/03/RCB05402.jpg",
-        "https://discoverysamal.com/wp-content/uploads/2026/03/RCB05408.jpg",
-        "https://discoverysamal.com/wp-content/uploads/2026/03/RCB05411-1.jpg",
-        "https://discoverysamal.com/wp-content/uploads/2026/03/RCB05425.jpg"
-      ],
-      "pendingImageUpload": false,
-
-      "featured": true,
-      "bookingUrl": "/booking?room=premier-suite-beachfront"
-    },
-
-    {
-      "id": "deluxe-beach-view",
-      "slug": "deluxe-beach-view",
-      "name": "Deluxe Beach View",
+      "slug": "deluxe",
+      "name": "Deluxe",
       "category": "Deluxe",
-      "location": "White Beach, Sitio Manggayad, Station 3, Boracay Island, Malay, Aklan 5608, Philippines",
-      "tagline": "Two connecting rooms with a king and two queens",
-      "shortDescription": "Two connecting rooms — one king bed and two queen beds — ideal for a family of six with a sweeping beach view.",
-      "longDescription": "Spacious and considered, the Deluxe Beach View links two connecting rooms into a single retreat for up to six guests. A king bed in one suite and two queen beds in the other open onto a private balcony with a scenic view of White Beach.",
-
-      "currentPrice": 10500,
-      "oldPrice": 21000,
-      "discountPercentage": 50,
-      "discountLabel": "50% OFF",
-
-      "capacity": { "base": 4, "max": 6 },
-      "goodFor": 6,
-      "maxOccupancy": 6,
-      "view": "Beach view",
-      "bedType": "1 King + 2 Queen beds (2 connecting rooms)",
-      "bedConfiguration": [
-        "One (1) king-sized bed",
-        "Two (2) queen-sized beds",
-        "Two connecting rooms",
-        "Private balcony with lounge beds",
-        "En suite bathroom with bathtub"
+      "tagline": "Comfortable island comfort for two",
+      "description": "Single/twin adult occupancy, max 2 kids aged 11 & below. Floor area: 30-35 sqm. Standard bed: 1 single + 1 double bed (limited King size bed rooms available). Thoughtfully furnished with all essential comforts for a relaxing Mactan Island stay.",
+      "pricePerNight": 3500,
+      "weekendPrice": 4000,
+      "maxGuests": 4,
+      "capacity": 2,
+      "occupancy": 2,
+      "size": "30-35 sqm",
+      "bedType": "1 Single + 1 Double bed",
+      "minGuests": 1,
+      "available": true,
+      "images": [
+        "https://homesweb.staah.net/imagelibrary/big_1702967760_8689_heritagedeluxe1.jpg",
+        "https://homesweb.staah.net/imagelibrary/big_1702967765_8689_heritagedeluxe2.jpg"
       ],
-
-      "roomFeatures": [
-        "Two connecting rooms",
-        "Sleeps up to 6 guests",
-        "Private balcony with beach view",
-        "Bathtub in en suite bathroom"
-      ],
-      "highlights": [
-        "Two connecting rooms for privacy and togetherness",
-        "King + two queen bed configuration",
-        "Private balcony with scenic beach view",
-        "Bathtub in en suite bathroom"
-      ],
-      "amenities": [
-        "Free toiletries",
-        "Bathtub",
-        "Bathrobes",
-        "Hair dryer",
-        "Clothes rack",
-        "Wardrobe or closet",
-        "Sofa",
-        "Desk",
-        "Electric kettle",
+      "features": [
         "Balcony",
-        "Lounge beds",
-        "Air conditioner",
-        "Flat-screen TV with cable",
-        "Wi-Fi",
-        "Telephone",
+        "Air-conditioning",
+        "Free WiFi",
+        "Flat Screen TV",
+        "Private Bathroom",
+        "Shower",
+        "Hair Dryer",
+        "Electric Kettle",
         "Refrigerator",
-        "Minibar"
-      ],
-
-      "pricePerNight": 21000,
-      "publishedRate": 21000,
-      "bestRate": 10500,
-
-      "images": [
-        "https://discoverysamal.com/wp-content/uploads/2026/03/RCB05079.jpg",
-        "https://discoverysamal.com/wp-content/uploads/2026/03/RCB05087.jpg",
-        "https://discoverysamal.com/wp-content/uploads/2026/03/RCB05104.jpg",
-        "https://discoverysamal.com/wp-content/uploads/2026/03/RCB05112.jpg",
-        "https://discoverysamal.com/wp-content/uploads/2026/03/RCB05129.jpg",
-        "https://discoverysamal.com/wp-content/uploads/2026/03/RCB05145.jpg",
-        "https://discoverysamal.com/wp-content/uploads/2026/03/RCB05173-1.jpg",
-        "https://discoverysamal.com/wp-content/uploads/2026/03/RCB05175.jpg",
-        "https://discoverysamal.com/wp-content/uploads/2026/03/RCB05351.jpg",
-        "https://discoverysamal.com/wp-content/uploads/2026/03/RCB05353-1.jpg"
-      ],
-      "pendingImageUpload": false,
-
-      "featured": true,
-      "bookingUrl": "/booking?room=deluxe-beach-view"
+        "Electronic Door Lock",
+        "In-room Safe",
+        "Non-smoking",
+        "Free Parking",
+        "Desk",
+        "Towels & Toiletries"
+      ]
     },
-
     {
-      "id": "family-beachfront-suite",
-      "slug": "family-beachfront-suite",
-      "name": "Family Beachfront Suite",
-      "category": "Family",
-      "location": "White Beach, Sitio Manggayad, Station 3, Boracay Island, Malay, Aklan 5608, Philippines",
-      "tagline": "Two-bedroom beachfront retreat for the whole family",
-      "shortDescription": "A two-bedroom beachfront suite with two beds in each room — built for families of up to eight.",
-      "longDescription": "Generously sized for multi-generational stays, the Family Beachfront Suite features two bedrooms with two beds each — sleeping up to eight guests directly beside White Beach. Full board meals and roundtrip transfers are included throughout your stay.",
-
-      "currentPrice": 13600,
-      "oldPrice": 27200,
-      "discountPercentage": 50,
-      "discountLabel": "50% OFF",
-
-      "capacity": { "base": 6, "max": 8 },
-      "goodFor": 8,
-      "maxOccupancy": 8,
-      "view": "Beachfront",
-      "bedType": "4 Beds across 2 bedrooms",
-      "bedConfiguration": [
-        "Two (2) bedrooms",
-        "Two (2) beds in each bedroom",
-        "Direct beachfront",
-        "Private bathroom(s)",
-        "Air-conditioned"
+      "slug": "grandluxe-room",
+      "name": "Grand Luxe Room",
+      "category": "Luxury",
+      "tagline": "Elevated comfort with garden or pool views",
+      "description": "Elevated guest experience with premium furnishings and plush bedding. Features a balcony and a full suite of modern amenities ideal for couples seeking a stylish retreat on Mactan Island.",
+      "pricePerNight": 4500,
+      "weekendPrice": 5200,
+      "maxGuests": 3,
+      "capacity": 2,
+      "occupancy": 2,
+      "size": "35-40 sqm",
+      "bedType": "1 King size bed",
+      "minGuests": 1,
+      "available": true,
+      "images": [
+        "https://homesweb.staah.net/imagelibrary/big_1702966945_8689_WhiteSandsResort2019119.jpg"
       ],
-
-      "roomFeatures": [
-        "Two-bedroom layout",
-        "Direct beachfront",
-        "Sleeps up to 8 guests",
-        "Family-friendly suite"
-      ],
-      "highlights": [
-        "Two bedrooms — two beds each",
-        "Direct beachfront for the whole family",
-        "Sleeps up to 8 guests comfortably",
-        "Full board meals & airport transfers included"
-      ],
-      "amenities": [
-        "Free toiletries",
+      "features": [
+        "Balcony",
+        "Air-conditioning",
+        "Free WiFi",
+        "Flat Screen TV",
+        "Private Bathroom",
+        "Bathtub & Shower",
+        "Hair Dryer",
+        "Electric Kettle",
+        "Refrigerator",
         "Bathrobes",
-        "Hair dryer",
-        "Clothes rack",
-        "Wardrobe or closet",
-        "Electric kettle",
-        "Air conditioner",
-        "Flat-screen TV with cable",
-        "Wi-Fi",
-        "Telephone",
-        "Refrigerator",
-        "Minibar"
-      ],
-
-      "pricePerNight": 27200,
-      "publishedRate": 27200,
-      "bestRate": 13600,
-
+        "Room Slippers",
+        "Electronic Door Lock",
+        "In-room Safe",
+        "Non-smoking",
+        "Free Parking",
+        "Towels & Toiletries"
+      ]
+    },
+    {
+      "slug": "premier-room",
+      "name": "Premier Room",
+      "category": "Premier",
+      "tagline": "Spacious premier rooms with premium touches",
+      "description": "Generous well-appointed space for guests who demand a premium stay. High-quality furnishings, minibar, and direct access to resort facilities. Perfect for discerning travellers visiting Cebu.",
+      "pricePerNight": 5500,
+      "weekendPrice": 6200,
+      "maxGuests": 3,
+      "capacity": 2,
+      "occupancy": 2,
+      "size": "40-45 sqm",
+      "bedType": "1 King size bed",
+      "minGuests": 1,
+      "available": true,
       "images": [
-        "https://discoverysamal.com/wp-content/uploads/2026/03/RCB04943-2.jpg",
-        "https://discoverysamal.com/wp-content/uploads/2026/03/RCB04945.jpg",
-        "https://discoverysamal.com/wp-content/uploads/2026/03/RCB04955.jpg",
-        "https://discoverysamal.com/wp-content/uploads/2026/03/RCB04968-2.jpg",
-        "https://discoverysamal.com/wp-content/uploads/2026/03/RCB04977.jpg",
-        "https://discoverysamal.com/wp-content/uploads/2026/03/RCB05000.jpg",
-        "https://discoverysamal.com/wp-content/uploads/2026/03/RCB05015.jpg",
-        "https://discoverysamal.com/wp-content/uploads/2026/03/RCB05019.jpg",
-        "https://discoverysamal.com/wp-content/uploads/2026/03/RCB05036.jpg"
+        "https://homesweb.staah.net/imagelibrary/big_1702975136_8689_1.png"
       ],
-      "pendingImageUpload": false,
-
-      "featured": true,
-      "bookingUrl": "/booking?room=family-beachfront-suite"
-    },
-
-    {
-      "id": "seaview-villa",
-      "slug": "seaview-villa",
-      "name": "SeaView Villa",
-      "category": "Villa",
-      "location": "White Beach, Sitio Manggayad, Station 3, Boracay Island, Malay, Aklan 5608, Philippines",
-      "tagline": "Three-bedroom villa with panoramic sea views",
-      "shortDescription": "A three-bedroom seaview villa with two beds in each room — built for groups of up to fifteen.",
-      "longDescription": "Spread out across three bedrooms with two beds each, the SeaView Villa anchors a private wing of the resort with sweeping views of the Sulu Sea. Ideal for celebrations, large families, or barkada getaways, the villa includes full board meals and roundtrip transfers for every guest.",
-
-      "currentPrice": 15600,
-      "oldPrice": 31200,
-      "discountPercentage": 50,
-      "discountLabel": "50% OFF",
-
-      "capacity": { "base": 10, "max": 15 },
-      "goodFor": 10,
-      "maxOccupancy": 15,
-      "view": "Sea view",
-      "bedType": "6 Beds across 3 bedrooms",
-      "bedConfiguration": [
-        "Three (3) bedrooms",
-        "Two (2) beds in each bedroom",
-        "Sea view",
-        "Multiple bathrooms",
-        "Air-conditioned"
-      ],
-
-      "roomFeatures": [
-        "Three-bedroom villa",
-        "Sweeping sea views",
-        "Sleeps 10–15 guests",
-        "Group & celebration ready"
-      ],
-      "highlights": [
-        "Three bedrooms — two beds each",
-        "Panoramic sea views",
-        "Sleeps up to 15 guests",
-        "Perfect for group celebrations"
-      ],
-      "amenities": [
-        "Air conditioner",
-        "Private bathrooms",
+      "features": [
+        "Balcony",
+        "Air-conditioning",
         "Free WiFi",
-        "Flat-screen TVs",
+        "Flat Screen TV",
+        "Private Bathroom",
+        "Bathtub & Shower",
+        "Hair Dryer",
+        "Electric Kettle",
         "Refrigerator",
-        "Free toiletries"
-      ],
-
-      "pricePerNight": 31200,
-      "publishedRate": 31200,
-      "bestRate": 15600,
-
-      "images": [],
-      "pendingImageUpload": true,
-
-      "featured": true,
-      "bookingUrl": "/booking?room=seaview-villa"
+        "Bathrobes",
+        "Room Slippers",
+        "Electronic Door Lock",
+        "In-room Safe",
+        "Non-smoking",
+        "Free Parking",
+        "Desk",
+        "Towels & Toiletries"
+      ]
     },
-
     {
-      "id": "luxury-villa",
-      "slug": "luxury-villa",
-      "name": "Luxury Villa",
-      "category": "Villa",
-      "location": "White Beach, Sitio Manggayad, Station 3, Boracay Island, Malay, Aklan 5608, Philippines",
-      "tagline": "Five-bedroom signature villa for up to 20 guests",
-      "shortDescription": "The resort's signature villa — five bedrooms with two beds in each room — for grand gatherings of up to twenty.",
-      "longDescription": "Boracay Sands' flagship Luxury Villa is the most spacious accommodation on the property. Five bedrooms with two beds each host up to twenty guests in a private, curated setting — built for weddings, milestone celebrations, and exclusive corporate retreats. Full board meals, roundtrip Caticlan transfers, and exclusive facility access are included for every guest.",
-
-      "currentPrice": 22000,
-      "oldPrice": 44000,
-      "discountPercentage": 50,
-      "discountLabel": "50% OFF",
-
-      "capacity": { "base": 15, "max": 20 },
-      "goodFor": 20,
-      "maxOccupancy": 20,
-      "view": "Signature villa",
-      "bedType": "10 Beds across 5 bedrooms",
-      "bedConfiguration": [
-        "Five (5) bedrooms",
-        "Two (2) beds in each bedroom",
-        "Multiple bathrooms",
-        "Private villa setting",
-        "Air-conditioned"
+      "slug": "ocean-view-suite",
+      "name": "Ocean View Suite",
+      "category": "Luxury",
+      "tagline": "Breathtaking beachfront views from your balcony",
+      "description": "Single/twin occupancy, max 2 kids aged 11 & below free in room. 80 sq. m. with a balcony overlooking the beach. 1 King size bed. The most sought-after suite for honeymoons and special occasions at Cebu White Sands Resort.",
+      "pricePerNight": 10200,
+      "weekendPrice": 12000,
+      "maxGuests": 4,
+      "capacity": 2,
+      "occupancy": 2,
+      "size": "80 sqm",
+      "bedType": "1 King size bed",
+      "minGuests": 1,
+      "available": true,
+      "images": [
+        "https://homesweb.staah.net/imagelibrary/big_1705900556_8689_WhiteSandsResort201944.jpg",
+        "https://homesweb.staah.net/imagelibrary/big_1715394652_8689_SUITE_CR.jpg"
       ],
-
-      "roomFeatures": [
-        "Five-bedroom signature villa",
-        "Sleeps up to 20 guests",
-        "Private villa setting",
-        "Wedding & event ready"
-      ],
-      "highlights": [
-        "Five bedrooms — two beds each",
-        "Sleeps up to 20 guests",
-        "Signature private villa",
-        "Ideal for weddings and corporate retreats"
-      ],
-      "amenities": [
-        "Air conditioner",
-        "Multiple private bathrooms",
+      "features": [
+        "Beachfront Balcony",
+        "Ocean View",
+        "Air-conditioning",
         "Free WiFi",
-        "Flat-screen TVs",
+        "Flat Screen TV",
+        "Private Bathroom",
+        "Bathtub & Shower",
+        "Hair Dryer",
+        "Bathrobes",
+        "Room Slippers",
+        "Electric Kettle",
         "Refrigerator",
-        "Free toiletries",
-        "Spacious living areas"
+        "Electronic Door Lock",
+        "In-room Safe",
+        "Non-smoking",
+        "Free Parking",
+        "Towels & Toiletries"
+      ]
+    },
+    {
+      "slug": "family-room",
+      "name": "Family Room",
+      "category": "Family",
+      "tagline": "Spacious and welcoming for the whole family",
+      "description": "Thoughtfully designed for families — multiple beds, ample space, and all amenities needed for a relaxed stay together at Mactan Island.",
+      "pricePerNight": 6000,
+      "weekendPrice": 7000,
+      "maxGuests": 5,
+      "capacity": 4,
+      "occupancy": 4,
+      "size": "45-55 sqm",
+      "bedType": "2 Double beds",
+      "minGuests": 2,
+      "available": true,
+      "images": [
+        "https://homesweb.staah.net/imagelibrary/big_1702975987_8689_WhiteSandsResort2019307.jpg"
       ],
-
-      "pricePerNight": 44000,
-      "publishedRate": 44000,
-      "bestRate": 22000,
-
-      "images": [],
-      "pendingImageUpload": true,
-
-      "featured": true,
-      "bookingUrl": "/booking?room=luxury-villa"
+      "features": [
+        "Air-conditioning",
+        "Free WiFi",
+        "Flat Screen TV",
+        "Private Bathroom",
+        "Shower",
+        "Hair Dryer",
+        "Electric Kettle",
+        "Refrigerator",
+        "Electronic Door Lock",
+        "In-room Safe",
+        "Non-smoking",
+        "Free Parking",
+        "Desk",
+        "Towels & Toiletries",
+        "Kid-friendly setup"
+      ]
+    },
+    {
+      "slug": "family-suite",
+      "name": "Family Suite",
+      "category": "Family",
+      "tagline": "A suite experience tailored for families",
+      "description": "Combines suite-level comfort with dedicated family-friendly amenities. Generous living area and multiple sleeping configurations for a premium family resort experience on Mactan Island.",
+      "pricePerNight": 8500,
+      "weekendPrice": 9800,
+      "maxGuests": 6,
+      "capacity": 4,
+      "occupancy": 4,
+      "size": "60-70 sqm",
+      "bedType": "1 King + 2 Single beds",
+      "minGuests": 2,
+      "available": true,
+      "images": [
+        "https://homesweb.staah.net/imagelibrary/big_1702976465_8689_untitled-23.jpg"
+      ],
+      "features": [
+        "Air-conditioning",
+        "Free WiFi",
+        "Flat Screen TV",
+        "Private Bathroom",
+        "Bathtub & Shower",
+        "Hair Dryer",
+        "Bathrobes",
+        "Room Slippers",
+        "Electric Kettle",
+        "Refrigerator",
+        "Electronic Door Lock",
+        "In-room Safe",
+        "Non-smoking",
+        "Free Parking",
+        "Desk",
+        "Towels & Toiletries",
+        "Kid-friendly setup"
+      ]
+    },
+    {
+      "slug": "panoramic-view-suite",
+      "name": "Panoramic View Suite",
+      "category": "Luxury",
+      "tagline": "360° panoramic views of Mactan Island and the sea",
+      "description": "Our most spectacular sea-view suite — expansive views of the Mactan Island coastline and Cebu waters. Premium furnishings, finest bathroom amenities, and an unforgettable wrap-around balcony.",
+      "pricePerNight": 12000,
+      "weekendPrice": 14000,
+      "maxGuests": 3,
+      "capacity": 2,
+      "occupancy": 2,
+      "size": "75-85 sqm",
+      "bedType": "1 King size bed",
+      "minGuests": 1,
+      "available": true,
+      "images": [
+        "https://homesweb.staah.net/imagelibrary/big_1702977955_8689_WhiteSandsResort201933.jpg"
+      ],
+      "features": [
+        "Panoramic Balcony",
+        "Panoramic Sea View",
+        "Air-conditioning",
+        "Free WiFi",
+        "Flat Screen TV",
+        "Private Bathroom",
+        "Bathtub & Shower",
+        "Hair Dryer",
+        "Bathrobes",
+        "Room Slippers",
+        "Electric Kettle",
+        "Refrigerator",
+        "Electronic Door Lock",
+        "In-room Safe",
+        "Non-smoking",
+        "Free Parking",
+        "Towels & Toiletries"
+      ]
+    },
+    {
+      "slug": "grand-luxe-plus",
+      "name": "Grand Luxe Plus",
+      "category": "Luxury",
+      "tagline": "The pinnacle of resort luxury at Cebu White Sands",
+      "description": "The Grand Luxe Plus is the finest room at Cebu White Sands Resort. Expansive floor plan, premium furnishings, living area, and a full suite of top-tier amenities. Crafted for VIP guests, honeymooners, and anniversary celebrants.",
+      "pricePerNight": 15000,
+      "weekendPrice": 18000,
+      "maxGuests": 3,
+      "capacity": 2,
+      "occupancy": 2,
+      "size": "85-100 sqm",
+      "bedType": "1 King size bed",
+      "minGuests": 1,
+      "available": true,
+      "images": [
+        "https://homesweb.staah.net/imagelibrary/big_1732177969_8689_Mabuhaygrandluxeroom1.jpg"
+      ],
+      "features": [
+        "Private Balcony",
+        "Panoramic Sea View",
+        "Air-conditioning",
+        "Free WiFi",
+        "Flat Screen TV",
+        "Private Bathroom",
+        "Bathtub & Shower",
+        "Hair Dryer",
+        "Bathrobes",
+        "Room Slippers",
+        "Electric Kettle",
+        "Refrigerator",
+        "Electronic Door Lock",
+        "In-room Safe",
+        "Non-smoking",
+        "Free Parking",
+        "Desk",
+        "Living Area",
+        "Towels & Toiletries"
+      ]
     }
   ]
 }

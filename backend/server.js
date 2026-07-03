@@ -4,7 +4,6 @@ const cors = require("cors");
 const helmet = require("helmet");
 const morgan = require("morgan");
 const mongoSanitize = require("express-mongo-sanitize");
-const { v2: cloudinary } = require("cloudinary");
 const connectDB = require("./config/db");
 const logger = require("./config/logger");
 const errorHandler = require("./middleware/errorHandler");
@@ -25,12 +24,6 @@ const app = express();
 app.set("trust proxy", 1);
 
 connectDB();
-
-cloudinary.config({
-  cloud_name: process.env.CLOUDINARY_CLOUD_NAME,
-  api_key: process.env.CLOUDINARY_API_KEY,
-  api_secret: process.env.CLOUDINARY_API_SECRET,
-});
 
 // Security middleware
 app.use(helmet({ crossOriginResourcePolicy: { policy: "cross-origin" } }));

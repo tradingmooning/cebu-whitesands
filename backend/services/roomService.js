@@ -1,6 +1,6 @@
 const Room = require("../models/Room");
 const AppError = require("../utils/AppError");
-const { uploadToCloudinary } = require("../middleware/upload");
+const storage = require("../src/storage/storage");
 const discountService = require("./discountService");
 
 const roomService = {
@@ -32,13 +32,12 @@ const roomService = {
 
   async create(data, files) {
     const images = [];
+    const imageKeys = [];
     if (files && files.length > 0) {
       for (const file of files) {
-        const result = await uploadToCloudinary(
-          file.buffer,
-          "resort-template/rooms",
-        );
-        images.push(result.secure_url);
+        const result = await storage.uploadFile(file, storage.FOLDERS.ROOMS);
+        images.push(result.url);
+        imageKeys.push(result.key);
       }
     }
 
@@ -57,6 +56,7 @@ const roomService = {
       features: data.features ? JSON.parse(data.features) : [],
       note: data.note || undefined,
       images,
+      imageKeys,
       category: data.category,
       maxGuests: data.maxGuests,
       available: data.available !== "false",
@@ -97,18 +97,21 @@ const roomService = {
     }
 
     const newImages = [];
+    const newImageKeys = [];
     if (files && files.length > 0) {
       for (const file of files) {
-        const result = await uploadToCloudinary(
-          file.buffer,
-          "resort-template/rooms",
-        );
-        newImages.push(result.secure_url);
+        const result = await storage.uploadFile(file, storage.FOLDERS.ROOMS);
+        newImages.push(result.url);
+        newImageKeys.push(result.key);
       }
     }
 
     const kept = data.existingImages ? JSON.parse(data.existingImages) : [];
+    const keptKeys = data.existingImageKeys
+      ? JSON.parse(data.existingImageKeys)
+      : [];
     updateData.images = [...kept, ...newImages];
+    updateData.imageKeys = [...keptKeys, ...newImageKeys];
 
     const updateOp = { $set: updateData };
     if (Object.keys(unsetFields).length > 0) {

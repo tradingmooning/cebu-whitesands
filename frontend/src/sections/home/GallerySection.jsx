@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+﻿import { motion } from "framer-motion";
 import hom1 from "../../assets/slides/hom1.jpg";
 import hom2 from "../../assets/slides/hom2.jpg";
 import hom3 from "../../assets/slides/hom3.jpg";
@@ -26,7 +26,7 @@ export default function GallerySection() {
         >
           <p className="label-tag mb-4">Gallery</p>
           <h2 className="font-serif text-5xl text-forest-dark sm:text-6xl">
-            The Discovery Samal Moments
+            The Cebu Whitesand Resort Moments
           </h2>
           <p className="mt-5 text-sm text-charcoal/55">
             A glimpse of the coastal calm, curated escapes, and golden-hour
@@ -46,7 +46,7 @@ export default function GallerySection() {
             >
               <img
                 src={src}
-                alt={`Discovery Samal gallery ${index + 1}`}
+                alt={`Cebu Whitesand Resort gallery ${index + 1}`}
                 className="w-full object-cover transition-transform duration-700 hover:scale-105"
               />
             </motion.div>

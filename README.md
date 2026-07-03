@@ -1,4 +1,4 @@
-# Discovery Samal Resort
+# Cebu Whitesand Resort
 
 Discovery Samal Resort is a full-stack booking platform for the resort website, guest reservation flow, admin operations, and transactional email handling. The repository is split into three apps: a React frontend, an Express/MongoDB backend, and a small Node-based email relay.
 

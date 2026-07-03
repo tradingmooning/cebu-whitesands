@@ -71,6 +71,7 @@ const bookingSchema = new mongoose.Schema(
       default: "full",
     },
     paymentScreenshot: String,
+    paymentScreenshotKey: String,
     paymentRef: String,
     // Secure token for continuation link (expires after 72h)
     continuationToken: { type: String, index: { sparse: true } },
@@ -86,6 +87,7 @@ const bookingSchema = new mongoose.Schema(
         default: "unpaid",
       },
       firstPaymentScreenshot: String,
+      firstPaymentScreenshotKey: String,
       firstPaymentDate: Date,
       firstPaymentConfirmedAt: Date,
       secondPaymentStatus: {
@@ -94,6 +96,7 @@ const bookingSchema = new mongoose.Schema(
         default: "unpaid",
       },
       secondPaymentScreenshot: String,
+      secondPaymentScreenshotKey: String,
       secondPaymentDueDate: Date,
       secondPaymentDate: Date,
       secondPaymentConfirmedAt: Date,

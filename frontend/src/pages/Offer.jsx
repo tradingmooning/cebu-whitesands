@@ -28,7 +28,7 @@ import { SPECIAL_OFFERS, getOfferBySlug } from "../data/specialOffers";
 import { brand } from "../lib/brand";
 
 /* ------------------------------------------------------------------ */
-/*  Brand palette (from discoverysamal.com)                              */
+/*  Brand palette (from cebu-whitesand-resort.com)                              */
 /*    cream   #f7f7f5                                                  */
 /*    brown   #1a1a1a   (deep brown â€” primary text & dark panels)      */
 /*    orange  #008c8c   (accent CTA)                                   */
@@ -84,7 +84,7 @@ function CinematicHero({ onExplore }) {
       <motion.div style={{ y }} className="absolute inset-0">
         <img
           src="https://image-tc.galaxy.tf/wijpeg-aeexb9m4bu60ndq3vcdnb7l9o/discovery-samal-08124-2_standard.jpg"
-          alt="Samal Island shoreline"
+          alt="Cebu shoreline"
           className="absolute inset-0 h-full w-full scale-110 object-cover"
         />
       </motion.div>
@@ -100,7 +100,7 @@ function CinematicHero({ onExplore }) {
       >
         <div className="flex items-center gap-3 border border-teal/50 bg-ocean/35 px-5 py-2 text-[10px] uppercase tracking-[0.4em] text-ivory backdrop-blur-md">
           <Star className="h-3 w-3 fill-teal text-[#651D4C]" />
-          <span>Discovery Samal · Limited Time Offers</span>
+          <span>Cebu Whitesand Resort · Limited Time Offers</span>
           <Star className="h-3 w-3 fill-teal text-[#651D4C]" />
         </div>
       </motion.div>
@@ -137,9 +137,9 @@ function CinematicHero({ onExplore }) {
           {...fadeIn(0.9)}
           className="mt-10 max-w-2xl text-base leading-relaxed text-ivory/75 lg:text-lg"
         >
-          Luxury beachfront experiences hand-crafted by Discovery Samal Resort â€”
+          Luxury beachfront experiences hand-crafted by Cebu Whitesand Resort â€”
           for couples seeking quiet solace, and groups gathering for shared
-          island moments on Samal Island.
+          island moments on Cebu.
         </motion.p>
 
         <motion.div
@@ -569,8 +569,8 @@ function ClosingCTA() {
   return (
     <section className="relative overflow-hidden">
       <img
-        src="https://discoverysamal.com/wp-content/uploads/2026/03/RCB05425.jpg"
-        alt="Samal Island sunset"
+        src="https://cebu-whitesand-resort.com/wp-content/uploads/2026/03/RCB05425.jpg"
+        alt="Cebu sunset"
         className="absolute inset-0 h-full w-full scale-110 object-cover blur-[2px]"
         loading="lazy"
       />
@@ -591,7 +591,7 @@ function ClosingCTA() {
         >
           Wake up steps away from
           <br />
-          Samal Island's{" "}
+          Cebu's{" "}
           <span className="italic text-[#651D4C]">white sand paradise</span>.
         </motion.h2>
         <motion.p
@@ -628,7 +628,7 @@ function ClosingCTA() {
         >
           <span className="flex items-center gap-2">
             <MapPin className="h-3.5 w-3.5 text-[#651D4C]" />
-            Samal Island, Davao del Norte
+            Cebu, Philippines
           </span>
           <span className="flex items-center gap-2">
             <Mail className="h-3.5 w-3.5 text-[#651D4C]" />
@@ -695,7 +695,7 @@ export default function Offer() {
 
   useEffect(() => {
     const prev = document.title;
-    document.title = "Special Offers · Discovery Samal Resort";
+    document.title = "Special Offers · Cebu Whitesand Resort";
     return () => {
       document.title = prev;
     };

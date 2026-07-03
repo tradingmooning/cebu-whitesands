@@ -1,6 +1,6 @@
 ﻿/**
- * Discovery Samal Resort — Special Offers
- * Source: https://www.discoverysamal.com/offers
+ * Cebu Whitesand Resort — Special Offers
+ * Source: https://www.cebu-whitesand-resort.com/offers
  */
 
 const CDN = "https://image-tc.galaxy.tf";
@@ -12,7 +12,7 @@ export const SPECIAL_OFFERS = [
     title: "Independence Day Travel Sale",
     subtitle: "Celebrate freedom on the island",
     description:
-      "Commemorate Philippine Independence Day with an exclusive travel sale at Discovery Samal Resort. Enjoy discounted room rates and special island packages — the perfect occasion to explore Samal Island in luxury.",
+      "Commemorate Philippine Independence Day with an exclusive travel sale at Cebu Whitesand Resort. Enjoy discounted room rates and special island packages — the perfect occasion to explore Cebu in luxury.",
     badge: "Limited Time",
     featured: true,
     duration: "Select Dates",
@@ -38,7 +38,7 @@ export const SPECIAL_OFFERS = [
     title: "Happy Summer Room Package",
     subtitle: "Make every summer day count",
     description:
-      "Dive into summer bliss with the Happy Summer Room Package at Discovery Samal Resort. Enjoy the pristine beach, crystal-clear waters, and world-class resort amenities with our special summer pricing.",
+      "Dive into summer bliss with the Happy Summer Room Package at Cebu Whitesand Resort. Enjoy the pristine beach, crystal-clear waters, and world-class resort amenities with our special summer pricing.",
     badge: "Summer Special",
     featured: true,
     duration: "Summer Season",
@@ -68,7 +68,7 @@ export const SPECIAL_OFFERS = [
     title: "Island Escape",
     subtitle: "Your perfect tropical getaway",
     description:
-      "Escape to the pristine shores of Samal Island with our Island Escape package. Unwind in tropical luxury with curated experiences designed to help you reconnect with nature and yourself.",
+      "Escape to the pristine shores of Cebu with our Island Escape package. Unwind in tropical luxury with curated experiences designed to help you reconnect with nature and yourself.",
     badge: "Getaway Package",
     featured: false,
     duration: "2 Days · 1 Night",
@@ -149,7 +149,7 @@ export const SPECIAL_OFFERS = [
     title: "BBQ Night at Haribar Lounge",
     subtitle: "Island barbecue under the stars",
     description:
-      "Join us for a spectacular barbecue night at Haribar Lounge. Enjoy the best dinner barbecue buffet in Davao — fresh grilled meats, seafood, and island specialties served under the stars with live music and cocktails.",
+      "Join us for a spectacular barbecue night at our beachfront lounge. Enjoy a sumptuous dinner barbecue buffet — fresh grilled meats, seafood, and local specialties served under the stars with live music and cocktails.",
     badge: "Dining Experience",
     featured: false,
     duration: "Select Evenings",
@@ -176,7 +176,7 @@ export const SPECIAL_OFFERS = [
     title: "Kris+ Member Exclusive",
     subtitle: "Special privileges for Singapore Airlines KrisFlyer members",
     description:
-      "Exclusive privileges await KrisFlyer and Kris+ members at Discovery Samal Resort. Enjoy special discounted rates and member-only benefits as part of Singapore Airlines' preferred resort partnership in Davao.",
+      "Exclusive privileges await KrisFlyer and Kris+ members at Cebu Whitesand Resort. Enjoy special discounted rates and member-only benefits as part of Singapore Airlines' preferred resort partnership in Cebu.",
     badge: "Members Only",
     featured: false,
     duration: "Anytime",
@@ -199,8 +199,6 @@ export const SPECIAL_OFFERS = [
   },
 ];
 
-
 export function getOfferBySlug(slug) {
   return SPECIAL_OFFERS.find((o) => o.slug === slug) || null;
 }
-

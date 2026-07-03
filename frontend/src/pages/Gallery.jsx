@@ -1,4 +1,4 @@
-import { useMemo, useState } from "react";
+﻿import { useMemo, useState } from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import GalleryHero from "../components/gallery/GalleryHero";
@@ -41,7 +41,7 @@ export default function Gallery() {
       <section className="relative h-[44vh] min-h-[320px] w-full overflow-hidden">
         <img
           src={CTA_IMG}
-          alt="Discovery Samal beachfront at golden hour"
+          alt="Cebu Whitesand Resort beachfront at golden hour"
           className="absolute inset-0 h-full w-full object-cover"
         />
         <div

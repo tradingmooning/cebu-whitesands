@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+﻿import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { brand } from "../../lib/brand";
 
@@ -14,6 +14,7 @@ const fadeUp = {
 };
 
 export default function WelcomeSection() {
+  const CDN = "https://homesweb.staah.net";
   return (
     <section className="bg-warm-white py-24 sm:py-28 lg:py-32">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
@@ -30,38 +31,75 @@ export default function WelcomeSection() {
               custom={0}
               className="section-pre-title mb-5"
             >
-              Discovery Samal Resort on Samal Island, Davao del Norte
+              Maribago Beach, Mactan Island, Cebu
             </motion.p>
             <motion.h2
               variants={fadeUp}
               custom={1}
               className="font-serif text-4xl leading-snug text-charcoal sm:text-5xl"
             >
-              Welcome to a Seaside Sanctuary
+              Welcome to Cebu Whitesand Resort
             </motion.h2>
             <motion.p
               variants={fadeUp}
               custom={2}
               className="mt-6 text-base leading-8 text-charcoal/65"
             >
-              Nestled along the pristine shores of Samal Island, Davao del Norte
-              Discovery Samal&nbsp;Villas invites you to experience an exclusive
-              coastal retreat where luxury meets nature. Our world-class
-              amenities, attentive service, and breathtaking surroundings create
-              an unforgettable escape for couples, families, and groups.
+              Cebu Whitesand Resort is a modest resort situated on the east coast of Mactan Island in Lapu-Lapu City, Cebu. The resort has 86 guest rooms spread across 3 main wings — each specially designed and furnished to suit any traveller's taste.
             </motion.p>
             <motion.p
               variants={fadeUp}
               custom={3}
               className="mt-4 text-base leading-8 text-charcoal/65"
             >
-              Wake up to the sound of waves, spend your days exploring the
-              crystal-clear waters, and unwind at our Sunrise Pavilion
-              restaurant with a cold drink and a stunning sea view.
+              Only 20 minutes by car from Mactan–Cebu International Airport, our 2-hectare property perfectly blends turn-of-the-century Philippine architecture with modern facilities. Open since 1995, we have grown into a favourite destination for locals and visitors alike.
             </motion.p>
             <motion.div variants={fadeUp} custom={4} className="mt-8">
               <Link to="/about" className="sv-btn-outline">
-                About Discovery Samal
+                About White Sands Resort
+              </Link>
+            </motion.div>
+          </motion.div>
+
+          {/* Right: image grid */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-60px" }}
+            transition={{ duration: 1, ease: [0.22, 0.61, 0.36, 1] }}
+            className="grid grid-cols-2 gap-3"
+          >
+            <div className="col-span-2 overflow-hidden">
+              <img
+                src={`${CDN}/8689/1704673021_8689_WhiteSands_Resort_2019_(184)_(2).jpg`}
+                alt="Cebu White Sands Resort aerial view"
+                className="h-64 w-full object-cover transition-transform duration-700 hover:scale-105"
+              />
+            </div>
+            <div className="overflow-hidden">
+              <img
+                src={`${CDN}/imagelibrary/big_1702966945_8689_WhiteSandsResort2019119.jpg`}
+                alt="Cebu White Sands Resort room"
+                className="h-44 w-full object-cover transition-transform duration-700 hover:scale-105"
+              />
+            </div>
+            <div className="overflow-hidden">
+              <img
+                src={`${CDN}/8689/1709537342_8689_patio_B.jpg`}
+                alt="Patio Gavino Restaurant"
+                className="h-44 w-full object-cover transition-transform duration-700 hover:scale-105"
+              />
+            </div>
+          </motion.div>
+        </div>
+      </div>
+    </section>
+  );
+}
+            </motion.p>
+            <motion.div variants={fadeUp} custom={4} className="mt-8">
+              <Link to="/about" className="sv-btn-outline">
+                About Cebu Whitesand Resort
               </Link>
             </motion.div>
           </motion.div>
@@ -77,21 +115,21 @@ export default function WelcomeSection() {
             <div className="col-span-2 overflow-hidden">
               <img
                 src={`${CDN}/sundownersvillas01_qX9pJvj.jpg`}
-                alt="Discovery Samal Resort aerial view"
+                alt="Cebu Whitesand Resort aerial view"
                 className="h-64 w-full object-cover transition-transform duration-700 hover:scale-105"
               />
             </div>
             <div className="overflow-hidden">
               <img
                 src={`${CDN}/img_15.jpg`}
-                alt="Discovery Samal bedroom"
+                alt="Cebu Whitesand Resort bedroom"
                 className="h-44 w-full object-cover transition-transform duration-700 hover:scale-105"
               />
             </div>
             <div className="overflow-hidden">
               <img
                 src={`${CDN}/Sunrise-Pavilion-1.jpg`}
-                alt="Discovery Samal dining"
+                alt="Cebu Whitesand Resort dining"
                 className="h-44 w-full object-cover transition-transform duration-700 hover:scale-105"
               />
             </div>

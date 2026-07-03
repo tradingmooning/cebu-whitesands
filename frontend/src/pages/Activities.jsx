@@ -51,7 +51,7 @@ function Hero() {
         <motion.img
           {...fadeIn()}
           src={ACTIVITIES_HERO_IMAGE}
-          alt="Discovery Samal Resort — Activities & Recreation"
+          alt="Cebu Whitesand Resort — Activities & Recreation"
           className="absolute inset-0 h-full w-full object-cover"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-ocean/70 via-ocean/15 to-ocean/95" />
@@ -88,7 +88,7 @@ function Hero() {
         >
           Twenty curated experiences across wellness, water, sport, and scenery
           — composed for guests with a taste for the unhurried, luminous side of
-          Samal Island and the Davao Gulf.
+          Cebu and the Cebu waters.
         </motion.p>
 
         <motion.div
@@ -332,7 +332,7 @@ const TIMELINE = [
     icon: Moon,
     time: "Evening",
     title: "Gardens of light",
-    note: "End the day at Haribar Lounge with cocktails and a sunset over the Davao Gulf.",
+    note: "End the day at Haribar Lounge with cocktails and a sunset over the Cebu waters.",
   },
 ];
 
@@ -357,7 +357,7 @@ function Timeline() {
       <div className="relative mx-auto max-w-7xl px-6 lg:px-12">
         <motion.div {...fadeUp()} className="max-w-2xl">
           <p className="mb-5 flex items-center gap-3 text-[10px] font-semibold uppercase tracking-[0.45em] text-[#651D4C]">
-            <span className="h-px w-10 bg-[#651D4C]" />A Day at Discovery Samal
+            <span className="h-px w-10 bg-[#651D4C]" />A Day at Cebu Whitesand Resort
           </p>
           <h2 className="font-sans text-4xl leading-[1.1] text-white sm:text-5xl lg:text-[52px]">
             From first light to
@@ -524,7 +524,7 @@ function FinalCTA() {
             <span className="italic text-[#651D4C]">is waiting.</span>
           </h2>
           <p className="mx-auto mt-7 max-w-xl text-[15px] leading-[1.85] text-white/70">
-            Reserve a stay at Discovery Samal Resort and unlock the full
+            Reserve a stay at Cebu Whitesand Resort and unlock the full
             collection — from The Spa wellness rituals to sunset cocktails at
             Haribar Lounge.
           </p>

@@ -1,4 +1,4 @@
-import { useState } from "react";
+﻿import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import {
@@ -18,7 +18,7 @@ import { useAuth } from "../hooks/useAuth";
 import { brand } from "../lib/brand";
 
 const HERO_IMAGE =
-  "https://discoverysamal.com/wp-content/uploads/2026/03/RCB05408.jpg";
+  "https://cebu-whitesand-resort.com/wp-content/uploads/2026/03/RCB05408.jpg";
 
 export default function Login() {
   const [form, setForm] = useState({ email: "", password: "", remember: true });

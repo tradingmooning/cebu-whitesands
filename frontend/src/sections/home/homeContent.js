@@ -1,19 +1,71 @@
-const CDN = "https://d1lmdmhhbtmxsa.cloudfront.net/original_images";
-const SUND = "https://lirp.cdn-website.com/b434b26a/dms3rep/multi/opt";
+﻿const CDN = "https://homesweb.staah.net";
 
-export const heroVideoUrl =
-  "https://vid.cdn-website.com/b434b26a/videos/6qpt5NehT9Cum5s8vd29_SUNDOWNERS_LANDSCAPE-v.mp4";
-export const heroPosterUrl = `${SUND}/6qpt5NehT9Cum5s8vd29_SUNDOWNERS_LANDSCAPE.v2.0000000-1920w.jpg`;
+export const heroVideoUrl = "";
+export const heroPosterUrl = `${CDN}/imagelibrary/1705044784_8689_IMG_1655.jpg`;
 
 export const heroSlides = [
-  `${SUND}/2BR+POOL+VILLA+LEFT+WING+3-1920w.jpeg`,
-  `${SUND}/2+BEDROOM+DUPLEX5-1920w.jpeg`,
-  `${SUND}/154685286600-1920w.jpeg`,
+  `${CDN}/imagelibrary/1705044784_8689_IMG_1655.jpg`,
+  `${CDN}/imagelibrary/big_1705900556_8689_WhiteSandsResort201944.jpg`,
+  `${CDN}/imagelibrary/big_1702977955_8689_WhiteSandsResort201933.jpg`,
 ];
 
-export const heroLogoUrl = `${CDN}/sundownersvillas-logo.png`;
+export const heroLogoUrl = "";
 export const diningLogoUrl = "";
-export const diningImageUrl = `${CDN}/Sunrise-Pavilion-1.jpg`;
+export const diningImageUrl = `${CDN}/8689/1706233575_8689_patio.jpg`;
+
+export const experienceSlides = [
+  {
+    title: "Anahata Spa",
+    subtitle:
+      "Rejuvenate with traditional Filipino hilot massage therapies and holistic wellness treatments.",
+    image: `${CDN}/8689/1714188411_8689_anahata-spa_4.jpg`,
+  },
+  {
+    title: "Weddings & Celebrations",
+    subtitle:
+      "Celebrate life's special moments in our stunning beachfront venues on Mactan Island.",
+    image: `${CDN}/8689/1704421110_8689_9.jpg`,
+  },
+  {
+    title: "Island Activities",
+    subtitle:
+      "From jet skiing to island hopping — adventure awaits on the shores of Mactan.",
+    image: `${CDN}/8689/1704599753_8689_jetski_a.jpg`,
+  },
+  {
+    title: "Patio Gavino Restaurant",
+    subtitle:
+      "Savor fresh Filipino and international cuisine in our signature beachfront restaurant.",
+    image: `${CDN}/8689/1709537342_8689_patio_B.jpg`,
+  },
+];
+
+export const roomFallbacks = [
+  {
+    name: "Deluxe Room",
+    occupancy: "2 Guests · Heritage Wing",
+    price: "From ₱3,500 / night",
+    image: `${CDN}/imagelibrary/big_1702967760_8689_heritagedeluxe1.jpg`,
+  },
+  {
+    name: "Grand Luxe Room",
+    occupancy: "2 Guests · Garden View",
+    price: "From ₱4,500 / night",
+    image: `${CDN}/imagelibrary/big_1702966945_8689_WhiteSandsResort2019119.jpg`,
+  },
+  {
+    name: "Ocean View Suite",
+    occupancy: "2 Guests · Sea View",
+    price: "From ₱6,500 / night",
+    image: `${CDN}/imagelibrary/big_1705900556_8689_WhiteSandsResort201944.jpg`,
+  },
+  {
+    name: "Family Suite",
+    occupancy: "4 Guests · Family Wing",
+    price: "From ₱8,500 / night",
+    image: `${CDN}/imagelibrary/big_1702976465_8689_untitled-23.jpg`,
+  },
+];
 
 export const experienceSlides = [
   {
@@ -122,7 +174,7 @@ export const testimonials = [
   {
     name: "Gzel Venturina",
     quote:
-      "If you are looking for a family, couple staycation, I would highly recommend Discovery Samal Resort. It was an exquisite and relaxing experience with very professional and friendly staff.",
+      "If you are looking for a family, couple staycation, I would highly recommend Cebu Whitesand Resort. It was an exquisite and relaxing experience with very professional and friendly staff.",
   },
 ];
 

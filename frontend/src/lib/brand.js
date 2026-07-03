@@ -1,40 +1,44 @@
-export const brand = {
-  projectId: import.meta.env.VITE_PROJECT_ID || "PROJ-XXXXXXXXX",
-  projectName: import.meta.env.VITE_APP_NAME || "Your Resort Name",
-  displayName: import.meta.env.VITE_APP_NAME || "Your Resort Name",
-  homeDisplayName: import.meta.env.VITE_APP_NAME || "Your Resort Name",
-  shortName: "Discovery Samal",
-  initials: "DS",
-  tagline: "Island Luxury Redefined",
-  domain: import.meta.env.VITE_DOMAIN || "yourdomain.com",
+﻿export const brand = {
+  projectId: import.meta.env.VITE_PROJECT_ID || "cebu-whitesand-resort",
+  projectName: import.meta.env.VITE_APP_NAME || "Cebu Whitesand Resort",
+  displayName: import.meta.env.VITE_APP_NAME || "Cebu Whitesand Resort",
+  homeDisplayName: "Cebu Whitesand Resort",
+  shortName: "Whitesand Resort",
+  initials: "CWR",
+  tagline: "Where Crystal Waters Meet White Sands",
+  domain: import.meta.env.VITE_DOMAIN || "cebu-whitesand-resort.com",
   apiUrl: import.meta.env.VITE_API_URL || "http://localhost:5000",
-  email: "reservations@discoverysamal.com",
-  phone: "+63 084 308 2998",
-  address: "Island Garden City of Samal, Davao del Norte, 8119, Philippines",
-  facebookPageUrl: "https://www.facebook.com/discoverysamal",
-  instagramUrl: "https://www.instagram.com/discoverysamal/",
-  socialHandle: "@discoverysamal",
-  logoUrl: "https://image-tc.galaxy.tf/wipng-7fdiodx62skf1s8iq9jghjsz6/discovery-samal-colour.png?width=500",
-  logoWhiteUrl: "https://image-tc.galaxy.tf/wipng-788jbt3890mjhd3ndne0t39dn/discovery-samal-colour-reversal.png?width=500",
-  cdnBase: "",
-  // Brand palette — whitesands-inspired wine/maroon system
+  email: "reservations@cebu-whitesand-resort.com",
+  phone: "",
+  address:
+    "Maribago Beach, Mactan Island, M.L. Quezon National Highway, Lapu-Lapu City, 6015 Cebu",
+  addressShort: "Maribago Beach, Mactan Island, Cebu",
+  facebookPageUrl: "",
+  instagramUrl: "",
+  socialHandle: "@cebuwhitesandresort",
+  // Real logo from whitesands.com.ph
+  logoUrl:
+    "https://homesweb.staah.net/8689/1708086491_8689_1704416764_8689_websitelogo_copy.png",
+  logoWhiteUrl:
+    "https://homesweb.staah.net/8689/1708086491_8689_1704416764_8689_websitelogo_copy.png",
+  cdnBase: "https://homesweb.staah.net",
+  // Exact whitesands.com.ph palette — scraped via Playwright
   palette: {
-    bg:           "#ffffff", // clean white page background
-    surface:      "#f8f4ef", // card / panel surface
-    primary:      "#333333", // dark text, headers
-    brand:        "#651D4C", // wine/maroon (CTAs, highlights)
-    brandDark:    "#4a1538", // wine hover state
-    brandDeeper:  "#2d0e22", // footer / very dark wine
-    gold:         "#b8943c", // warm antique gold (accent)
-    goldLight:    "#d4ae6e", // lighter gold
-    champagne:    "#e4c47a", // champagne / highlight
-    sand:         "#e8d9c8", // warm sand
-    ivory:        "#faf6f0", // ivory
-    charcoal:     "#333333", // heading text
-    bodyText:     "#555555", // body text
-    deep:         "#2d0e22", // deep wine (overlays, footer)
-    // legacy aliases
-    accent:       "#651D4C",
-    accentDark:   "#4a1538",
+    bg: "#ffffff", // page background
+    surface: "#f5f5f5", // section bg (scraped)
+    primary: "#333333", // heading color (scraped: rgb 51,51,51)
+    brand: "#651D4C", // EXACT brand color (scraped: rgb 101,29,76)
+    brandDark: "#4a1538",
+    brandDeeper: "#2d0e22",
+    gold: "#C9A96E",
+    goldLight: "#dfc08e",
+    champagne: "#f0dfc0",
+    sand: "#ede0cc",
+    ivory: "#faf7f2",
+    charcoal: "#333333", // scraped
+    bodyText: "#555555", // scraped: rgb 85,85,85
+    deep: "#2d0e22",
+    accent: "#651D4C",
+    accentDark: "#4a1538",
   },
 };
