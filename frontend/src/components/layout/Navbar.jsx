@@ -80,7 +80,7 @@ export default function Navbar() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.35 }}
-              className="h-10 w-auto object-contain sm:h-11"
+              className="h-20 w-auto object-contain sm:h-24"
             />
           </Link>
 
