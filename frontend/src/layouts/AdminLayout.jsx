@@ -26,6 +26,8 @@ import {
   Shield,
   Loader2,
   Share2,
+  Wallet,
+  Inbox,
 } from "lucide-react";
 import { useAuth } from "../hooks/useAuth";
 import { brand } from "../lib/brand";
@@ -52,6 +54,12 @@ const NAV_GROUPS = [
       { to: "/owner/payments", label: "Payments", icon: CreditCard },
       { to: "/owner/rooms", label: "Rooms", icon: BedDouble },
       { to: "/owner/discounts", label: "Discounts", icon: Tag },
+      { to: "/owner/payment-methods", label: "Payment Methods", icon: Wallet },
+      {
+        to: "/owner/payment-submissions",
+        label: "Payment Submissions",
+        icon: Inbox,
+      },
     ],
   },
   {

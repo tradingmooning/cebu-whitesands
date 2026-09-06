@@ -98,6 +98,10 @@ export default function PendingPayments() {
     }
   };
 
+  // Most recent payments[] record of a given type — carries the method used
+  const findPaymentRecord = (b, type) =>
+    [...(b.payments || [])].reverse().find((p) => p.type === type);
+
   // Determine which screenshot + amount to show for a pending booking
   const getPendingInfo = (b) => {
     if (b.paymentOption === "installment") {
@@ -107,6 +111,7 @@ export default function PendingPayments() {
           label: "2nd Installment",
           amount: b.installment.secondPaymentAmount,
           installmentNumber: 2,
+          paymentMethodName: findPaymentRecord(b, "second")?.paymentMethodName,
         };
       }
       if (b.installment?.firstPaymentStatus === "pending") {
@@ -115,6 +120,7 @@ export default function PendingPayments() {
           label: "1st Installment",
           amount: b.installment.firstPaymentAmount,
           installmentNumber: 1,
+          paymentMethodName: findPaymentRecord(b, "first")?.paymentMethodName,
         };
       }
     }
@@ -123,6 +129,7 @@ export default function PendingPayments() {
       label: "Full Payment",
       amount: b.totalAmount,
       installmentNumber: null,
+      paymentMethodName: findPaymentRecord(b, "full")?.paymentMethodName,
     };
   };
 
@@ -200,6 +207,11 @@ export default function PendingPayments() {
                             {b.paymentOption === "installment" && (
                               <span className="bg-blue-50 text-blue-600 px-2 py-0.5 text-[10px] uppercase tracking-wider">
                                 {info.label}
+                              </span>
+                            )}
+                            {info.paymentMethodName && (
+                              <span className="bg-teal/10 text-teal-dark px-2 py-0.5 text-[10px] uppercase tracking-wider">
+                                Paid via {info.paymentMethodName}
                               </span>
                             )}
                           </div>
