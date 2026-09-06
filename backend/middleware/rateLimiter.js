@@ -30,4 +30,16 @@ const bookingLimiter = createLimiter(
   "Too many booking requests, please try again later.",
 );
 
-module.exports = { apiLimiter, authLimiter, bookingLimiter };
+// Public payment-proof submission limiter (unauthenticated write endpoint)
+const paymentSubmissionLimiter = createLimiter(
+  15 * 60 * 1000,
+  10,
+  "Too many submissions, please try again later.",
+);
+
+module.exports = {
+  apiLimiter,
+  authLimiter,
+  bookingLimiter,
+  paymentSubmissionLimiter,
+};

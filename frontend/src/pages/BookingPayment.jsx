@@ -4,8 +4,7 @@ import { motion } from "framer-motion";
 import {
   ShieldCheck,
   Upload,
-  Building2,
-  Smartphone,
+  Wallet,
   CheckCircle2,
   CalendarDays,
   Users,
@@ -16,7 +15,7 @@ import {
 import toast from "react-hot-toast";
 import {
   getBookingById,
-  getPaymentDetails,
+  getPaymentMethods,
   uploadPaymentProof,
 } from "../services/api";
 
@@ -35,40 +34,42 @@ export default function BookingPayment() {
 
   /* ---------- State (logic preserved exactly) ---------- */
   const [booking, setBooking] = useState(null);
-  const [payment, setPayment] = useState(null);
+  const [methods, setMethods] = useState(null);
+  const [selectedMethodId, setSelectedMethodId] = useState(null);
   const [file, setFile] = useState(null);
   const [preview, setPreview] = useState(null);
   const [uploading, setUploading] = useState(false);
   const [uploaded, setUploaded] = useState(false);
   const [error, setError] = useState("");
   const [paymentOption, setPaymentOption] = useState("full");
-  const [paymentMethod, setPaymentMethod] = useState("bank");
 
   useEffect(() => {
-    Promise.all([getBookingById(id), getPaymentDetails()]).then(
-      ([bookingRes, paymentRes]) => {
-        const b = bookingRes.data.data || bookingRes.data;
-        const p = paymentRes.data.data || paymentRes.data;
-        setBooking(b);
-        setPayment(p);
-        if (b.paymentOption) setPaymentOption(b.paymentOption);
-        if (b.paymentScreenshot) setUploaded(true);
-        if (
-          b.paymentOption === "installment" &&
-          b.installment?.firstPaymentScreenshot
-        ) {
-          // Show "Payment received" only if BOTH payments are submitted/confirmed,
-          // or if only first exists and second has also been submitted.
-          // Allow second payment upload as soon as first screenshot is uploaded
-          // (no need to wait for admin confirmation of first payment).
-          const secondSubmitted =
-            b.installment?.secondPaymentScreenshot ||
-            b.installment?.secondPaymentStatus === "confirmed" ||
-            b.installment?.secondPaymentStatus === "pending";
-          if (secondSubmitted) setUploaded(true);
-        }
-      },
-    );
+    Promise.all([
+      getBookingById(id),
+      getPaymentMethods({ active: true }),
+    ]).then(([bookingRes, methodsRes]) => {
+      const b = bookingRes.data.data || bookingRes.data;
+      const m = methodsRes.data.data || methodsRes.data || [];
+      setBooking(b);
+      setMethods(m);
+      if (m.length > 0) setSelectedMethodId(m[0]._id);
+      if (b.paymentOption) setPaymentOption(b.paymentOption);
+      if (b.paymentScreenshot) setUploaded(true);
+      if (
+        b.paymentOption === "installment" &&
+        b.installment?.firstPaymentScreenshot
+      ) {
+        // Show "Payment received" only if BOTH payments are submitted/confirmed,
+        // or if only first exists and second has also been submitted.
+        // Allow second payment upload as soon as first screenshot is uploaded
+        // (no need to wait for admin confirmation of first payment).
+        const secondSubmitted =
+          b.installment?.secondPaymentScreenshot ||
+          b.installment?.secondPaymentStatus === "confirmed" ||
+          b.installment?.secondPaymentStatus === "pending";
+        if (secondSubmitted) setUploaded(true);
+      }
+    });
   }, [id]);
 
   const isInstallment = booking?.paymentOption === "installment";
@@ -89,6 +90,8 @@ export default function BookingPayment() {
       ? installment?.secondPaymentAmount
       : installment?.firstPaymentAmount
     : booking?.totalAmount;
+
+  const selectedMethod = methods?.find((m) => m._id === selectedMethodId);
 
   const handleFileChange = (e) => {
     const f = e.target.files?.[0];
@@ -116,6 +119,9 @@ export default function BookingPayment() {
       if (paymentOption === "installment" || isInstallment) {
         formData.append("installmentNumber", currentInstallmentNumber);
       }
+      if (selectedMethod) {
+        formData.append("paymentMethodId", selectedMethod._id);
+      }
       await uploadPaymentProof(id, formData);
       setUploaded(true);
       toast.success("Payment received. Confirming your stay…");
@@ -127,7 +133,7 @@ export default function BookingPayment() {
     }
   };
 
-  if (!booking || !payment) {
+  if (!booking || !methods) {
     return (
       <div className="min-h-[70vh] flex items-center justify-center bg-warm-white">
         <div className="text-center">
@@ -240,85 +246,52 @@ export default function BookingPayment() {
               )}
 
               {/* Method picker */}
-              <Card>
-                <Eyebrow>Payment Method</Eyebrow>
-                <CardTitle>Choose how to pay</CardTitle>
-                <div className="mt-7 grid sm:grid-cols-2 gap-4">
-                  <MethodTile
-                    icon={Building2}
-                    active={paymentMethod === "bank"}
-                    onClick={() => setPaymentMethod("bank")}
-                    title="Online Transfer"
-                    subtitle="Direct deposit"
-                  />
-                  {payment.gcashNumber && (
-                    <MethodTile
-                      icon={Smartphone}
-                      active={paymentMethod === "gcash"}
-                      onClick={() => setPaymentMethod("gcash")}
-                      title="GCash"
-                      subtitle="Mobile transfer"
-                    />
+              {methods.length === 0 ? (
+                <Card>
+                  <Eyebrow>Payment Method</Eyebrow>
+                  <CardTitle>No payment methods available</CardTitle>
+                  <p className="mt-3 text-charcoal/55 text-sm leading-relaxed">
+                    Please contact our concierge to arrange payment for your
+                    reservation.
+                  </p>
+                </Card>
+              ) : (
+                <>
+                  <Card>
+                    <Eyebrow>Payment Method</Eyebrow>
+                    <CardTitle>Choose how to pay</CardTitle>
+                    <div className="mt-7 grid sm:grid-cols-2 gap-4">
+                      {methods.map((m) => (
+                        <MethodTile
+                          key={m._id}
+                          logoUrl={m.logoUrl}
+                          active={selectedMethodId === m._id}
+                          onClick={() => setSelectedMethodId(m._id)}
+                          title={m.name}
+                        />
+                      ))}
+                    </div>
+                  </Card>
+
+                  {/* Method details */}
+                  {selectedMethod && (
+                    <Card>
+                      <Eyebrow>{selectedMethod.name} Details</Eyebrow>
+                      <CardTitle>Send to</CardTitle>
+                      <DetailGrid
+                        items={selectedMethod.details.map((d) => [
+                          d.label,
+                          d.value,
+                          d.mono,
+                        ])}
+                      />
+                      {selectedMethod.instructions && (
+                        <Note>{selectedMethod.instructions}</Note>
+                      )}
+                    </Card>
                   )}
-                </div>
-
-                {/* Coming-soon payment rails */}
-                <div className="mt-6 pt-6 border-t border-charcoal/8">
-                  <p className="text-[10px] tracking-[0.28em] uppercase text-charcoal/40 font-medium mb-3">
-                    Arriving soon
-                  </p>
-                  <div className="grid grid-cols-2 sm:grid-cols-4 gap-2.5">
-                    {["Visa / Mastercard", "Stripe", "PayPal", "Paystack"].map(
-                      (m) => (
-                        <div
-                          key={m}
-                          className="text-[10px] tracking-[0.14em] uppercase text-charcoal/40 border border-dashed border-charcoal/15 px-3 py-2.5 text-center bg-warm-white"
-                        >
-                          {m}
-                        </div>
-                      ),
-                    )}
-                  </div>
-                  <p className="mt-3 text-[11px] text-charcoal/45 leading-relaxed">
-                    Instant card & wallet checkout is in the works. For now,
-                    transfers are confirmed by our concierge within 24 hours.
-                  </p>
-                </div>
-              </Card>
-
-              {/* Method details */}
-              <Card>
-                {paymentMethod === "bank" ? (
-                  <>
-                    <Eyebrow>Online Transfer Details</Eyebrow>
-                    <CardTitle>Send to</CardTitle>
-                    <DetailGrid
-                      items={[
-                        ["Bank", payment.bankName],
-                        ["Account name", payment.accountName],
-                        ["Account number", payment.accountNumber, true],
-                      ]}
-                    />
-                    {payment.instructions && (
-                      <Note>{payment.instructions}</Note>
-                    )}
-                  </>
-                ) : (
-                  <>
-                    <Eyebrow>GCash Details</Eyebrow>
-                    <CardTitle>Send to</CardTitle>
-                    <DetailGrid
-                      items={[
-                        ["GCash name", payment.gcashName],
-                        ["GCash number", payment.gcashNumber, true],
-                      ]}
-                    />
-                    {payment.gcashInstructions && (
-                      <Note>{payment.gcashInstructions}</Note>
-                    )}
-                  </>
-                )}
-              </Card>
+                </>
+              )}
 
               {/* Upload */}
               {uploaded ? (
@@ -508,12 +481,12 @@ function ChoiceTile({ active, onClick, title, subtitle }) {
   );
 }
 
-function MethodTile({ icon: Icon, active, onClick, title, subtitle }) {
+function MethodTile({ logoUrl, active, onClick, title }) {
   return (
     <button
       type="button"
       onClick={onClick}
-      className={`text-left p-6 transition-all flex items-start gap-4 ${
+      className={`text-left p-6 transition-all flex items-center gap-4 ${
         active
           ? "bg-teal-dark text-white"
           : "bg-warm-white border border-charcoal/15 text-charcoal hover:border-teal/40"
@@ -524,22 +497,15 @@ function MethodTile({ icon: Icon, active, onClick, title, subtitle }) {
           active ? "bg-white/15" : "bg-seafoam"
         }`}
       >
-        <Icon size={20} strokeWidth={1.5} />
+        {logoUrl ? (
+          <img src={logoUrl} alt="" className="w-7 h-7 object-contain" />
+        ) : (
+          <Wallet size={20} strokeWidth={1.5} />
+        )}
       </div>
-      <div>
-        <p
-          className={`font-medium ${active ? "text-white" : "text-teal-dark"}`}
-        >
-          {title}
-        </p>
-        <p
-          className={`mt-1 text-xs ${
-            active ? "text-white/70" : "text-charcoal/50"
-          }`}
-        >
-          {subtitle}
-        </p>
-      </div>
+      <p className={`font-medium ${active ? "text-white" : "text-teal-dark"}`}>
+        {title}
+      </p>
     </button>
   );
 }

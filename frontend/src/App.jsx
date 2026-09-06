@@ -18,6 +18,7 @@ import Booking from "./pages/Booking";
 import BookingPayment from "./pages/BookingPayment";
 import BookingSuccess from "./pages/BookingSuccess";
 import ContinuePayment from "./pages/ContinuePayment";
+import PaymentLink from "./pages/PaymentLink";
 import Login from "./pages/Login";
 import RoomDetails from "./pages/RoomDetails";
 import Dashboard from "./pages/admin/Dashboard";
@@ -26,6 +27,8 @@ import ViewBookings from "./pages/admin/ViewBookings";
 import PendingPayments from "./pages/admin/PendingPayments";
 import PaymentSettingsPage from "./pages/admin/PaymentSettingsPage";
 import AdminDiscounts from "./pages/admin/AdminDiscounts";
+import AdminPaymentMethods from "./pages/admin/AdminPaymentMethods";
+import AdminPaymentSubmissions from "./pages/admin/AdminPaymentSubmissions";
 import SocialManager from "./pages/admin/SocialManager";
 
 export default function App() {
@@ -54,6 +57,7 @@ export default function App() {
             path="/booking/continue/:token"
             element={<ContinuePayment />}
           />
+          <Route path="/payment/:slug" element={<PaymentLink />} />
         </Route>
         <Route path="/owner/login" element={<Login />} />
         <Route path="/owner" element={<AdminLayout />}>
@@ -62,6 +66,11 @@ export default function App() {
           <Route path="bookings" element={<ViewBookings />} />
           <Route path="payments" element={<PendingPayments />} />
           <Route path="discounts" element={<AdminDiscounts />} />
+          <Route path="payment-methods" element={<AdminPaymentMethods />} />
+          <Route
+            path="payment-submissions"
+            element={<AdminPaymentSubmissions />}
+          />
           <Route path="settings" element={<PaymentSettingsPage />} />
           <Route path="social" element={<SocialManager />} />
         </Route>

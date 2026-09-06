@@ -1,15 +1,28 @@
 const Booking = require("../models/Booking");
 const PaymentDetails = require("../models/PaymentSettings");
+const PaymentMethod = require("../models/PaymentMethod");
 const storage = require("../src/storage/storage");
 const AppError = require("../utils/AppError");
 const emailService = require("./emailService");
 
 const paymentService = {
-  async uploadProof(bookingId, file, installmentNumber, paymentOption) {
+  async uploadProof(
+    bookingId,
+    file,
+    installmentNumber,
+    paymentOption,
+    paymentMethodId,
+  ) {
     if (!file) throw new AppError("Payment screenshot is required", 400);
 
     const booking = await Booking.findById(bookingId);
     if (!booking) throw new AppError("Booking not found", 404);
+
+    let paymentMethodName;
+    if (paymentMethodId) {
+      const method = await PaymentMethod.findById(paymentMethodId).select("name");
+      if (method) paymentMethodName = method.name;
+    }
 
     // Set payment option on first upload if provided
     if (
@@ -46,6 +59,8 @@ const paymentService = {
           status: "pending",
           screenshotUrl: result.url,
           paidAt: new Date(),
+          paymentMethod: paymentMethodId || undefined,
+          paymentMethodName,
         });
       } else if (num === 2) {
         booking.installment.secondPaymentScreenshot = result.url;
@@ -58,6 +73,8 @@ const paymentService = {
           status: "pending",
           screenshotUrl: result.url,
           paidAt: new Date(),
+          paymentMethod: paymentMethodId || undefined,
+          paymentMethodName,
         });
       }
       // First installment uploaded → "partial"; second → still "pending" until admin confirms

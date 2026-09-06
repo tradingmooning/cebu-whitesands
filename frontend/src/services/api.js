@@ -171,6 +171,34 @@ export const generatePaymentLink = (bookingId, sendEmail = false) =>
 export const getContinuationBooking = (token) =>
   api.get(`/bookings/continue/${token}`);
 
+// Payment Methods
+export const getPaymentMethods = (params) =>
+  api.get("/payment-methods", { params });
+export const getPaymentMethodBySlug = (slug) =>
+  api.get(`/payment-methods/${slug}`);
+export const createPaymentMethod = (formData) =>
+  api.post("/payment-methods", formData, {
+    headers: { "Content-Type": "multipart/form-data" },
+  });
+export const updatePaymentMethod = (id, formData) =>
+  api.put(`/payment-methods/${id}`, formData, {
+    headers: { "Content-Type": "multipart/form-data" },
+  });
+export const togglePaymentMethod = (id) =>
+  api.patch(`/payment-methods/${id}/toggle`);
+export const submitPaymentProof = (slug, formData) =>
+  api.post(`/payment-methods/${slug}/submissions`, formData, {
+    headers: { "Content-Type": "multipart/form-data" },
+  });
+
+// Payment Submissions (admin review)
+export const getPaymentSubmissions = (params) =>
+  api.get("/payment-submissions", { params });
+export const updateSubmissionStatus = (id, data) =>
+  api.patch(`/payment-submissions/${id}/status`, data);
+export const deleteSubmission = (id) =>
+  api.delete(`/payment-submissions/${id}`);
+
 // Social & Contact
 export const getSocialLinks = () => api.get("/social/links");
 export const updateSocialLinks = (data) =>

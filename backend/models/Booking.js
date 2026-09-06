@@ -21,6 +21,8 @@ const paymentRecordSchema = new mongoose.Schema(
     reference: String,
     paidAt: Date,
     confirmedAt: Date,
+    paymentMethod: { type: mongoose.Schema.Types.ObjectId, ref: "PaymentMethod" },
+    paymentMethodName: String,
   },
   { _id: true },
 );

@@ -8,6 +8,7 @@ exports.uploadProof = catchAsync(async (req, res) => {
     req.file,
     req.body.installmentNumber,
     req.body.paymentOption,
+    req.body.paymentMethodId,
   );
   res.json({ success: true, data: booking });
 });

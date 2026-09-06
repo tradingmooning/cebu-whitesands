@@ -17,6 +17,8 @@ const adminRoutes = require("./routes/admin.routes");
 const settingsRoutes = require("./routes/settings.routes");
 const discountRoutes = require("./routes/discount.routes");
 const socialRoutes = require("./routes/social.routes");
+const paymentMethodRoutes = require("./routes/paymentMethod.routes");
+const paymentSubmissionRoutes = require("./routes/paymentSubmission.routes");
 
 const app = express();
 
@@ -72,6 +74,8 @@ app.use("/api/admin", adminRoutes);
 app.use("/api/settings", settingsRoutes);
 app.use("/api/discounts", discountRoutes);
 app.use("/api/social", socialRoutes);
+app.use("/api/payment-methods", paymentMethodRoutes);
+app.use("/api/payment-submissions", paymentSubmissionRoutes);
 
 // Centralized error handler (must be last)
 app.use(errorHandler);
