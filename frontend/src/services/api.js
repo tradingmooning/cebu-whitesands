@@ -145,6 +145,8 @@ export const logoutAdmin = (refreshToken) =>
 export const checkAuth = () => api.get("/admin/me");
 export const getDashboard = () => api.get("/admin/dashboard");
 export const seedAdmin = () => api.post("/admin/seed");
+export const changePassword = (currentPassword, newPassword) =>
+  api.post("/admin/change-password", { currentPassword, newPassword });
 
 // Settings
 export const getSettings = () => api.get("/settings/payment");
