@@ -28,6 +28,7 @@ const FOLDERS = {
   PROFILES: "cebu-whitesand-resort/profiles",
   LOGOS: "cebu-whitesand-resort/logos",
   DOCUMENTS: "cebu-whitesand-resort/documents",
+  OG_ROOMS: "cebu-whitesand-resort/og/rooms",
 };
 
 /**
@@ -89,6 +90,27 @@ async function uploadFile(file, folder) {
 }
 
 /**
+ * Write a small public JSON object to R2 at an exact key (no unique-name
+ * generation — callers pass a deterministic key, e.g. for OG preview
+ * manifests keyed by slug).
+ * @param {string} key
+ * @param {object} data
+ */
+async function putJson(key, data) {
+  const body = JSON.stringify(data);
+  await r2Client.send(
+    new PutObjectCommand({
+      Bucket: R2_BUCKET_NAME,
+      Key: key,
+      Body: body,
+      ContentType: "application/json",
+      ContentLength: Buffer.byteLength(body),
+    }),
+  );
+  return { key, url: getFileUrl(key) };
+}
+
+/**
  * Delete a file from R2 by its key. Errors are swallowed (idempotent).
  * @param {string} key
  */
@@ -131,6 +153,7 @@ async function fileExists(key) {
 
 module.exports = {
   uploadFile,
+  putJson,
   deleteFile,
   getFileUrl,
   generateUniqueFilename,

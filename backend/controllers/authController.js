@@ -42,3 +42,19 @@ exports.seed = catchAsync(async (req, res) => {
     data: admin,
   });
 });
+
+exports.changePassword = catchAsync(async (req, res) => {
+  const data = await authService.changePassword(
+    req.admin.id,
+    req.body.currentPassword,
+    req.body.newPassword,
+  );
+  auditService.log({
+    action: "PASSWORD_CHANGE",
+    entity: "Admin",
+    entityId: req.admin.id,
+    adminId: req.admin.id,
+    req,
+  });
+  res.json({ success: true, message: "Password updated successfully", data });
+});

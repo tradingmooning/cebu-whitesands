@@ -6,6 +6,7 @@ const { authLimiter } = require("../middleware/rateLimiter");
 const {
   loginSchema,
   refreshTokenSchema,
+  changePasswordSchema,
 } = require("../validators/auth.validator");
 const {
   login,
@@ -14,6 +15,7 @@ const {
   checkAuth,
   dashboard,
   seed,
+  changePassword,
 } = require("../controllers/authController");
 
 router.post("/login", authLimiter, validate(loginSchema), login);
@@ -22,5 +24,11 @@ router.post("/logout", logout);
 router.get("/me", auth, checkAuth);
 router.get("/dashboard", auth, dashboard);
 router.post("/seed", seed);
+router.post(
+  "/change-password",
+  auth,
+  validate(changePasswordSchema),
+  changePassword,
+);
 
 module.exports = router;

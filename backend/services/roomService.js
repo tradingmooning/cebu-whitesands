@@ -2,6 +2,7 @@ const Room = require("../models/Room");
 const AppError = require("../utils/AppError");
 const storage = require("../src/storage/storage");
 const discountService = require("./discountService");
+const ogManifestService = require("./ogManifestService");
 
 const roomService = {
   async getAll(query) {
@@ -62,6 +63,7 @@ const roomService = {
       available: data.available !== "false",
     });
 
+    await ogManifestService.writeRoomManifest(room);
     return room;
   },
 
@@ -123,6 +125,8 @@ const roomService = {
       runValidators: true,
     });
     if (!room) throw new AppError("Room not found", 404);
+
+    await ogManifestService.writeRoomManifest(room);
     return room;
   },
 
@@ -139,6 +143,8 @@ const roomService = {
   async delete(id) {
     const room = await Room.findByIdAndDelete(id);
     if (!room) throw new AppError("Room not found", 404);
+
+    await ogManifestService.deleteRoomManifest(room.slug);
     return room;
   },
 };

@@ -76,6 +76,19 @@ const authService = {
     return admin;
   },
 
+  async changePassword(adminId, currentPassword, newPassword) {
+    const admin = await Admin.findById(adminId);
+    if (!admin) throw new AppError("Not authorized", 401);
+
+    const isMatch = await admin.comparePassword(currentPassword);
+    if (!isMatch) throw new AppError("Current password is incorrect", 401);
+
+    admin.password = newPassword;
+    await admin.save();
+
+    return { email: admin.email };
+  },
+
   async dashboard() {
     const [
       totalRooms,
